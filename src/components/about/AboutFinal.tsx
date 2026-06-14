@@ -29,13 +29,13 @@ export default function AboutFinal() {
         sizes="100vw"
         className="-z-20 object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-navy-900/[0.94]" />
+      <div className="absolute inset-0 -z-10 bg-navy-900/70" />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            'linear-gradient(180deg, rgba(11,20,34,0.55) 0%, rgba(11,20,34,0.9) 100%), radial-gradient(70% 60% at 82% -10%, rgba(194,161,77,0.12) 0%, transparent 55%)',
+            'linear-gradient(180deg, rgba(11,20,34,0.25) 0%, rgba(11,20,34,0.6) 100%), radial-gradient(70% 60% at 82% -10%, rgba(194,161,77,0.12) 0%, transparent 55%)',
         }}
       />
 
