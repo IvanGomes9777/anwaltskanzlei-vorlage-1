@@ -63,6 +63,34 @@
     "a3": "Contract & Commercial",
     "a4": "Criminal Law"
   },
+  "services": {
+    "eyebrow": "Practice areas",
+    "heading": "Four focuses, one standard.",
+    "intro": "Whether private or corporate – we represent your interests with clarity, experience and resolve.",
+    "cta": "Learn more",
+    "d1": "Dismissals, severance and termination agreements: we represent employees and employers assertively – out of court and before the labour court.",
+    "d2": "Divorce, maintenance and custody as well as wills and estates – advised with empathy and arranged with foresight.",
+    "d3": "Contracts, corporate law and liability: legally sound solutions for companies, founders and the self-employed.",
+    "d4": "Defence in investigations and criminal proceedings – discreet, determined and fully focused on your case.",
+    "t1": "Protection, severance, contracts",
+    "t2": "Divorce, maintenance, inheritance",
+    "t3": "Contracts, GmbH, liability",
+    "t4": "Defence, investigation, appeal"
+  },
+  "variantsSvc": {
+    "heading": "Services section – 5 variants",
+    "intro": "Scroll through all five drafts and tell me the number you like best.",
+    "v1Name": "Variant 1 — Cards",
+    "v1Desc": "Classic 4-card grid",
+    "v2Name": "Variant 2 — Editorial list",
+    "v2Desc": "Large numbered rows, minimal",
+    "v3Name": "Variant 3 — Bento",
+    "v3Desc": "Asymmetric grid with feature tile",
+    "v4Name": "Variant 4 — Sticky split",
+    "v4Desc": "Sticky heading left, blocks right",
+    "v5Name": "Variant 5 — Dark band",
+    "v5Desc": "Section on navy with gold accents"
+  },
   "footer": {
     "rights": "All rights reserved.",
     "imprint": "Imprint",
