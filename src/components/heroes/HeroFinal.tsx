@@ -1,27 +1,42 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function HeroFinal() {
   const t = useTranslations('hero');
+  const reduceMotion = useReducedMotion();
 
   return (
     <section className="relative isolate flex min-h-[88vh] items-center overflow-hidden bg-navy-900">
-      {/* Hintergrundbild mit dezenter Ken-Burns-Bewegung */}
-      <div className="absolute inset-0 -z-20 animate-kenburns">
-        <Image
-          src="/hero/hero-library.webp"
-          alt={t('imageAlt')}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div>
+      {/* Hintergrund: Video (mit Standbild als Poster/Fallback) */}
+      {reduceMotion ? (
+        <div className="absolute inset-0 -z-20">
+          <Image
+            src="/hero/hero-library.webp"
+            alt={t('imageAlt')}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+      ) : (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/hero/hero-library.webp"
+          preload="auto"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        >
+          <source src="/hero/hero.mp4" type="video/mp4" />
+        </video>
+      )}
 
       {/* Verdunkelung für Lesbarkeit (zentriert) */}
       <div
