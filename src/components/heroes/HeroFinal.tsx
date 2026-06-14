@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -96,18 +97,18 @@ export default function HeroFinal() {
           transition={{ duration: 0.9, delay: 0.57, ease }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <a
-            href="#"
+          <Link
+            href="/#kontakt"
             className="rounded-md bg-gold px-8 py-3.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-gold-400"
           >
             {t('ctaPrimary')}
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/#leistungen"
             className="rounded-md border border-sand-100/30 px-8 py-3.5 text-sm font-medium text-sand-100 backdrop-blur-sm transition-colors hover:border-gold-400 hover:text-gold-400"
           >
             {t('ctaSecondary')}
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

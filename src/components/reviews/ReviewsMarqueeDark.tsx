@@ -75,7 +75,9 @@ export default function ReviewsMarqueeDark() {
       <div className="container-content relative pb-24 text-center md:pb-28">
         <Reveal>
           <a
-            href="#"
+            href="https://www.google.com/search?q=Hoffmann+Vogel+Rechtsanw%C3%A4lte+M%C3%BCnchen"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group mt-14 inline-flex items-center gap-4 rounded-full bg-white px-7 py-4 shadow-xl shadow-navy-900/40 ring-1 ring-black/5 transition-all hover:-translate-y-0.5 hover:shadow-2xl"
           >
             <GoogleMark className="text-base" />

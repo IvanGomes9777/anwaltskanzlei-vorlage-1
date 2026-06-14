@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import Reveal from '@/components/Reveal';
 
 export default function AboutFinal() {
@@ -85,12 +86,12 @@ export default function AboutFinal() {
         </div>
 
         <Reveal delay={0.2}>
-          <a
-            href="#"
+          <Link
+            href="/#team"
             className="mt-12 inline-block rounded-md bg-gold px-7 py-3.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-gold-400"
           >
             {t('cta')}
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

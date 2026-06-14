@@ -16,7 +16,13 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex flex-col gap-2 text-sm md:items-end">
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-end">
+            <Link href="/faq" className="text-sand-100/70 transition-colors hover:text-gold">
+              {t('footer.faq')}
+            </Link>
+            <Link href="/karriere" className="text-sand-100/70 transition-colors hover:text-gold">
+              {t('footer.career')}
+            </Link>
             <Link
               href="/impressum"
               className="text-sand-100/70 transition-colors hover:text-gold"

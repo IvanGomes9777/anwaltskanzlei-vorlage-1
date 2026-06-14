@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import Reveal from '@/components/Reveal';
 
 export function useMembers() {
   const t = useTranslations('team');
   return [
-    { img: '/team/member-1.webp', name: t('m1name'), role: t('m1role'), area: t('m1area') },
-    { img: '/team/member-2.webp', name: t('m2name'), role: t('m2role'), area: t('m2area') },
-    { img: '/team/member-3.webp', name: t('m3name'), role: t('m3role'), area: t('m3area') },
-    { img: '/team/member-4.webp', name: t('m4name'), role: t('m4role'), area: t('m4area') },
+    { img: '/team/member-1.webp', name: t('m1name'), role: t('m1role'), area: t('m1area'), slug: 'katharina-hoffmann' },
+    { img: '/team/member-2.webp', name: t('m2name'), role: t('m2role'), area: t('m2area'), slug: 'michael-vogel' },
+    { img: '/team/member-3.webp', name: t('m3name'), role: t('m3role'), area: t('m3area'), slug: 'julia-brandt' },
+    { img: '/team/member-4.webp', name: t('m4name'), role: t('m4role'), area: t('m4area'), slug: 'stefan-keller' },
   ];
 }
 
@@ -32,7 +33,7 @@ export default function TeamCards() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {members.map((m, i) => (
             <Reveal key={m.name} delay={i * 0.08}>
-              <article className="group">
+              <Link href={`/team/${m.slug}`} className="group block">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
                   <Image
                     src={m.img}
@@ -46,12 +47,12 @@ export default function TeamCards() {
                   <p className="text-xs uppercase tracking-wide text-gold-600">
                     {m.role}
                   </p>
-                  <h3 className="mt-1 font-serif text-lg font-semibold text-navy">
+                  <h3 className="mt-1 font-serif text-lg font-semibold text-navy transition-colors group-hover:text-gold-600">
                     {m.name}
                   </h3>
                   <p className="mt-1 text-sm text-navy/55">{m.area}</p>
                 </div>
-              </article>
+              </Link>
             </Reveal>
           ))}
         </div>
