@@ -1,0 +1,43 @@
+import { setRequestLocale } from 'next-intl/server';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import HeroFinal from '@/components/heroes/HeroFinal';
+import ServicesDark from '@/components/services/ServicesDark';
+import AboutFinal from '@/components/about/AboutFinal';
+import TeamCards from '@/components/team/TeamCards';
+import ReviewsMarqueeDark from '@/components/reviews/ReviewsMarqueeDark';
+import ContactMap from '@/components/contact/ContactMap';
+
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return (
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1">
+        <HeroFinal />
+        <div id="leistungen" className="scroll-mt-20">
+          <ServicesDark />
+        </div>
+        <div id="kanzlei" className="scroll-mt-20">
+          <AboutFinal />
+        </div>
+        <div id="team" className="scroll-mt-20">
+          <TeamCards />
+        </div>
+        <div id="bewertungen" className="scroll-mt-20">
+          <ReviewsMarqueeDark />
+        </div>
+        <div id="kontakt" className="scroll-mt-20">
+          <ContactMap />
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
