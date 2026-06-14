@@ -29,13 +29,13 @@ export default function AboutFinal() {
         sizes="100vw"
         className="-z-20 object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-navy-900/88" />
+      <div className="absolute inset-0 -z-10 bg-navy-900/[0.94]" />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            'radial-gradient(70% 60% at 80% 0%, rgba(194,161,77,0.16) 0%, transparent 60%)',
+            'linear-gradient(180deg, rgba(11,20,34,0.55) 0%, rgba(11,20,34,0.9) 100%), radial-gradient(70% 60% at 82% -10%, rgba(194,161,77,0.12) 0%, transparent 55%)',
         }}
       />
 
@@ -56,7 +56,7 @@ export default function AboutFinal() {
                   <dt className="font-serif text-3xl font-semibold text-gold-400 md:text-4xl">
                     {s.v}
                   </dt>
-                  <dd className="mt-1 text-sm text-sand-100/55">{s.l}</dd>
+                  <dd className="mt-1 text-sm text-sand-100/65">{s.l}</dd>
                 </div>
               ))}
             </dl>
@@ -64,9 +64,9 @@ export default function AboutFinal() {
 
           <Reveal delay={0.12}>
             <div className="md:pt-12">
-              <p className="text-lg leading-relaxed text-sand-100/85">{t('lead')}</p>
-              <p className="mt-4 leading-relaxed text-sand-100/65">{t('p1')}</p>
-              <p className="mt-4 leading-relaxed text-sand-100/65">{t('p2')}</p>
+              <p className="text-lg leading-relaxed text-sand-100/90">{t('lead')}</p>
+              <p className="mt-4 leading-relaxed text-sand-100/75">{t('p1')}</p>
+              <p className="mt-4 leading-relaxed text-sand-100/75">{t('p2')}</p>
             </div>
           </Reveal>
         </div>
@@ -78,7 +78,7 @@ export default function AboutFinal() {
               <article className="h-full rounded-xl border border-sand-100/15 bg-sand-100/[0.04] p-6 backdrop-blur-sm transition-colors hover:border-gold-400/50">
                 <span className="font-serif text-sm text-gold-400">{v.n}</span>
                 <h3 className="mt-4 font-serif text-lg font-semibold">{v.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-sand-100/65">{v.d}</p>
+                <p className="mt-2 text-sm leading-relaxed text-sand-100/75">{v.d}</p>
               </article>
             </Reveal>
           ))}
