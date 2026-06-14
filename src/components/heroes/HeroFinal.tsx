@@ -16,7 +16,7 @@ export default function HeroFinal() {
       {reduceMotion ? (
         <div className="absolute inset-0 -z-20">
           <Image
-            src="/hero/hero-library.webp"
+            src="/hero/hero-books.webp"
             alt={t('imageAlt')}
             fill
             priority
@@ -30,7 +30,7 @@ export default function HeroFinal() {
           muted
           loop
           playsInline
-          poster="/hero/hero-library.webp"
+          poster="/hero/hero-books.webp"
           preload="auto"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         >
