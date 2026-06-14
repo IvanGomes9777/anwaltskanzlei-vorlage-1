@@ -6,11 +6,11 @@ export default function Header() {
   const t = useTranslations();
 
   const nav = [
-    { href: '/', label: t('nav.home') },
-    { href: '/', label: t('nav.services') },
-    { href: '/', label: t('nav.firm') },
-    { href: '/', label: t('nav.team') },
-    { href: '/', label: t('nav.contact') },
+    { href: '/#leistungen', label: t('nav.services') },
+    { href: '/#kanzlei', label: t('nav.firm') },
+    { href: '/#team', label: t('nav.team') },
+    { href: '/#bewertungen', label: t('nav.reviews') },
+    { href: '/#kontakt', label: t('nav.contact') },
   ];
 
   return (

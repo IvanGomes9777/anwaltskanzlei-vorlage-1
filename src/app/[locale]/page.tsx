@@ -21,11 +21,21 @@ export default async function Home({
       <Header />
       <main className="flex-1">
         <HeroFinal />
-        <ServicesDark />
-        <AboutFinal />
-        <TeamCards />
-        <ReviewsMarqueeDark />
-        <ContactMap />
+        <div id="leistungen" className="scroll-mt-20">
+          <ServicesDark />
+        </div>
+        <div id="kanzlei" className="scroll-mt-20">
+          <AboutFinal />
+        </div>
+        <div id="team" className="scroll-mt-20">
+          <TeamCards />
+        </div>
+        <div id="bewertungen" className="scroll-mt-20">
+          <ReviewsMarqueeDark />
+        </div>
+        <div id="kontakt" className="scroll-mt-20">
+          <ContactMap />
+        </div>
       </main>
       <Footer />
     </div>
