@@ -17,10 +17,16 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-2 text-sm md:items-end">
           <div className="flex gap-6">
-            <Link href="/" className="text-sand-100/70 transition-colors hover:text-gold">
+            <Link
+              href="/impressum"
+              className="text-sand-100/70 transition-colors hover:text-gold"
+            >
               {t('footer.imprint')}
             </Link>
-            <Link href="/" className="text-sand-100/70 transition-colors hover:text-gold">
+            <Link
+              href="/datenschutz"
+              className="text-sand-100/70 transition-colors hover:text-gold"
+            >
               {t('footer.privacy')}
             </Link>
           </div>

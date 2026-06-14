@@ -35,6 +35,27 @@
   .hairline-gold {
     @apply h-px w-12 bg-gold;
   }
+  .legal-prose {
+    @apply text-[0.95rem] leading-relaxed text-navy/75;
+  }
+  .legal-prose h2 {
+    @apply mb-3 mt-10 font-serif text-2xl font-semibold text-navy;
+  }
+  .legal-prose h3 {
+    @apply mb-2 mt-6 font-serif text-lg font-semibold text-navy;
+  }
+  .legal-prose p {
+    @apply mb-4;
+  }
+  .legal-prose ul {
+    @apply mb-4 list-disc space-y-1 pl-5;
+  }
+  .legal-prose a {
+    @apply text-gold-600 underline underline-offset-2;
+  }
+  .legal-prose strong {
+    @apply font-semibold text-navy;
+  }
 }
 
 @keyframes kenburns {
