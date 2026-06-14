@@ -193,6 +193,35 @@
     "v5Name": "Variante 5 — Info-Kacheln",
     "v5Desc": "Kontakt-Kacheln über dem Formular"
   },
+  "reviews": {
+    "eyebrow": "Bewertungen",
+    "heading": "Was Mandanten sagen.",
+    "intro": "Auszug aus Rückmeldungen – Beispielinhalte für diese Vorlage.",
+    "onGoogle": "Bewertungen auf Google",
+    "ratingValue": "4,9",
+    "ratingCount": "127 Google-Bewertungen",
+    "placeholder": "Beispiel-Bewertungen. Echte Google-Rezensionen werden später per Google-Places-API eingebunden.",
+    "r1name": "Markus T.", "r1meta": "vor 2 Wochen", "r1text": "Klare Beratung, schnelle Rückmeldung und ein faires Ergebnis im Arbeitsrechtsstreit. Jederzeit wieder.",
+    "r2name": "Sabine L.", "r2meta": "vor 1 Monat", "r2text": "Sehr einfühlsam in einer schwierigen familiären Situation. Man fühlt sich gut aufgehoben und bestens beraten.",
+    "r3name": "Andreas K.", "r3meta": "vor 1 Monat", "r3text": "Kompetente Begleitung bei unserem Gesellschaftsvertrag – pragmatisch, gründlich und auf den Punkt.",
+    "r4name": "P. R.", "r4meta": "vor 2 Monaten", "r4text": "Diskret und entschlossen. Im Strafverfahren jederzeit erreichbar und hervorragend vorbereitet.",
+    "r5name": "Julia M.", "r5meta": "vor 3 Monaten", "r5text": "Verständliche Erklärungen ohne Juristendeutsch. Endlich eine Kanzlei, die wirklich zuhört.",
+    "r6name": "Thomas B.", "r6meta": "vor 3 Monaten", "r6text": "Professionell von der ersten Minute an, faire Konditionen. Klare Empfehlung."
+  },
+  "variantsReviews": {
+    "heading": "Google-Bewertungen – 5 Varianten",
+    "intro": "Scrolle durch alle fünf Entwürfe und sag mir die Nummer, die dir am besten gefällt.",
+    "v1Name": "Variante 1 — Karten-Raster",
+    "v1Desc": "Drei Bewertungskarten mit Google-Badge",
+    "v2Name": "Variante 2 — Laufband",
+    "v2Desc": "Endlos scrollende Karten (Marquee)",
+    "v3Name": "Variante 3 — Aggregat + Liste",
+    "v3Desc": "Gesamtbewertung links, Liste rechts",
+    "v4Name": "Variante 4 — Großes Zitat",
+    "v4Desc": "Eine hervorgehobene Bewertung",
+    "v5Name": "Variante 5 — Dunkel",
+    "v5Desc": "Bewertungskarten auf Navy"
+  },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
     "imprint": "Impressum",

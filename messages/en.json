@@ -193,6 +193,35 @@
     "v5Name": "Variant 5 — Info tiles",
     "v5Desc": "Contact tiles above the form"
   },
+  "reviews": {
+    "eyebrow": "Reviews",
+    "heading": "What clients say.",
+    "intro": "A selection of feedback – sample content for this template.",
+    "onGoogle": "Reviews on Google",
+    "ratingValue": "4.9",
+    "ratingCount": "127 Google reviews",
+    "placeholder": "Sample reviews. Real Google reviews are integrated later via the Google Places API.",
+    "r1name": "Markus T.", "r1meta": "2 weeks ago", "r1text": "Clear advice, fast responses and a fair outcome in an employment dispute. Would return any time.",
+    "r2name": "Sabine L.", "r2meta": "1 month ago", "r2text": "Very empathetic in a difficult family situation. You feel in good hands and well advised.",
+    "r3name": "Andreas K.", "r3meta": "1 month ago", "r3text": "Competent support with our shareholders' agreement – pragmatic, thorough and to the point.",
+    "r4name": "P. R.", "r4meta": "2 months ago", "r4text": "Discreet and determined. Always reachable during the criminal proceedings and excellently prepared.",
+    "r5name": "Julia M.", "r5meta": "3 months ago", "r5text": "Clear explanations without legalese. Finally a firm that truly listens.",
+    "r6name": "Thomas B.", "r6meta": "3 months ago", "r6text": "Professional from the very first minute, fair terms. Highly recommended."
+  },
+  "variantsReviews": {
+    "heading": "Google reviews – 5 variants",
+    "intro": "Scroll through all five drafts and tell me the number you like best.",
+    "v1Name": "Variant 1 — Card grid",
+    "v1Desc": "Three review cards with Google badge",
+    "v2Name": "Variant 2 — Marquee",
+    "v2Desc": "Infinitely scrolling cards",
+    "v3Name": "Variant 3 — Aggregate + list",
+    "v3Desc": "Overall rating left, list right",
+    "v4Name": "Variant 4 — Large quote",
+    "v4Desc": "One highlighted review",
+    "v5Name": "Variant 5 — Dark",
+    "v5Desc": "Review cards on navy"
+  },
   "footer": {
     "rights": "All rights reserved.",
     "imprint": "Imprint",
