@@ -18,6 +18,35 @@
     "tokensTitle": "Design tokens",
     "next": "Next step: hero section – 5 variants"
   },
+  "hero": {
+    "eyebrow": "Employment, Family, Commercial & Criminal Law",
+    "title": "Legal certainty with foresight.",
+    "titleAccent": "foresight.",
+    "subtitle": "Personal counsel and assertive representation – for individuals and businesses in Munich and nationwide.",
+    "ctaPrimary": "Request a consultation",
+    "ctaSecondary": "Our practice areas",
+    "stat1Value": "25+",
+    "stat1Label": "years of experience",
+    "stat2Value": "4",
+    "stat2Label": "practice areas",
+    "stat3Value": "1,500+",
+    "stat3Label": "cases handled",
+    "imageAlt": "Sample image – firm offices (placeholder)"
+  },
+  "variants": {
+    "heading": "Hero section – 5 variants",
+    "intro": "Scroll through all five drafts and tell me the number you like best. The content is identical – only the design differs.",
+    "v1Name": "Variant 1 — Trust",
+    "v1Desc": "Light, trust-building, editorial (Stripe style)",
+    "v2Name": "Variant 2 — Editorial",
+    "v2Desc": "Centered, typographic, calm (Linear style)",
+    "v3Name": "Variant 3 — Premium Dark",
+    "v3Desc": "Elegant dark mode with gold accents",
+    "v4Name": "Variant 4 — With firm photo",
+    "v4Desc": "Classic split with image",
+    "v5Name": "Variant 5 — Typographic",
+    "v5Desc": "Bold, minimal, generous whitespace"
+  },
   "footer": {
     "rights": "All rights reserved.",
     "imprint": "Imprint",

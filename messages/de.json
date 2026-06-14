@@ -18,6 +18,35 @@
     "tokensTitle": "Design-Tokens",
     "next": "Nächster Schritt: Hero-Sektion – 5 Varianten"
   },
+  "hero": {
+    "eyebrow": "Arbeits-, Familien-, Wirtschafts- & Strafrecht",
+    "title": "Rechtssicherheit mit Weitblick.",
+    "titleAccent": "Weitblick.",
+    "subtitle": "Persönliche Beratung und durchsetzungsstarke Vertretung – für Privatpersonen und Unternehmen in München und bundesweit.",
+    "ctaPrimary": "Erstberatung anfragen",
+    "ctaSecondary": "Unsere Leistungen",
+    "stat1Value": "25+",
+    "stat1Label": "Jahre Erfahrung",
+    "stat2Value": "4",
+    "stat2Label": "Fachbereiche",
+    "stat3Value": "1.500+",
+    "stat3Label": "betreute Mandate",
+    "imageAlt": "Beispielbild – Kanzleiräume (Platzhalter)"
+  },
+  "variants": {
+    "heading": "Hero-Sektion – 5 Varianten",
+    "intro": "Scrolle durch alle fünf Entwürfe und sag mir die Nummer, die dir am besten gefällt. Inhalte sind identisch – nur das Design unterscheidet sich.",
+    "v1Name": "Variante 1 — Trust",
+    "v1Desc": "Hell, vertrauensbildend, editorial (Stripe-Stil)",
+    "v2Name": "Variante 2 — Editorial",
+    "v2Desc": "Zentriert, typografisch, ruhig (Linear-Stil)",
+    "v3Name": "Variante 3 — Premium Dunkel",
+    "v3Desc": "Eleganter Dark-Mode mit Goldakzenten",
+    "v4Name": "Variante 4 — Mit Kanzlei-Foto",
+    "v4Desc": "Klassischer Split mit Bild",
+    "v5Name": "Variante 5 — Typografisch",
+    "v5Desc": "Plakativ, minimal, viel Weißraum"
+  },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
     "imprint": "Impressum",
