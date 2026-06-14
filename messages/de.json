@@ -10,7 +10,16 @@
     "firm": "Kanzlei",
     "team": "Team",
     "reviews": "Bewertungen",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "home": "Start",
+    "menu": "Menü",
+    "close": "Schließen"
+  },
+  "cookie": {
+    "text": "Wir verwenden technisch notwendige Cookies. Optionale Dienste (z. B. eingebundene Karten) nutzen wir nur mit Ihrer Einwilligung.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "more": "Datenschutzerklärung"
   },
   "scaffold": {
     "badge": "Grundgerüst",

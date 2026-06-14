@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import CookieBanner from '@/components/CookieBanner';
 import '../globals.css';
 
 const display = Playfair_Display({
@@ -46,7 +47,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${display.variable} ${body.variable}`}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <CookieBanner />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

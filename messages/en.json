@@ -10,7 +10,16 @@
     "firm": "Firm",
     "team": "Team",
     "reviews": "Reviews",
-    "contact": "Contact"
+    "contact": "Contact",
+    "home": "Home",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "cookie": {
+    "text": "We use technically necessary cookies. Optional services (e.g. embedded maps) are only used with your consent.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "more": "Privacy policy"
   },
   "scaffold": {
     "badge": "Foundation",
