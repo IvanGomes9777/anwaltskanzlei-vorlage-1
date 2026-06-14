@@ -91,6 +91,38 @@
     "v5Name": "Variant 5 — Dark band",
     "v5Desc": "Section on navy with gold accents"
   },
+  "about": {
+    "eyebrow": "The firm",
+    "heading": "Personal. Precise. By your side.",
+    "lead": "For over 25 years we have supported clients in Munich and nationwide – with the care of a boutique firm and the strength of a well-rehearsed team.",
+    "p1": "We listen before we act. Every case begins with a clear assessment of your situation – explained plainly, without legalese.",
+    "p2": "Reliability is not a slogan for us but a way of working: short response times, dedicated contacts and a strategy that fits your goals.",
+    "quote": "We listen before we act.",
+    "cta": "Get to know us",
+    "val1t": "Plain language",
+    "val1d": "We explain the law clearly – without legalese.",
+    "val2t": "Availability",
+    "val2d": "Dedicated contacts and short response times.",
+    "val3t": "Discretion",
+    "val3d": "Confidentiality at every step of the matter.",
+    "val4t": "Resolve",
+    "val4d": "Determined and strategic for your goal.",
+    "imageAlt": "Sample image – firm offices overlooking Munich (placeholder)"
+  },
+  "variantsAbout": {
+    "heading": "About the firm – 5 variants",
+    "intro": "Scroll through all five drafts and tell me the number you like best.",
+    "v1Name": "Variant 1 — Split with photo",
+    "v1Desc": "Text left, photo right",
+    "v2Name": "Variant 2 — Centered + values",
+    "v2Desc": "Centered intro, values row",
+    "v3Name": "Variant 3 — Statement + figures",
+    "v3Desc": "Large statement, numbers, editorial",
+    "v4Name": "Variant 4 — Value cards",
+    "v4Desc": "Heading + 4 value cards",
+    "v5Name": "Variant 5 — Photo band",
+    "v5Desc": "Full-bleed photo with overlay text"
+  },
   "footer": {
     "rights": "All rights reserved.",
     "imprint": "Imprint",

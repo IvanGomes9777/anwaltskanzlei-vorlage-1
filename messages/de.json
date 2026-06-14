@@ -91,6 +91,38 @@
     "v5Name": "Variante 5 — Dunkles Band",
     "v5Desc": "Sektion auf Navy mit Goldakzenten"
   },
+  "about": {
+    "eyebrow": "Die Kanzlei",
+    "heading": "Persönlich. Präzise. An Ihrer Seite.",
+    "lead": "Seit über 25 Jahren begleiten wir Mandantinnen und Mandanten in München und bundesweit – mit der Sorgfalt einer Boutique-Kanzlei und der Schlagkraft eines eingespielten Teams.",
+    "p1": "Wir hören zu, bevor wir handeln. Jeder Fall beginnt mit einer klaren Einschätzung Ihrer Lage – verständlich erklärt, ohne Juristendeutsch.",
+    "p2": "Verlässlichkeit ist für uns keine Floskel, sondern Arbeitsweise: kurze Reaktionszeiten, feste Ansprechpartner und eine Strategie, die zu Ihren Zielen passt.",
+    "quote": "Wir hören zu, bevor wir handeln.",
+    "cta": "Lernen Sie uns kennen",
+    "val1t": "Klartext",
+    "val1d": "Wir erklären Recht verständlich – ohne Juristendeutsch.",
+    "val2t": "Erreichbarkeit",
+    "val2d": "Feste Ansprechpartner und kurze Reaktionszeiten.",
+    "val3t": "Diskretion",
+    "val3d": "Vertraulichkeit in jedem Schritt des Mandats.",
+    "val4t": "Durchsetzung",
+    "val4d": "Entschlossen und strategisch für Ihr Ziel.",
+    "imageAlt": "Beispielbild – Kanzleiräume mit Blick über München (Platzhalter)"
+  },
+  "variantsAbout": {
+    "heading": "Über die Kanzlei – 5 Varianten",
+    "intro": "Scrolle durch alle fünf Entwürfe und sag mir die Nummer, die dir am besten gefällt.",
+    "v1Name": "Variante 1 — Split mit Foto",
+    "v1Desc": "Text links, Foto rechts",
+    "v2Name": "Variante 2 — Zentriert + Werte",
+    "v2Desc": "Zentrierte Einleitung, Werte-Reihe",
+    "v3Name": "Variante 3 — Statement + Kennzahlen",
+    "v3Desc": "Großes Statement, Zahlen, editorial",
+    "v4Name": "Variante 4 — Werte-Karten",
+    "v4Desc": "Überschrift + 4 Wertekarten",
+    "v5Name": "Variante 5 — Foto-Band",
+    "v5Desc": "Vollbild-Foto mit Overlay-Text"
+  },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
     "imprint": "Impressum",
