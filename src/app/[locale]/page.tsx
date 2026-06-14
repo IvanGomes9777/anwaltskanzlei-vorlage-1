@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroFinal from '@/components/heroes/HeroFinal';
 import ServicesDark from '@/components/services/ServicesDark';
+import AboutFinal from '@/components/about/AboutFinal';
 
 export default async function Home({
   params,
@@ -18,6 +19,7 @@ export default async function Home({
       <main className="flex-1">
         <HeroFinal />
         <ServicesDark />
+        <AboutFinal />
       </main>
       <Footer />
     </div>
