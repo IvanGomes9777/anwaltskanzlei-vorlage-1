@@ -1,14 +1,22 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+
+type Status = 'idle' | 'loading' | 'sent' | 'error';
 
 export default function ContactForm({ dark = false }: { dark?: boolean }) {
   const t = useTranslations('contact');
   const a = useTranslations('areas');
-  const [sent, setSent] = useState(false);
+  const locale = useLocale();
+  const [status, setStatus] = useState<Status>('idle');
 
-  const areas = [a('a1'), a('a2'), a('a3'), a('a4')];
+  const areas = [
+    { slug: 'arbeitsrecht', label: a('a1') },
+    { slug: 'familienrecht', label: a('a2') },
+    { slug: 'wirtschaftsrecht', label: a('a3') },
+    { slug: 'strafrecht', label: a('a4') },
+  ];
 
   const labelCls = dark ? 'text-sand-100/70' : 'text-navy/60';
   const inputCls = dark
@@ -16,30 +24,65 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
     : 'border-navy/15 bg-white text-navy placeholder:text-navy/30 focus:border-gold';
   const noteCls = dark ? 'text-sand-100/45' : 'text-navy/45';
 
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          email: data.get('email'),
+          phone: data.get('phone'),
+          area: data.get('area'),
+          message: data.get('message'),
+          consent: data.get('consent') === 'on',
+          company: data.get('company'), // Honeypot
+          locale,
+        }),
+      });
+      if (!res.ok) throw new Error('request failed');
+      setStatus('sent');
+      form.reset();
+    } catch {
+      setStatus('error');
+    }
+  }
+
+  if (status === 'sent') {
+    return (
+      <div
+        className={`rounded-xl border p-8 text-center ${
+          dark ? 'border-sand-100/15 bg-sand-100/[0.04] text-sand-100' : 'border-navy/10 bg-white text-navy'
+        }`}
+      >
+        <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold text-2xl text-navy-900">
+          ✓
+        </span>
+        <p className="font-serif text-lg font-semibold">{t('success')}</p>
+      </div>
+    );
+  }
+
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSent(true);
-      }}
-      className="space-y-4"
-    >
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className={`text-xs uppercase tracking-wide ${labelCls}`}>
-            {t('nameLabel')}
-          </span>
+          <span className={`text-xs uppercase tracking-wide ${labelCls}`}>{t('nameLabel')}</span>
           <input
+            name="name"
             type="text"
             required
             className={`mt-1.5 w-full rounded-md border px-4 py-3 text-sm outline-none transition-colors ${inputCls}`}
           />
         </label>
         <label className="block">
-          <span className={`text-xs uppercase tracking-wide ${labelCls}`}>
-            {t('emailLabel')}
-          </span>
+          <span className={`text-xs uppercase tracking-wide ${labelCls}`}>{t('emailLabel')}</span>
           <input
+            name="email"
             type="email"
             required
             className={`mt-1.5 w-full rounded-md border px-4 py-3 text-sm outline-none transition-colors ${inputCls}`}
@@ -48,20 +91,18 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
       </div>
 
       <label className="block">
-        <span className={`text-xs uppercase tracking-wide ${labelCls}`}>
-          {t('phoneLabel')}
-        </span>
+        <span className={`text-xs uppercase tracking-wide ${labelCls}`}>{t('phoneLabel')}</span>
         <input
+          name="phone"
           type="tel"
           className={`mt-1.5 w-full rounded-md border px-4 py-3 text-sm outline-none transition-colors ${inputCls}`}
         />
       </label>
 
       <label className="block">
-        <span className={`text-xs uppercase tracking-wide ${labelCls}`}>
-          {t('areaLabel')}
-        </span>
+        <span className={`text-xs uppercase tracking-wide ${labelCls}`}>{t('areaLabel')}</span>
         <select
+          name="area"
           required
           defaultValue=""
           className={`mt-1.5 w-full rounded-md border px-4 py-3 text-sm outline-none transition-colors ${inputCls}`}
@@ -70,8 +111,8 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
             {t('areaPlaceholder')}
           </option>
           {areas.map((area) => (
-            <option key={area} value={area} className="text-navy">
-              {area}
+            <option key={area.slug} value={area.slug} className="text-navy">
+              {area.label}
             </option>
           ))}
           <option value="other" className="text-navy">
@@ -81,18 +122,27 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
       </label>
 
       <label className="block">
-        <span className={`text-xs uppercase tracking-wide ${labelCls}`}>
-          {t('messageLabel')}
-        </span>
+        <span className={`text-xs uppercase tracking-wide ${labelCls}`}>{t('messageLabel')}</span>
         <textarea
+          name="message"
           rows={4}
           required
           className={`mt-1.5 w-full resize-none rounded-md border px-4 py-3 text-sm outline-none transition-colors ${inputCls}`}
         />
       </label>
 
+      {/* Honeypot – für Menschen unsichtbar */}
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-0 w-0 opacity-0"
+      />
+
       <label className={`flex items-start gap-3 text-sm ${dark ? 'text-sand-100/70' : 'text-navy/65'}`}>
-        <input type="checkbox" required className="mt-1 accent-gold" />
+        <input type="checkbox" name="consent" required className="mt-1 accent-gold" />
         <span>{t('consent')}</span>
       </label>
 
@@ -100,19 +150,16 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
 
       <button
         type="submit"
-        className={`rounded-md px-7 py-3.5 text-sm font-semibold transition-colors ${
-          dark
-            ? 'bg-gold text-navy-900 hover:bg-gold-400'
-            : 'bg-navy text-sand-50 hover:bg-navy-700'
+        disabled={status === 'loading'}
+        className={`rounded-md px-7 py-3.5 text-sm font-semibold transition-colors disabled:opacity-60 ${
+          dark ? 'bg-gold text-navy-900 hover:bg-gold-400' : 'bg-navy text-sand-50 hover:bg-navy-700'
         }`}
       >
-        {t('submit')}
+        {status === 'loading' ? t('sending') : t('submit')}
       </button>
 
-      {sent && (
-        <p className={`text-sm font-medium ${dark ? 'text-gold-400' : 'text-gold-600'}`}>
-          {t('demoNote')}
-        </p>
+      {status === 'error' && (
+        <p className="text-sm font-medium text-red-600">{t('error')}</p>
       )}
     </form>
   );
