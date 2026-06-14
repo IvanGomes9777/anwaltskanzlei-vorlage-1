@@ -1,0 +1,31 @@
+{
+  "brand": {
+    "name": "Hoffmann · Vogel",
+    "suffix": "Rechtsanwälte",
+    "claim": "Rechtssicherheit mit Weitblick."
+  },
+  "nav": {
+    "home": "Start",
+    "services": "Leistungen",
+    "firm": "Kanzlei",
+    "team": "Team",
+    "contact": "Kontakt"
+  },
+  "scaffold": {
+    "badge": "Grundgerüst",
+    "title": "Das Fundament steht.",
+    "lead": "Next.js, das Design-System (Marineblau · Anthrazit · Gold), Typografie und die Zweisprachigkeit (DE/EN) sind eingerichtet. Als Nächstes folgt die Startseiten-Hero-Sektion mit fünf visuellen Varianten zur Auswahl.",
+    "tokensTitle": "Design-Tokens",
+    "next": "Nächster Schritt: Hero-Sektion – 5 Varianten"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "placeholder": "Beispiel-Vorlage – Inhalte sind Platzhalter."
+  },
+  "lang": {
+    "de": "DE",
+    "en": "EN"
+  }
+}

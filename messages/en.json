@@ -1,0 +1,31 @@
+{
+  "brand": {
+    "name": "Hoffmann · Vogel",
+    "suffix": "Attorneys at Law",
+    "claim": "Legal certainty with foresight."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Practice Areas",
+    "firm": "Firm",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "scaffold": {
+    "badge": "Foundation",
+    "title": "The foundation is set.",
+    "lead": "Next.js, the design system (navy · charcoal · gold), typography and bilingual support (DE/EN) are in place. Next up: the homepage hero section with five visual variants to choose from.",
+    "tokensTitle": "Design tokens",
+    "next": "Next step: hero section – 5 variants"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "placeholder": "Sample template – content is placeholder."
+  },
+  "lang": {
+    "de": "DE",
+    "en": "EN"
+  }
+}
