@@ -5,7 +5,10 @@ import { useTranslations } from 'next-intl';
 
 export default function ContactForm({ dark = false }: { dark?: boolean }) {
   const t = useTranslations('contact');
+  const a = useTranslations('areas');
   const [sent, setSent] = useState(false);
+
+  const areas = [a('a1'), a('a2'), a('a3'), a('a4')];
 
   const labelCls = dark ? 'text-sand-100/70' : 'text-navy/60';
   const inputCls = dark
@@ -52,6 +55,29 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
           type="tel"
           className={`mt-1.5 w-full rounded-md border px-4 py-3 text-sm outline-none transition-colors ${inputCls}`}
         />
+      </label>
+
+      <label className="block">
+        <span className={`text-xs uppercase tracking-wide ${labelCls}`}>
+          {t('areaLabel')}
+        </span>
+        <select
+          required
+          defaultValue=""
+          className={`mt-1.5 w-full rounded-md border px-4 py-3 text-sm outline-none transition-colors ${inputCls}`}
+        >
+          <option value="" disabled>
+            {t('areaPlaceholder')}
+          </option>
+          {areas.map((area) => (
+            <option key={area} value={area} className="text-navy">
+              {area}
+            </option>
+          ))}
+          <option value="other" className="text-navy">
+            {t('areaOther')}
+          </option>
+        </select>
       </label>
 
       <label className="block">
