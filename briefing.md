@@ -41,8 +41,7 @@
 7. **Datenschutzerklärung / Privacy** — DSGVO-konform (siehe §6).
 
 ## 5. Rechtsgebiete (Full-Service, Beispiele)
-Arbeitsrecht · Familien- & Erbrecht · Miet- & Immobilienrecht ·
-Vertrags- & Wirtschaftsrecht · Verkehrsrecht · Strafrecht.
+Arbeitsrecht · Familien- & Erbrecht · Vertrags- & Wirtschaftsrecht · Strafrecht.
 
 ## 6. Rechtliche Pflichten (zwingend — von echter Kanzlei verifizieren lassen)
 - **Impressum nach § 5 DDG:** Name, Anschrift, Rechtsform, Vertretungsberechtigte,
