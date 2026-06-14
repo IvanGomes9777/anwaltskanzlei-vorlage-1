@@ -4,7 +4,7 @@ import { Stars, GoogleMark, useReviews } from './parts';
 
 export default function ReviewsDark() {
   const t = useTranslations('reviews');
-  const reviews = useReviews().slice(0, 3);
+  const reviews = useReviews();
 
   return (
     <section className="relative overflow-hidden bg-navy-900 text-sand-100">
@@ -55,6 +55,20 @@ export default function ReviewsDark() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.2}>
+          <div className="mt-12 text-center">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 rounded-md bg-gold px-7 py-3.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-gold-400"
+            >
+              <GoogleMark className="text-sm" />
+              <span>·</span>
+              {t('viewAll')}
+            </a>
+            <p className="mt-5 text-xs text-sand-100/40">{t('placeholder')}</p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
