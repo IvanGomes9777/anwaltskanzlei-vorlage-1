@@ -45,7 +45,23 @@
     "v4Name": "Variant 4 — With firm photo",
     "v4Desc": "Classic split with image",
     "v5Name": "Variant 5 — Typographic",
-    "v5Desc": "Bold, minimal, generous whitespace"
+    "v5Desc": "Bold, minimal, generous whitespace",
+    "v6Name": "Variant 6 — Bento / Asymmetric",
+    "v6Desc": "Asymmetric grid with practice-area tiles",
+    "v7Name": "Variant 7 — Image background",
+    "v7Desc": "Full-bleed photo, cinematic, light text",
+    "v8Name": "Variant 8 — Practice index",
+    "v8Desc": "Claim left, numbered practice areas right",
+    "v9Name": "Variant 9 — Monogram / Crest",
+    "v9Desc": "Classic, refined monogram H·V",
+    "v10Name": "Variant 10 — Two-tone split",
+    "v10Desc": "Navy/sand color block, modern editorial"
+  },
+  "areas": {
+    "a1": "Employment Law",
+    "a2": "Family & Inheritance",
+    "a3": "Contract & Commercial",
+    "a4": "Criminal Law"
   },
   "footer": {
     "rights": "All rights reserved.",

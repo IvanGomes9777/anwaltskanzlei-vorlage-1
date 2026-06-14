@@ -45,7 +45,23 @@
     "v4Name": "Variante 4 — Mit Kanzlei-Foto",
     "v4Desc": "Klassischer Split mit Bild",
     "v5Name": "Variante 5 — Typografisch",
-    "v5Desc": "Plakativ, minimal, viel Weißraum"
+    "v5Desc": "Plakativ, minimal, viel Weißraum",
+    "v6Name": "Variante 6 — Bento / Asymmetrisch",
+    "v6Desc": "Asymmetrisches Raster mit Fachgebiet-Kacheln",
+    "v7Name": "Variante 7 — Bildhintergrund",
+    "v7Desc": "Vollflächiges Foto, cineastisch, heller Text",
+    "v8Name": "Variante 8 — Fachgebiet-Index",
+    "v8Desc": "Claim links, nummerierte Rechtsgebiete rechts",
+    "v9Name": "Variante 9 — Monogramm / Wappen",
+    "v9Desc": "Klassisch-edel mit Monogramm H·V",
+    "v10Name": "Variante 10 — Zweifarbig geteilt",
+    "v10Desc": "Farbblock Navy/Sand, modern-editorial"
+  },
+  "areas": {
+    "a1": "Arbeitsrecht",
+    "a2": "Familien- & Erbrecht",
+    "a3": "Vertrags- & Wirtschaftsrecht",
+    "a4": "Strafrecht"
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",

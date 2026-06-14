@@ -5,6 +5,11 @@ import HeroEditorial from '@/components/heroes/HeroEditorial';
 import HeroDark from '@/components/heroes/HeroDark';
 import HeroSplitPhoto from '@/components/heroes/HeroSplitPhoto';
 import HeroTypographic from '@/components/heroes/HeroTypographic';
+import HeroBento from '@/components/heroes/HeroBento';
+import HeroImageBg from '@/components/heroes/HeroImageBg';
+import HeroIndex from '@/components/heroes/HeroIndex';
+import HeroMonogram from '@/components/heroes/HeroMonogram';
+import HeroTwoTone from '@/components/heroes/HeroTwoTone';
 
 export default async function HeroVariantsPage({
   params,
@@ -25,6 +30,11 @@ function Gallery() {
     { id: 'v3', name: t('v3Name'), desc: t('v3Desc'), node: <HeroDark /> },
     { id: 'v4', name: t('v4Name'), desc: t('v4Desc'), node: <HeroSplitPhoto /> },
     { id: 'v5', name: t('v5Name'), desc: t('v5Desc'), node: <HeroTypographic /> },
+    { id: 'v6', name: t('v6Name'), desc: t('v6Desc'), node: <HeroBento /> },
+    { id: 'v7', name: t('v7Name'), desc: t('v7Desc'), node: <HeroImageBg /> },
+    { id: 'v8', name: t('v8Name'), desc: t('v8Desc'), node: <HeroIndex /> },
+    { id: 'v9', name: t('v9Name'), desc: t('v9Desc'), node: <HeroMonogram /> },
+    { id: 'v10', name: t('v10Name'), desc: t('v10Desc'), node: <HeroTwoTone /> },
   ];
 
   return (
