@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import HeroFinal from '@/components/heroes/HeroFinal';
 import ServicesDark from '@/components/services/ServicesDark';
 import AboutFinal from '@/components/about/AboutFinal';
+import TeamCards from '@/components/team/TeamCards';
 
 export default async function Home({
   params,
@@ -20,6 +21,7 @@ export default async function Home({
         <HeroFinal />
         <ServicesDark />
         <AboutFinal />
+        <TeamCards />
       </main>
       <Footer />
     </div>
