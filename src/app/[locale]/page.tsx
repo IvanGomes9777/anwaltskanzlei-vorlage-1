@@ -5,7 +5,7 @@ import HeroFinal from '@/components/heroes/HeroFinal';
 import ServicesDark from '@/components/services/ServicesDark';
 import AboutFinal from '@/components/about/AboutFinal';
 import TeamCards from '@/components/team/TeamCards';
-import ReviewsDark from '@/components/reviews/ReviewsDark';
+import ReviewsMarqueeDark from '@/components/reviews/ReviewsMarqueeDark';
 import ContactMap from '@/components/contact/ContactMap';
 
 export default async function Home({
@@ -24,7 +24,7 @@ export default async function Home({
         <ServicesDark />
         <AboutFinal />
         <TeamCards />
-        <ReviewsDark />
+        <ReviewsMarqueeDark />
         <ContactMap />
       </main>
       <Footer />
