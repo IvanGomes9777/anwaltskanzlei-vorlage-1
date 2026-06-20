@@ -15,7 +15,11 @@ function recipientFor(area: string): string {
     wirtschaftsstrafrecht: process.env.CONTACT_TO_WIRTSCHAFTSSTRAFRECHT,
     steuerstrafrecht: process.env.CONTACT_TO_STEUERSTRAFRECHT,
   };
-  return map[area] || process.env.CONTACT_TO_DEFAULT || 'info@example.com';
+  return (
+    map[area] ||
+    process.env.CONTACT_TO_DEFAULT ||
+    'luebbersmann@luebersmann-rechtsanwaelte.de'
+  );
 }
 
 const isEmail = (v: unknown): v is string =>
@@ -46,7 +50,7 @@ export async function POST(request: Request) {
 
   const areaLabel = AREA_LABELS[area] ?? AREA_LABELS.other;
   const to = recipientFor(area);
-  const from = process.env.CONTACT_FROM || 'Kanzlei <onboarding@resend.dev>';
+  const from = process.env.CONTACT_FROM || 'Lübbersmann Rechtsanwälte <onboarding@resend.dev>';
   const apiKey = process.env.RESEND_API_KEY;
 
   // Demo-Modus: kein API-Key gesetzt → nichts senden, aber Formular „funktioniert"
@@ -76,7 +80,7 @@ export async function POST(request: Request) {
 
     // 2) Automatische Eingangsbestätigung an den Absender
     const ackSubject = 'Ihre Anfrage ist bei uns eingegangen';
-    const ackText = `Guten Tag ${name},\n\nvielen Dank für Ihre Nachricht zum Thema „${areaLabel}". Die zuständige Person meldet sich zeitnah bei Ihnen.\n\nMit freundlichen Grüßen\nHoffmann · Vogel Rechtsanwälte`;
+    const ackText = `Guten Tag ${name},\n\nvielen Dank für Ihre Nachricht zum Thema „${areaLabel}". Die zuständige Person meldet sich zeitnah bei Ihnen.\n\nMit freundlichen Grüßen\nLübbersmann Rechtsanwälte`;
 
     await resend.emails.send({
       from,

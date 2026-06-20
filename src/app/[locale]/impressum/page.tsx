@@ -28,23 +28,25 @@ function ImpressumDE() {
     <>
       <h2>Angaben gemäß § 5 DDG</h2>
       <p>
-        <strong>Hoffmann · Vogel Rechtsanwälte [Platzhalter]</strong>
+        <strong>Lübbersmann Rechtsanwälte</strong>
         <br />
-        Maximilianstraße 12
+        Südstraße 11
         <br />
-        80539 München
+        48153 Münster
       </p>
       <p>
         <strong>Vertreten durch:</strong>
         <br />
-        Dr. Katharina Hoffmann, Michael Vogel [Platzhalter]
+        Sascha Lübbersmann
       </p>
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: +49 89 1234 567 [Platzhalter]
+        Telefon: 0251 524024
         <br />
-        E-Mail: kanzlei@hoffmann-vogel.example [Platzhalter]
+        Fax: 0251 531761
+        <br />
+        E-Mail: luebbersmann@luebersmann-rechtsanwaelte.de
       </p>
 
       <h2>Umsatzsteuer-ID</h2>
@@ -56,12 +58,12 @@ function ImpressumDE() {
 
       <h2>Berufsrechtliche Angaben</h2>
       <p>
-        <strong>Gesetzliche Berufsbezeichnung:</strong> Rechtsanwältin / Rechtsanwalt
+        <strong>Gesetzliche Berufsbezeichnung:</strong> Rechtsanwalt
         (verliehen in der Bundesrepublik Deutschland)
       </p>
       <p>
-        <strong>Zuständige Rechtsanwaltskammer:</strong> Rechtsanwaltskammer München,
-        Tal 33, 80331 München [ggf. anpassen]
+        <strong>Zuständige Rechtsanwaltskammer:</strong> Rechtsanwaltskammer Hamm,
+        Ostenallee 18, 59063 Hamm [ggf. anpassen]
       </p>
       <p>
         <strong>Berufsrechtliche Regelungen:</strong> Es gelten insbesondere die
@@ -91,7 +93,7 @@ function ImpressumDE() {
       </p>
 
       <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-      <p>Dr. Katharina Hoffmann, Anschrift wie oben [Platzhalter]</p>
+      <p>Sascha Lübbersmann, Anschrift wie oben</p>
 
       <h2>Haftung für Inhalte</h2>
       <p>

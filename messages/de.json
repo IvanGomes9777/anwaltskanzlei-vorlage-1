@@ -1,8 +1,8 @@
 {
   "brand": {
-    "name": "Hoffmann · Vogel",
+    "name": "Lübbersmann",
     "suffix": "Rechtsanwälte",
-    "claim": "Rechtssicherheit mit Weitblick."
+    "claim": "Strafverteidigung mit Weitblick."
   },
   "nav": {
     "home": "Start",
@@ -190,12 +190,14 @@
     "confidential": "Hinweis: Bitte übermitteln Sie keine vertraulichen Details über dieses Formular – eine unverschlüsselte Übertragung ist nicht absolut sicher.",
     "demoNote": "Demo-Formular – es werden keine Daten gesendet.",
     "addressTitle": "Adresse",
-    "address1": "Maximilianstraße 12",
-    "address2": "80539 München",
+    "address1": "Südstraße 11",
+    "address2": "48153 Münster",
     "phoneTitle": "Telefon",
-    "phone": "+49 89 1234 567",
+    "phone": "0251 524024",
     "emailTitle": "E-Mail",
-    "email": "kanzlei@hoffmann-vogel.example",
+    "email": "luebbersmann@luebersmann-rechtsanwaelte.de",
+    "faxTitle": "Fax",
+    "fax": "0251 531761",
     "hoursTitle": "Sprechzeiten",
     "hours": "Mo–Fr 9:00–18:00 Uhr",
     "mapLabel": "Anfahrt"

@@ -32,11 +32,11 @@ function DatenschutzDE() {
         Datenschutz-Grundverordnung (DSGVO) ist:
       </p>
       <p>
-        Hoffmann · Vogel Rechtsanwälte [Platzhalter]
+        Lübbersmann Rechtsanwälte
         <br />
-        Maximilianstraße 12, 80539 München
+        Südstraße 11, 48153 Münster
         <br />
-        E-Mail: datenschutz@hoffmann-vogel.example [Platzhalter]
+        E-Mail: luebbersmann@luebersmann-rechtsanwaelte.de
       </p>
 
       <h2>2. Ihre Rechte als betroffene Person</h2>
@@ -88,13 +88,14 @@ function DatenschutzDE() {
         werden, hier vermerken.]
       </p>
 
-      <h2>7. Eingebundener Kartendienst (OpenStreetMap)</h2>
+      <h2>7. Eingebundener Kartendienst (Google Maps)</h2>
       <p>
-        Zur Darstellung der Anfahrt binden wir Karten von OpenStreetMap (OpenStreetMap
-        Foundation, St John&apos;s Innovation Centre, Cowley Road, Cambridge, CB4 0WS, UK)
-        ein. Beim Laden der Karte wird Ihre IP-Adresse an OpenStreetMap übermittelt.
-        Rechtsgrundlage ist unser berechtigtes Interesse an einer ansprechenden
-        Darstellung (Art. 6 Abs. 1 lit. f DSGVO) bzw. Ihre Einwilligung.
+        Zur Darstellung der Anfahrt binden wir Karten von Google Maps ein (Anbieter:
+        Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden
+        der Karte wird Ihre IP-Adresse an Google übermittelt; dabei können Daten auch in
+        die USA übertragen werden. Rechtsgrundlage ist unser berechtigtes Interesse an
+        einer ansprechenden Darstellung (Art. 6 Abs. 1 lit. f DSGVO) bzw. Ihre
+        Einwilligung gemäß § 25 Abs. 1 TDDDG.
       </p>
 
       <h2>8. SSL-/TLS-Verschlüsselung</h2>
