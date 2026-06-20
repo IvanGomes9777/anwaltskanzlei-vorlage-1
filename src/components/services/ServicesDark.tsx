@@ -26,7 +26,7 @@ export default function ServicesDark() {
           <p className="mt-5 max-w-xl text-lg text-black/70">{s('intro')}</p>
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-black/10 bg-black/10 sm:grid-cols-2">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-black/10 bg-black/10 sm:grid-cols-2 md:grid-cols-3">
           {items.map((it, i) => (
             <Reveal key={it.n} delay={i * 0.08}>
               <Link
