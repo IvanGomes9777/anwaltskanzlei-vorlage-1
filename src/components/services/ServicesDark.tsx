@@ -14,42 +14,34 @@ export default function ServicesDark() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-navy-900 text-sand-100">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.4]"
-        style={{
-          background:
-            'radial-gradient(60% 60% at 85% 10%, rgba(114,134,144,0.18) 0%, transparent 60%)',
-        }}
-      />
+    <section className="relative overflow-hidden bg-[#728690] text-black">
       <div className="container-content relative py-24 md:py-28">
         <Reveal>
-          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.24em] text-gold-400">
-            <span className="h-px w-8 bg-gold-400" />
+          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.24em] text-white">
+            <span className="h-px w-8 bg-white" />
             {s('eyebrow')}
           </span>
-          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight md:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-black md:text-5xl">
             {s('heading')}
           </h2>
-          <p className="mt-5 max-w-xl text-lg text-sand-100/65">{s('intro')}</p>
+          <p className="mt-5 max-w-xl text-lg text-black/70">{s('intro')}</p>
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-sand-100/12 bg-sand-100/12 sm:grid-cols-2">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-black/10 bg-black/10 sm:grid-cols-2">
           {items.map((it, i) => (
             <Reveal key={it.n} delay={i * 0.08}>
               <Link
                 href={`/leistungen/${it.slug}`}
-                className="group block h-full bg-navy-900 p-8 transition-colors hover:bg-navy-700"
+                className="group block h-full bg-[#728690] p-8 transition-colors hover:bg-[#5d6e77]"
               >
                 <div className="flex items-baseline justify-between">
-                  <h3 className="font-serif text-2xl font-semibold">{it.title}</h3>
-                  <span className="font-serif text-sm text-gold-400">{it.n}</span>
+                  <h3 className="font-serif text-2xl font-semibold text-white">{it.title}</h3>
+                  <span className="font-serif text-sm text-black/60">{it.n}</span>
                 </div>
-                <p className="mt-4 text-sand-100/70">{it.desc}</p>
-                <p className="mt-6 flex items-center gap-2 text-xs uppercase tracking-wide text-sand-100/40">
+                <p className="mt-4 text-black/80">{it.desc}</p>
+                <p className="mt-6 flex items-center gap-2 text-xs uppercase tracking-wide text-black/60">
                   {it.tags}
-                  <span className="text-gold-400 transition-transform group-hover:translate-x-1">→</span>
+                  <span className="text-black transition-transform group-hover:translate-x-1">→</span>
                 </p>
               </Link>
             </Reveal>
