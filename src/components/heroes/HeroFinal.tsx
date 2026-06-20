@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
@@ -8,10 +9,47 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function HeroFinal() {
   const t = useTranslations('hero');
+  const reduceMotion = useReducedMotion();
 
   return (
     <section className="relative isolate flex min-h-[calc(100vh-5rem)] items-center overflow-hidden bg-[#728690]">
-      <div className="container-content relative flex flex-col items-center py-28 text-center text-black">
+      {/* Hintergrund: Video (mit Standbild als Poster/Fallback) */}
+      {reduceMotion ? (
+        <div className="absolute inset-0 -z-20">
+          <Image
+            src="/hero/hero-books.webp"
+            alt={t('imageAlt')}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+      ) : (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/hero/hero-books.webp"
+          preload="auto"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        >
+          <source src="/hero/hero.mp4" type="video/mp4" />
+        </video>
+      )}
+
+      {/* Verdunkelung für Lesbarkeit (zentriert) */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            'radial-gradient(75% 75% at 50% 45%, rgba(11,20,34,0.55) 0%, rgba(11,20,34,0.82) 100%)',
+        }}
+      />
+
+      <div className="container-content relative flex flex-col items-center py-28 text-center text-white">
         {/* Monogramm */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -30,7 +68,7 @@ export default function HeroFinal() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25, ease }}
-          className="mt-8 text-xs font-medium uppercase tracking-[0.34em] text-black"
+          className="mt-8 text-xs font-medium uppercase tracking-[0.34em] text-white/80"
         >
           {t('eyebrow')}
         </motion.span>
@@ -48,7 +86,7 @@ export default function HeroFinal() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.47, ease }}
-          className="mt-7 max-w-lg text-lg leading-relaxed text-black/80"
+          className="mt-7 max-w-lg text-lg leading-relaxed text-white/85"
         >
           {t('subtitle')}
         </motion.p>
@@ -61,13 +99,13 @@ export default function HeroFinal() {
         >
           <Link
             href="/#kontakt"
-            className="rounded-md bg-black px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-black/80"
+            className="rounded-md bg-white px-8 py-3.5 text-sm font-semibold text-black transition-colors hover:bg-white/90"
           >
             {t('ctaPrimary')}
           </Link>
           <Link
             href="/#leistungen"
-            className="rounded-md border border-black/40 px-8 py-3.5 text-sm font-medium text-black transition-colors hover:border-black"
+            className="rounded-md border border-white/40 px-8 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:border-white"
           >
             {t('ctaSecondary')}
           </Link>
