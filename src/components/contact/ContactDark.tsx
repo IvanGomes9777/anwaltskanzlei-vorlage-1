@@ -19,7 +19,7 @@ export default function ContactDark() {
         className="pointer-events-none absolute inset-0 opacity-[0.4]"
         style={{
           background:
-            'radial-gradient(55% 55% at 90% 0%, rgba(114,134,144,0.16) 0%, transparent 60%)',
+            'radial-gradient(55% 55% at 90% 0%, rgba(194,161,77,0.16) 0%, transparent 60%)',
         }}
       />
       <div className="container-content relative grid gap-14 py-24 md:grid-cols-[0.9fr_1.1fr] md:py-28">

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: 114 134 144; /* #728690 */
+  --background: 250 248 243; /* sand-50 */
   --foreground: 17 22 29; /* ink */
 }
 
@@ -23,7 +23,7 @@
     letter-spacing: -0.02em;
   }
   ::selection {
-    background-color: #728690;
+    background-color: #c2a14d;
     color: #0f1b2d;
   }
 }
