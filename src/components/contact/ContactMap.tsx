@@ -35,7 +35,7 @@ export default function ContactMap() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-black">
+                  <p className="text-xs font-bold uppercase tracking-wide text-gray-700">
                     {t('addressTitle')}
                   </p>
                   <p className="mt-1 text-sm text-white/80">
@@ -43,7 +43,7 @@ export default function ContactMap() {
                     <br />
                     {t('address2')}
                   </p>
-                  <p className="mt-3 text-xs font-bold uppercase tracking-wide text-black">
+                  <p className="mt-3 text-xs font-bold uppercase tracking-wide text-gray-700">
                     {t('emailTitle')}
                   </p>
                   <a
@@ -54,7 +54,7 @@ export default function ContactMap() {
                   </a>
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-black">
+                  <p className="text-xs font-bold uppercase tracking-wide text-gray-700">
                     {t('phoneTitle')}
                   </p>
                   <a
@@ -63,7 +63,7 @@ export default function ContactMap() {
                   >
                     {t('phone')}
                   </a>
-                  <p className="mt-3 text-xs font-bold uppercase tracking-wide text-black">
+                  <p className="mt-3 text-xs font-bold uppercase tracking-wide text-gray-700">
                     {t('faxTitle')}
                   </p>
                   <p className="mt-1 text-sm text-white/80">{t('fax')}</p>
