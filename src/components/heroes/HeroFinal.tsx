@@ -59,7 +59,7 @@ export default function HeroFinal() {
         >
           <span className="h-12 w-px bg-gradient-to-b from-transparent to-white" />
           <span className="my-4 font-serif text-6xl font-semibold tracking-tight text-white md:text-7xl">
-            H<span className="text-white">·</span>V
+            L<span className="text-white">·</span>R
           </span>
           <span className="h-12 w-px bg-gradient-to-t from-transparent to-white" />
         </motion.div>
