@@ -38,22 +38,22 @@ function Gallery() {
   ];
 
   return (
-    <div className="bg-navy-900">
+    <div className="bg-[#728690]">
       {/* Sticky Vergleichsleiste */}
-      <header className="sticky top-0 z-40 border-b border-sand-100/10 bg-navy-900/90 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-black/10 bg-[#728690]/90 backdrop-blur">
         <div className="container-content flex flex-col gap-3 py-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="font-serif text-lg font-semibold text-sand-100">
+            <h1 className="font-serif text-lg font-semibold text-black">
               {t('heading')}
             </h1>
-            <p className="max-w-2xl text-sm text-sand-100/55">{t('intro')}</p>
+            <p className="max-w-2xl text-sm text-black/55">{t('intro')}</p>
           </div>
           <nav className="flex flex-wrap gap-2">
             {variants.map((v, i) => (
               <a
                 key={v.id}
                 href={`#${v.id}`}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-sand-100/20 text-sm font-medium text-sand-100/80 transition-colors hover:border-gold hover:text-gold"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-black/20 text-sm font-medium text-black/80 transition-colors hover:border-white hover:text-black"
               >
                 {i + 1}
               </a>
@@ -66,18 +66,18 @@ function Gallery() {
       {variants.map((v) => (
         <section key={v.id} id={v.id} className="scroll-mt-24">
           <div className="container-content flex items-baseline gap-3 py-5">
-            <span className="font-serif text-sm font-semibold uppercase tracking-[0.18em] text-gold-400">
+            <span className="font-serif text-sm font-semibold uppercase tracking-[0.18em] text-black">
               {v.name}
             </span>
-            <span className="text-sm text-sand-100/45">— {v.desc}</span>
+            <span className="text-sm text-black/45">— {v.desc}</span>
           </div>
-          <div className="overflow-hidden border-y border-sand-100/10">
+          <div className="overflow-hidden border-y border-black/10">
             {v.node}
           </div>
         </section>
       ))}
 
-      <div className="container-content py-16 text-center text-sm text-sand-100/50">
+      <div className="container-content py-16 text-center text-sm text-black/50">
         ↑ {t('intro')}
       </div>
     </div>

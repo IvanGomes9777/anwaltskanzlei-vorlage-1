@@ -8,14 +8,14 @@ export default function TeamLargeGrid() {
   const members = useMembers();
 
   return (
-    <section className="bg-sand-50">
+    <section className="bg-[#728690]">
       <div className="container-content py-24 md:py-28">
         <Reveal>
           <div className="max-w-2xl">
-            <span className="text-xs font-medium uppercase tracking-[0.24em] text-gold-600">
+            <span className="text-xs font-medium uppercase tracking-[0.24em] text-black">
               {t('eyebrow')}
             </span>
-            <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight text-navy md:text-5xl">
+            <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
               {t('heading')}
             </h2>
           </div>
@@ -34,14 +34,14 @@ export default function TeamLargeGrid() {
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   />
                 </div>
-                <div className="mt-5 flex items-baseline justify-between border-t border-navy/12 pt-4">
+                <div className="mt-5 flex items-baseline justify-between border-t border-black/12 pt-4">
                   <div>
-                    <h3 className="font-serif text-2xl font-semibold text-navy">
+                    <h3 className="font-serif text-2xl font-semibold text-white">
                       {m.name}
                     </h3>
-                    <p className="mt-1 text-sm text-navy/55">{m.area}</p>
+                    <p className="mt-1 text-sm text-black/55">{m.area}</p>
                   </div>
-                  <span className="text-xs uppercase tracking-wide text-gold-600">
+                  <span className="text-xs uppercase tracking-wide text-black">
                     {m.role}
                   </span>
                 </div>

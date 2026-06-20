@@ -8,20 +8,17 @@ export default async function DatenschutzPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const en = locale === 'en';
 
   return (
     <LegalShell
-      title={en ? 'Privacy Policy' : 'Datenschutzerklärung'}
-      updated={en ? 'Template – to be reviewed by a lawyer before going live.' : 'Vorlage – vor Veröffentlichung anwaltlich prüfen lassen.'}
+      title="Datenschutzerklärung"
+      updated="Vorlage – vor Veröffentlichung anwaltlich prüfen lassen."
     >
-      <div className="mb-8 rounded-lg border border-gold/30 bg-gold/[0.06] p-4 text-sm text-navy/70">
-        {en
-          ? 'Note: Sample/placeholder content. Adapt to your actual data processing, tools and hosting, and have it reviewed legally before publishing.'
-          : 'Hinweis: Beispiel-/Platzhalterinhalt. An die tatsächliche Datenverarbeitung, eingesetzte Tools und das Hosting anpassen und vor Veröffentlichung rechtlich prüfen lassen.'}
+      <div className="mb-8 rounded-lg border border-white/30 bg-white/[0.06] p-4 text-sm text-black/70">
+        Hinweis: Beispiel-/Platzhalterinhalt. An die tatsächliche Datenverarbeitung, eingesetzte Tools und das Hosting anpassen und vor Veröffentlichung rechtlich prüfen lassen.
       </div>
 
-      {en ? <DatenschutzEN /> : <DatenschutzDE />}
+      <DatenschutzDE />
     </LegalShell>
   );
 }
@@ -35,11 +32,11 @@ function DatenschutzDE() {
         Datenschutz-Grundverordnung (DSGVO) ist:
       </p>
       <p>
-        Hoffmann · Vogel Rechtsanwälte [Platzhalter]
+        Lübbersmann Rechtsanwälte
         <br />
-        Maximilianstraße 12, 80539 München
+        Südstraße 11, 48153 Münster
         <br />
-        E-Mail: datenschutz@hoffmann-vogel.example [Platzhalter]
+        E-Mail: luebbersmann@luebersmann-rechtsanwaelte.de
       </p>
 
       <h2>2. Ihre Rechte als betroffene Person</h2>
@@ -91,13 +88,14 @@ function DatenschutzDE() {
         werden, hier vermerken.]
       </p>
 
-      <h2>7. Eingebundener Kartendienst (OpenStreetMap)</h2>
+      <h2>7. Eingebundener Kartendienst (Google Maps)</h2>
       <p>
-        Zur Darstellung der Anfahrt binden wir Karten von OpenStreetMap (OpenStreetMap
-        Foundation, St John&apos;s Innovation Centre, Cowley Road, Cambridge, CB4 0WS, UK)
-        ein. Beim Laden der Karte wird Ihre IP-Adresse an OpenStreetMap übermittelt.
-        Rechtsgrundlage ist unser berechtigtes Interesse an einer ansprechenden
-        Darstellung (Art. 6 Abs. 1 lit. f DSGVO) bzw. Ihre Einwilligung.
+        Zur Darstellung der Anfahrt binden wir Karten von Google Maps ein (Anbieter:
+        Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden
+        der Karte wird Ihre IP-Adresse an Google übermittelt; dabei können Daten auch in
+        die USA übertragen werden. Rechtsgrundlage ist unser berechtigtes Interesse an
+        einer ansprechenden Darstellung (Art. 6 Abs. 1 lit. f DSGVO) bzw. Ihre
+        Einwilligung gemäß § 25 Abs. 1 TDDDG.
       </p>
 
       <h2>8. SSL-/TLS-Verschlüsselung</h2>
@@ -118,97 +116,6 @@ function DatenschutzDE() {
         Diese Datenschutzerklärung ist aktuell gültig. Durch Weiterentwicklung der
         Website oder geänderte gesetzliche Vorgaben kann eine Anpassung erforderlich
         werden.
-      </p>
-    </>
-  );
-}
-
-function DatenschutzEN() {
-  return (
-    <>
-      <h2>1. Controller</h2>
-      <p>
-        The controller responsible for data processing on this website within the meaning
-        of the General Data Protection Regulation (GDPR) is:
-      </p>
-      <p>
-        Hoffmann · Vogel Rechtsanwälte [placeholder]
-        <br />
-        Maximilianstraße 12, 80539 Munich, Germany
-        <br />
-        Email: datenschutz@hoffmann-vogel.example [placeholder]
-      </p>
-
-      <h2>2. Your rights as a data subject</h2>
-      <ul>
-        <li>Right of access (Art. 15 GDPR)</li>
-        <li>Right to rectification (Art. 16 GDPR)</li>
-        <li>Right to erasure (Art. 17 GDPR)</li>
-        <li>Right to restriction of processing (Art. 18 GDPR)</li>
-        <li>Right to data portability (Art. 20 GDPR)</li>
-        <li>Right to object (Art. 21 GDPR)</li>
-        <li>Right to withdraw consent (Art. 7(3) GDPR)</li>
-      </ul>
-
-      <h2>3. Server log files</h2>
-      <p>
-        When you access the website, information is automatically transmitted to the
-        server (e.g. IP address, date and time, page accessed, browser type, operating
-        system) to ensure secure and stable operation. The legal basis is our legitimate
-        interest under Art. 6(1)(f) GDPR.
-      </p>
-
-      <h2>4. Hosting</h2>
-      <p>
-        This website is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789,
-        USA. Personal data (in particular access data) may be transferred to the USA on
-        the basis of the EU Commission&apos;s Standard Contractual Clauses. Legal basis:
-        Art. 6(1)(f) GDPR. A data processing agreement under Art. 28 GDPR is in place.
-      </p>
-
-      <h2>5. Contact form and contact</h2>
-      <p>
-        If you contact us via the form or by email, your details are stored to process
-        the enquiry. The legal basis is your consent (Art. 6(1)(a) GDPR) and, where a
-        mandate is initiated, Art. 6(1)(b) GDPR. Data is deleted once it is no longer
-        required and no statutory retention obligations apply. Please note that
-        unencrypted email transmission carries security risks.
-      </p>
-
-      <h2>6. Cookies</h2>
-      <p>
-        This website uses technically necessary cookies required for operation (legal
-        basis Art. 6(1)(f) GDPR and § 25(2) TDDDG). Non-essential cookies or tracking are
-        only used with your consent under § 25(1) TDDDG. [Note here if no tracking cookies
-        are used.]
-      </p>
-
-      <h2>7. Embedded map service (OpenStreetMap)</h2>
-      <p>
-        To show directions we embed maps from OpenStreetMap (OpenStreetMap Foundation,
-        Cambridge, UK). When the map loads, your IP address is transmitted to
-        OpenStreetMap. The legal basis is our legitimate interest in an appealing
-        presentation (Art. 6(1)(f) GDPR) or your consent.
-      </p>
-
-      <h2>8. SSL/TLS encryption</h2>
-      <p>
-        For security reasons this website uses SSL/TLS encryption. You can recognise an
-        encrypted connection by &quot;https://&quot; in the address bar.
-      </p>
-
-      <h2>9. Right to lodge a complaint</h2>
-      <p>
-        You have the right to lodge a complaint with a data protection supervisory
-        authority. The competent authority is the Bavarian State Office for Data
-        Protection Supervision (BayLDA), Promenade 27, 91522 Ansbach [adjust if
-        applicable].
-      </p>
-
-      <h2>10. Updates</h2>
-      <p>
-        This privacy policy is currently valid. Further development of the website or
-        changes in legal requirements may make adjustments necessary.
       </p>
     </>
   );

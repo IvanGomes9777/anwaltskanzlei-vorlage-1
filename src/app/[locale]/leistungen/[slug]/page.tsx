@@ -20,72 +20,79 @@ export default async function PracticePage({
   const practice = getPractice(slug);
   if (!practice) notFound();
 
-  const en = locale === 'en';
-  const c = en ? practice.en : practice.de;
+  const c = practice.de;
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
-        {/* Kopf */}
-        <section className="relative overflow-hidden bg-navy-900 text-sand-100">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 opacity-[0.4]"
-            style={{
-              background:
-                'radial-gradient(60% 60% at 80% 0%, rgba(194,161,77,0.16) 0%, transparent 60%)',
-            }}
-          />
-          <div className="container-content relative py-20 md:py-28">
-            <Link href="/#leistungen" className="text-sm text-sand-100/60 transition-colors hover:text-gold-400">
-              ← {en ? 'All practice areas' : 'Alle Rechtsgebiete'}
+      <main className="flex-1 bg-white">
+        <article className="container-content max-w-3xl py-16 md:py-24">
+          <Link
+            href="/#leistungen"
+            className="text-sm text-[#728690] transition-opacity hover:opacity-80"
+          >
+            ← Alle Rechtsgebiete
+          </Link>
+
+          <p className="mt-6 text-xs font-medium uppercase tracking-[0.24em] text-[#728690]">
+            {c.tagline}
+          </p>
+          <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-[#728690] md:text-5xl">
+            {c.title}
+          </h1>
+          <div className="mt-6 h-px w-16 bg-[#728690]" />
+          <p className="mt-8 text-lg leading-relaxed text-black/80">{c.intro}</p>
+
+          <div className="mt-12 space-y-10">
+            {c.sections.map((s, i) => (
+              <Reveal key={i} delay={0.05}>
+                <section>
+                  {s.heading && (
+                    <h2 className="font-serif text-2xl font-semibold text-[#728690]">
+                      {s.heading}
+                    </h2>
+                  )}
+                  {s.paragraphs?.map((p, j) => (
+                    <p key={j} className="mt-4 leading-relaxed text-black/80">
+                      {p}
+                    </p>
+                  ))}
+                  {s.bullets && (
+                    <ul className="mt-5 space-y-2.5">
+                      {s.bullets.map((b) => (
+                        <li
+                          key={b}
+                          className="flex items-start gap-3 text-black/80"
+                        >
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#728690]" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Kontakt-Abschluss */}
+          <div className="mt-14 rounded-2xl border border-[#728690] bg-white p-8 text-center">
+            <h2 className="font-serif text-2xl font-semibold text-[#728690]">
+              Lassen Sie Ihren Fall prüfen
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-black/75">
+              Je früher wir eingreifen, desto größer sind die Möglichkeiten, den Verlauf
+              des Verfahrens zu beeinflussen. Wir zeigen Ihnen klar und realistisch, welche
+              Optionen Sie haben.
+            </p>
+            <Link
+              href="/#kontakt"
+              className="mt-6 inline-block rounded-md bg-[#728690] px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#5d6e77]"
+            >
+              Kontakt aufnehmen
             </Link>
-            <p className="mt-6 text-xs font-medium uppercase tracking-[0.24em] text-gold-400">
-              {c.tagline}
-            </p>
-            <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight md:text-6xl">
-              {c.title}
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-sand-100/75">
-              {c.intro}
-            </p>
           </div>
-        </section>
-
-        {/* Inhalt */}
-        <section className="bg-sand-50">
-          <div className="container-content grid gap-12 py-20 md:grid-cols-[1fr_0.8fr] md:py-24">
-            <Reveal>
-              <h2 className="font-serif text-2xl font-semibold text-navy">
-                {en ? 'What we handle' : 'Was wir übernehmen'}
-              </h2>
-              <ul className="mt-6 space-y-3">
-                {c.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-3 border-b border-navy/10 pb-3 text-navy/75">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <div className="rounded-2xl border border-navy/10 bg-white p-7">
-                <h3 className="font-serif text-lg font-semibold text-navy">
-                  {en ? 'Our approach' : 'Unsere Arbeitsweise'}
-                </h3>
-                <p className="mt-3 leading-relaxed text-navy/70">{c.approach}</p>
-                <Link
-                  href="/#kontakt"
-                  className="mt-6 inline-block rounded-md bg-navy px-7 py-3.5 text-sm font-medium text-sand-50 transition-colors hover:bg-navy-700"
-                >
-                  {en ? 'Request a consultation' : 'Erstberatung anfragen'}
-                </Link>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        </article>
       </main>
       <Footer />
     </div>

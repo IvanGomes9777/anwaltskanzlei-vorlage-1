@@ -6,13 +6,13 @@ export default function ContactMap() {
   const t = useTranslations('contact');
 
   return (
-    <section className="bg-sand-50">
+    <section className="flex min-h-[calc(100vh-5rem)] flex-col justify-center bg-[#728690]">
       <div className="container-content py-24 md:py-28">
         <Reveal>
-          <span className="text-xs font-medium uppercase tracking-[0.24em] text-gold-600">
+          <span className="text-xs font-medium uppercase tracking-[0.24em] text-black">
             {t('eyebrow')}
           </span>
-          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-navy md:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-black md:text-5xl">
             {t('heading')}
           </h2>
         </Reveal>
@@ -24,34 +24,49 @@ export default function ContactMap() {
 
           <Reveal delay={0.12}>
             <div className="flex h-full flex-col gap-6">
-              <div className="overflow-hidden rounded-2xl border border-navy/10">
+              <div className="overflow-hidden rounded-2xl border border-black/10">
                 <iframe
                   title={t('mapLabel')}
                   className="h-[320px] w-full md:h-[380px]"
                   loading="lazy"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=11.5760%2C48.1380%2C11.5880%2C48.1430&layer=mapnik&marker=48.1405%2C11.5820"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=S%C3%BCdstra%C3%9Fe%2011%2C%2048153%20M%C3%BCnster&output=embed"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-gold-600">
+                  <p className="text-xs uppercase tracking-wide text-white">
                     {t('addressTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-navy/75">
+                  <p className="mt-1 text-sm text-white/80">
                     {t('address1')}
                     <br />
                     {t('address2')}
                   </p>
+                  <p className="mt-3 text-xs uppercase tracking-wide text-white">
+                    {t('emailTitle')}
+                  </p>
+                  <a
+                    href={`mailto:${t('email')}`}
+                    className="mt-1 block break-all text-sm text-white/80 underline-offset-2 hover:underline"
+                  >
+                    {t('email')}
+                  </a>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-gold-600">
+                  <p className="text-xs uppercase tracking-wide text-white">
                     {t('phoneTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-navy/75">{t('phone')}</p>
-                  <p className="mt-3 text-xs uppercase tracking-wide text-gold-600">
-                    {t('hoursTitle')}
+                  <a
+                    href={`tel:${t('phone').replace(/\s/g, '')}`}
+                    className="mt-1 block text-sm text-white/80 underline-offset-2 hover:underline"
+                  >
+                    {t('phone')}
+                  </a>
+                  <p className="mt-3 text-xs uppercase tracking-wide text-white">
+                    {t('faxTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-navy/75">{t('hours')}</p>
+                  <p className="mt-1 text-sm text-white/80">{t('fax')}</p>
                 </div>
               </div>
             </div>

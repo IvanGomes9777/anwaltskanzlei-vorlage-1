@@ -21,8 +21,8 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Hoffmann · Vogel – Rechtsanwälte',
-  description: 'Anwaltskanzlei – Vorlage. Rechtssicherheit mit Weitblick.',
+  title: 'Lübbersmann Rechtsanwälte',
+  description: 'Lübbersmann Rechtsanwälte – Strafverteidigung in Münster.',
 };
 
 export function generateStaticParams() {

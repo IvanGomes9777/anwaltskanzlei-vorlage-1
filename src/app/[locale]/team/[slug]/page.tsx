@@ -21,71 +21,83 @@ export default async function AttorneyPage({
   const attorney = getAttorney(slug);
   if (!attorney) notFound();
 
-  const en = locale === 'en';
-  const c = en ? attorney.en : attorney.de;
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 bg-sand-50">
-        <div className="container-content py-16 md:py-24">
-          <Link href="/#team" className="text-sm text-navy/55 transition-colors hover:text-gold-600">
-            ← {en ? 'All attorneys' : 'Zum Team'}
+      <main className="flex-1 bg-white">
+        <div className="container-content max-w-3xl py-16 md:py-24">
+          <Link
+            href="/#team"
+            className="text-sm text-[#728690] transition-opacity hover:opacity-80"
+          >
+            ← Zu den Anwälten
           </Link>
 
-          <div className="mt-8 grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
+          <div className="mt-8 grid gap-8 sm:grid-cols-[280px_1fr] sm:items-end">
             <Reveal>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
                 <Image
                   src={attorney.img}
                   alt={attorney.name}
                   fill
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  sizes="(max-width: 640px) 100vw, 280px"
                   className="object-cover"
                   priority
                 />
               </div>
             </Reveal>
-
             <Reveal delay={0.1}>
               <div>
-                <p className="text-xs uppercase tracking-[0.24em] text-gold-600">
-                  {c.role}
+                <p className="text-xs uppercase tracking-[0.2em] text-black/70">
+                  {attorney.role}
                 </p>
-                <h1 className="mt-3 font-serif text-4xl font-semibold text-navy md:text-5xl">
+                <h1 className="mt-2 font-serif text-4xl font-semibold text-[#728690] md:text-5xl">
                   {attorney.name}
                 </h1>
-                <p className="mt-2 text-navy/55">{c.area}</p>
-                <div className="hairline-gold mt-6" />
-
-                {c.vita.map((p, i) => (
-                  <p key={i} className="mt-5 leading-relaxed text-navy/75">
-                    {p}
-                  </p>
-                ))}
-
-                <h2 className="mt-10 font-serif text-lg font-semibold text-navy">
-                  {en ? 'Focus areas' : 'Schwerpunkte'}
-                </h2>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {c.focus.map((f) => (
-                    <li
-                      key={f}
-                      className="rounded-full border border-navy/15 px-4 py-1.5 text-sm text-navy/70"
-                    >
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="/#kontakt"
-                  className="mt-10 inline-block rounded-md bg-navy px-7 py-3.5 text-sm font-medium text-sand-50 transition-colors hover:bg-navy-700"
-                >
-                  {en ? 'Request a consultation' : 'Erstberatung anfragen'}
-                </Link>
               </div>
             </Reveal>
+          </div>
+
+          <div className="mt-12 h-px w-16 bg-[#728690]" />
+          <h2 className="mt-10 font-serif text-2xl font-semibold text-[#728690]">
+            Werdegang
+          </h2>
+
+          <div className="mt-8 border-l-2 border-[#728690]/30 pl-7">
+            {attorney.werdegang.map((entry, i) => (
+              <Reveal key={i} delay={i * 0.06}>
+                <div className="relative pb-9 last:pb-0">
+                  <span className="absolute -left-[35px] top-1 h-3 w-3 rounded-full border-2 border-[#728690] bg-white" />
+                  <p className="font-serif text-lg font-semibold text-[#728690]">
+                    {entry.year}
+                  </p>
+                  <ul className="mt-2 space-y-1.5">
+                    {entry.items.map((it) => (
+                      <li key={it} className="leading-relaxed text-black/80">
+                        {it}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Kontakt-Abschluss */}
+          <div className="mt-14 rounded-2xl border border-[#728690] bg-white p-8 text-center">
+            <h2 className="font-serif text-2xl font-semibold text-[#728690]">
+              Persönliches Gespräch vereinbaren
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-black/75">
+              Schildern Sie uns Ihr Anliegen – wir melden uns zeitnah und besprechen die
+              nächsten Schritte.
+            </p>
+            <Link
+              href="/#kontakt"
+              className="mt-6 inline-block rounded-md bg-[#728690] px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#5d6e77]"
+            >
+              Kontakt aufnehmen
+            </Link>
           </div>
         </div>
       </main>

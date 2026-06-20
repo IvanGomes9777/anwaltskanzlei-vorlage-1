@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Presse-Sektion – 5 Optionen</title>
+<style>
+  :root{
+    --brand:#728690;
+    --brand-dark:#5d6e77;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:Inter,system-ui,Arial,sans-serif;color:#000;background:#e7eaec;}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:#fff;letter-spacing:-.02em;line-height:1.1;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  .optlabel{
+    max-width:1100px;margin:0 auto;padding:34px 24px 14px;
+  }
+  .optlabel .tag{display:inline-block;background:#000;color:#fff;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:6px;}
+  .optlabel p{margin-top:10px;color:#26323a;font-size:14px;max-width:680px;}
+  section.demo{background:var(--brand);padding:64px 0;}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#000;display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:"";width:32px;height:1px;background:#fff;display:inline-block;}
+  .head{font-size:40px;font-weight:600;margin-top:14px;max-width:640px;}
+  .sub{margin-top:18px;color:rgba(0,0,0,.7);max-width:560px;font-size:17px;}
+  a{color:inherit;}
+
+  /* shared press item bits */
+  .src{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(0,0,0,.6);}
+  .date{font-size:12px;color:rgba(0,0,0,.5);}
+  .headline{font-family:Georgia,serif;color:#fff;font-weight:600;}
+  .arrow{color:#000;}
+
+  /* OPTION 1 – Bekannt aus + Liste */
+  .logos{display:flex;flex-wrap:wrap;gap:14px 34px;align-items:center;margin-top:34px;opacity:.92;}
+  .logos span{font-family:Georgia,serif;color:#fff;font-size:20px;font-weight:600;}
+  .o1list{margin-top:40px;border-top:1px solid rgba(0,0,0,.15);}
+  .o1row{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(0,0,0,.15);}
+  .o1row .meta{display:flex;gap:16px;align-items:baseline;min-width:230px;}
+  .o1row .headline{font-size:18px;flex:1;}
+
+  /* OPTION 2 – Karten-Grid */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px;background:rgba(0,0,0,.12);border:1px solid rgba(0,0,0,.12);border-radius:16px;overflow:hidden;}
+  .card{background:var(--brand);padding:28px;display:flex;flex-direction:column;min-height:230px;}
+  .card .headline{font-size:21px;margin:14px 0 10px;}
+  .card .teaser{font-size:14px;color:rgba(0,0,0,.78);flex:1;}
+  .card .more{margin-top:16px;font-size:13px;font-weight:600;color:#000;}
+
+  /* OPTION 3 – Marquee */
+  .marquee{margin-top:44px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+  .track{display:flex;gap:18px;width:max-content;animation:scroll 26s linear infinite;}
+  .chip{background:rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.12);border-radius:12px;padding:18px 22px;width:300px;flex:0 0 auto;}
+  .chip .headline{font-size:17px;margin-top:8px;}
+  @keyframes scroll{to{transform:translateX(-50%);}}
+
+  /* OPTION 4 – Featured + Liste */
+  .o4{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;margin-top:44px;}
+  .feat{background:rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.12);border-radius:16px;padding:34px;}
+  .feat .src{color:rgba(0,0,0,.65);}
+  .feat .quote{font-family:Georgia,serif;color:#fff;font-size:28px;font-weight:600;line-height:1.25;margin:16px 0 18px;}
+  .feat .more{font-weight:600;font-size:14px;color:#000;}
+  .o4list{display:flex;flex-direction:column;}
+  .o4item{padding:16px 0;border-bottom:1px solid rgba(0,0,0,.15);}
+  .o4item:first-child{padding-top:0;}
+  .o4item .headline{font-size:16px;margin-top:6px;}
+
+  /* OPTION 5 – Timeline */
+  .timeline{margin-top:44px;border-left:2px solid rgba(0,0,0,.25);padding-left:26px;display:flex;flex-direction:column;gap:30px;}
+  .tl{position:relative;}
+  .tl::before{content:"";position:absolute;left:-33px;top:4px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--brand-dark);}
+  .tl .date{font-size:13px;}
+  .tl .headline{font-size:20px;margin:6px 0 4px;}
+
+  @media(max-width:820px){
+    .grid3{grid-template-columns:1fr;}
+    .o4{grid-template-columns:1fr;}
+    .head{font-size:30px;}
+    .o1row{flex-direction:column;align-items:flex-start;gap:6px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="optlabel" style="padding-top:40px;">
+  <span class="tag">Presse-Sektion · 5 Design-Optionen</span>
+  <p>Alle Beispiele im Kanzlei-Design (Fläche #728690, weiße Überschriften, schwarzer Text). Inhalte sind Platzhalter – echte Presse-Links kommen später. Sag mir die Nummer der Variante, die dir am besten gefällt.</p>
+</div>
+
+<!-- OPTION 1 -->
+<div class="optlabel"><span class="tag">Option 1 — „Bekannt aus" + Artikel-Liste</span></div>
+<section class="demo"><div class="wrap">
+  <span class="eyebrow">Presse</span>
+  <h2 class="head">In den Medien</h2>
+  <div class="logos"><span>SZ</span><span>FAZ</span><span>Handelsblatt</span><span>LTO</span><span>Der Spiegel</span></div>
+  <div class="o1list">
+    <div class="o1row"><div class="meta"><span class="src">Süddeutsche Zeitung</span><span class="date">14.03.2026</span></div><span class="headline">„Medizinstrafrecht: Wenn die Abrechnung zum Verfahren wird"</span><span class="arrow">→</span></div>
+    <div class="o1row"><div class="meta"><span class="src">Legal Tribune Online</span><span class="date">02.02.2026</span></div><span class="headline">Interview zur Selbstanzeige im Steuerstrafrecht</span><span class="arrow">→</span></div>
+    <div class="o1row"><div class="meta"><span class="src">Handelsblatt</span><span class="date">19.12.2025</span></div><span class="headline">Compliance: So schützen sich Unternehmen vor Ermittlungen</span><span class="arrow">→</span></div>
+  </div>
+</div></section>
+
+<!-- OPTION 2 -->
+<div class="optlabel"><span class="tag">Option 2 — Karten-Grid (3 Spalten)</span></div>
+<section class="demo"><div class="wrap">
+  <span class="eyebrow">Presse</span>
+  <h2 class="head">Aktuelles aus der Presse</h2>
+  <div class="grid3">
+    <div class="card"><span class="src">Süddeutsche Zeitung</span><h3 class="headline">Medizinstrafrecht im Fokus</h3><p class="teaser">Unsere Einschätzung zu aktuellen Ermittlungen gegen Ärzte und Kliniken.</p><span class="more">Zum Artikel →</span></div>
+    <div class="card"><span class="src">Legal Tribune Online</span><h3 class="headline">Selbstanzeige richtig gemacht</h3><p class="teaser">Worauf es bei der strafbefreienden Selbstanzeige wirklich ankommt.</p><span class="more">Zum Artikel →</span></div>
+    <div class="card"><span class="src">Handelsblatt</span><h3 class="headline">Compliance zahlt sich aus</h3><p class="teaser">Wie Unternehmen Risiken früh erkennen und Verfahren vermeiden.</p><span class="more">Zum Artikel →</span></div>
+  </div>
+</div></section>
+
+<!-- OPTION 3 -->
+<div class="optlabel"><span class="tag">Option 3 — Endlos-Laufband (Marquee)</span></div>
+<section class="demo"><div class="wrap">
+  <span class="eyebrow">Presse</span>
+  <h2 class="head">Medienpräsenz</h2>
+  <p class="sub">Schlagzeilen laufen automatisch durch – ideal für viele Quellen.</p>
+</div>
+<div class="marquee"><div class="track">
+  <div class="chip"><span class="src">SZ</span><h3 class="headline">Medizinstrafrecht im Fokus</h3></div>
+  <div class="chip"><span class="src">LTO</span><h3 class="headline">Selbstanzeige richtig gemacht</h3></div>
+  <div class="chip"><span class="src">Handelsblatt</span><h3 class="headline">Compliance zahlt sich aus</h3></div>
+  <div class="chip"><span class="src">FAZ</span><h3 class="headline">Wirtschaftsstrafrecht aktuell</h3></div>
+  <!-- Duplikat für nahtlose Schleife -->
+  <div class="chip"><span class="src">SZ</span><h3 class="headline">Medizinstrafrecht im Fokus</h3></div>
+  <div class="chip"><span class="src">LTO</span><h3 class="headline">Selbstanzeige richtig gemacht</h3></div>
+  <div class="chip"><span class="src">Handelsblatt</span><h3 class="headline">Compliance zahlt sich aus</h3></div>
+  <div class="chip"><span class="src">FAZ</span><h3 class="headline">Wirtschaftsstrafrecht aktuell</h3></div>
+</div></div>
+</section>
+
+<!-- OPTION 4 -->
+<div class="optlabel"><span class="tag">Option 4 — Hauptartikel + Liste</span></div>
+<section class="demo"><div class="wrap">
+  <span class="eyebrow">Presse</span>
+  <h2 class="head">Im Gespräch</h2>
+  <div class="o4">
+    <div class="feat">
+      <span class="src">Süddeutsche Zeitung · 14.03.2026</span>
+      <p class="quote">„Im Medizinstrafrecht entscheidet die frühe Verteidigung über Approbation und Ruf."</p>
+      <span class="more">Ganzen Artikel lesen →</span>
+    </div>
+    <div class="o4list">
+      <div class="o4item"><span class="src">Legal Tribune Online</span><h3 class="headline">Selbstanzeige im Steuerstrafrecht</h3></div>
+      <div class="o4item"><span class="src">Handelsblatt</span><h3 class="headline">Compliance als Schutzschild</h3></div>
+      <div class="o4item"><span class="src">FAZ</span><h3 class="headline">Durchsuchung – und jetzt?</h3></div>
+      <div class="o4item"><span class="src">Der Spiegel</span><h3 class="headline">Wirtschaftsstrafrecht im Wandel</h3></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- OPTION 5 -->
+<div class="optlabel"><span class="tag">Option 5 — Zeitstrahl / Timeline</span></div>
+<section class="demo"><div class="wrap">
+  <span class="eyebrow">Presse</span>
+  <h2 class="head">Presse im Zeitverlauf</h2>
+  <div class="timeline">
+    <div class="tl"><span class="date">März 2026 · Süddeutsche Zeitung</span><h3 class="headline">Medizinstrafrecht: Wenn die Abrechnung zum Verfahren wird</h3></div>
+    <div class="tl"><span class="date">Februar 2026 · Legal Tribune Online</span><h3 class="headline">Interview zur Selbstanzeige im Steuerstrafrecht</h3></div>
+    <div class="tl"><span class="date">Dezember 2025 · Handelsblatt</span><h3 class="headline">Compliance: So schützen sich Unternehmen vor Ermittlungen</h3></div>
+  </div>
+</div></section>
+
+<div class="optlabel" style="padding-bottom:50px;"><p><strong>Welche Nummer (1–5)?</strong> Sag mir die Variante – dann baue ich sie in die Website ein und ersetze die Bewertungs-Sektion.</p></div>
+
+</body>
+</html>
