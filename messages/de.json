@@ -8,7 +8,7 @@
     "home": "Start",
     "services": "Leistungen",
     "firm": "Kanzlei",
-    "team": "Team",
+    "team": "Anwälte",
     "reviews": "Bewertungen",
     "press": "Presse",
     "costs": "Kosten",
@@ -139,7 +139,7 @@
     "v5Desc": "Vollbild-Foto mit Overlay-Text"
   },
   "team": {
-    "eyebrow": "Das Team",
+    "eyebrow": "Die Anwälte",
     "heading": "Anwälte, die zuhören.",
     "intro": "Erfahrene Juristinnen und Juristen mit klaren Schwerpunkten – an Ihrer Seite.",
     "cta": "Profil ansehen",

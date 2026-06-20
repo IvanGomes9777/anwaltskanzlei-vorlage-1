@@ -30,7 +30,7 @@ export default async function AttorneyPage({
             href="/#team"
             className="text-sm text-[#728690] transition-opacity hover:opacity-80"
           >
-            ← Zum Team
+            ← Zu den Anwälten
           </Link>
 
           <div className="mt-8 grid gap-8 sm:grid-cols-[280px_1fr] sm:items-end">
