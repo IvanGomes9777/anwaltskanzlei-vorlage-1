@@ -12,10 +12,9 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
   const [status, setStatus] = useState<Status>('idle');
 
   const areas = [
-    { slug: 'arbeitsrecht', label: a('a1') },
-    { slug: 'familienrecht', label: a('a2') },
-    { slug: 'wirtschaftsrecht', label: a('a3') },
-    { slug: 'strafrecht', label: a('a4') },
+    { slug: 'medizinstrafrecht', label: a('a1') },
+    { slug: 'wirtschaftsstrafrecht', label: a('a2') },
+    { slug: 'steuerstrafrecht', label: a('a3') },
   ];
 
   const labelCls = dark ? 'text-sand-100/70' : 'text-navy/60';

@@ -68,24 +68,21 @@
     "v10Desc": "Farbblock Navy/Sand, modern-editorial"
   },
   "areas": {
-    "a1": "Arbeitsrecht",
-    "a2": "Familien- & Erbrecht",
-    "a3": "Vertrags- & Wirtschaftsrecht",
-    "a4": "Strafrecht"
+    "a1": "Medizinstrafrecht",
+    "a2": "Wirtschaftsstrafrecht",
+    "a3": "Steuerstrafrecht"
   },
   "services": {
     "eyebrow": "Rechtsgebiete",
-    "heading": "Vier Schwerpunkte, ein Anspruch.",
+    "heading": "Drei Schwerpunkte, ein Anspruch.",
     "intro": "Ob privat oder unternehmerisch – wir vertreten Ihre Interessen mit Klarheit, Erfahrung und Nachdruck.",
     "cta": "Mehr erfahren",
-    "d1": "Kündigung, Abfindung und Aufhebungsverträge: Wir vertreten Arbeitnehmer wie Arbeitgeber durchsetzungsstark – außergerichtlich und vor dem Arbeitsgericht.",
-    "d2": "Scheidung, Unterhalt und Sorgerecht ebenso wie Testamente und Nachlass – einfühlsam beraten und vorausschauend geregelt.",
-    "d3": "Verträge, Gesellschaftsrecht und Haftungsfragen: rechtssichere Lösungen für Unternehmen, Gründer und Selbstständige.",
-    "d4": "Verteidigung im Ermittlungs- und Strafverfahren – diskret, entschlossen und mit voller Aufmerksamkeit für Ihren Fall.",
-    "t1": "Kündigungsschutz, Abfindung, Arbeitsvertrag",
-    "t2": "Scheidung, Unterhalt, Erbrecht",
-    "t3": "Verträge, GmbH, Haftung",
-    "t4": "Verteidigung, Ermittlung, Revision"
+    "d1": "Vorwürfe wie Abrechnungsbetrug, Behandlungsfehler oder Korruption im Gesundheitswesen – wir verteidigen Ärztinnen, Ärzte und Kliniken mit fachlicher Tiefe und größter Diskretion.",
+    "d2": "Ermittlungen wegen Betrug, Untreue, Insolvenzdelikten oder Geldwäsche – wir begleiten Unternehmen und Verantwortliche von der Durchsuchung bis zur Hauptverhandlung.",
+    "d3": "Steuerhinterziehung, Selbstanzeige und Betriebsprüfungen mit strafrechtlichem Bezug – wir sichern Ihre Interessen gegenüber Finanzamt und Staatsanwaltschaft.",
+    "t1": "Abrechnungsbetrug, Behandlungsfehler, Korruption",
+    "t2": "Betrug, Untreue, Geldwäsche",
+    "t3": "Steuerhinterziehung, Selbstanzeige, Betriebsprüfung"
   },
   "variantsSvc": {
     "heading": "Leistungs-Sektion – 5 Varianten",

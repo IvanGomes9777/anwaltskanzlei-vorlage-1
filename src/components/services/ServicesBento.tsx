@@ -51,16 +51,6 @@ export default function ServicesBento() {
               </div>
             </article>
           </Reveal>
-
-          <Reveal className="md:col-span-3" delay={0.24}>
-            <article className="flex h-full flex-col justify-between gap-4 rounded-2xl border border-navy/10 bg-white p-7 md:flex-row md:items-center">
-              <div className="flex items-center gap-5">
-                <span className="font-serif text-sm text-gold-600">04</span>
-                <h3 className="font-serif text-xl font-semibold text-navy">{a('a4')}</h3>
-              </div>
-              <p className="max-w-2xl text-sm text-navy/65">{s('d4')}</p>
-            </article>
-          </Reveal>
         </div>
       </div>
     </section>

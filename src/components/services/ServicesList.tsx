@@ -9,7 +9,6 @@ export default function ServicesList() {
     { n: '01', title: a('a1'), desc: s('d1') },
     { n: '02', title: a('a2'), desc: s('d2') },
     { n: '03', title: a('a3'), desc: s('d3') },
-    { n: '04', title: a('a4'), desc: s('d4') },
   ];
 
   return (

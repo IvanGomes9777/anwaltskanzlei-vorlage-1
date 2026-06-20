@@ -7,10 +7,9 @@ export default function ServicesDark() {
   const s = useTranslations('services');
 
   const items = [
-    { n: '01', title: a('a1'), desc: s('d1'), tags: s('t1'), slug: 'arbeitsrecht' },
-    { n: '02', title: a('a2'), desc: s('d2'), tags: s('t2'), slug: 'familienrecht' },
-    { n: '03', title: a('a3'), desc: s('d3'), tags: s('t3'), slug: 'wirtschaftsrecht' },
-    { n: '04', title: a('a4'), desc: s('d4'), tags: s('t4'), slug: 'strafrecht' },
+    { n: '01', title: a('a1'), desc: s('d1'), tags: s('t1'), slug: 'medizinstrafrecht' },
+    { n: '02', title: a('a2'), desc: s('d2'), tags: s('t2'), slug: 'wirtschaftsstrafrecht' },
+    { n: '03', title: a('a3'), desc: s('d3'), tags: s('t3'), slug: 'steuerstrafrecht' },
   ];
 
   return (

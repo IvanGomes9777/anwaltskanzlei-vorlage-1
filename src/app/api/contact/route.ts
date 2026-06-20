@@ -3,19 +3,17 @@ import { Resend } from 'resend';
 
 // Stabile Slugs → Klartext-Label (für die E-Mail) und Empfänger (aus Env)
 const AREA_LABELS: Record<string, string> = {
-  arbeitsrecht: 'Arbeitsrecht',
-  familienrecht: 'Familien- & Erbrecht',
-  wirtschaftsrecht: 'Vertrags- & Wirtschaftsrecht',
-  strafrecht: 'Strafrecht',
+  medizinstrafrecht: 'Medizinstrafrecht',
+  wirtschaftsstrafrecht: 'Wirtschaftsstrafrecht',
+  steuerstrafrecht: 'Steuerstrafrecht',
   other: 'Sonstiges / noch unklar',
 };
 
 function recipientFor(area: string): string {
   const map: Record<string, string | undefined> = {
-    arbeitsrecht: process.env.CONTACT_TO_ARBEITSRECHT,
-    familienrecht: process.env.CONTACT_TO_FAMILIENRECHT,
-    wirtschaftsrecht: process.env.CONTACT_TO_WIRTSCHAFTSRECHT,
-    strafrecht: process.env.CONTACT_TO_STRAFRECHT,
+    medizinstrafrecht: process.env.CONTACT_TO_MEDIZINSTRAFRECHT,
+    wirtschaftsstrafrecht: process.env.CONTACT_TO_WIRTSCHAFTSSTRAFRECHT,
+    steuerstrafrecht: process.env.CONTACT_TO_STEUERSTRAFRECHT,
   };
   return map[area] || process.env.CONTACT_TO_DEFAULT || 'info@example.com';
 }

@@ -8,7 +8,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 export default function HeroBento() {
   const t = useTranslations('hero');
   const a = useTranslations('areas');
-  const areas = [a('a1'), a('a2'), a('a3'), a('a4')];
+  const areas = [a('a1'), a('a2'), a('a3')];
 
   return (
     <section className="bg-sand-50">

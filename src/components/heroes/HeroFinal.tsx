@@ -12,7 +12,7 @@ export default function HeroFinal() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate flex min-h-[88vh] items-center overflow-hidden bg-navy-900">
+    <section className="relative isolate flex min-h-[calc(100vh-5rem)] items-center overflow-hidden bg-navy-900">
       {/* Hintergrund: Video (mit Standbild als Poster/Fallback) */}
       {reduceMotion ? (
         <div className="absolute inset-0 -z-20">

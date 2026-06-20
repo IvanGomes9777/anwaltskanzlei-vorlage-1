@@ -13,75 +13,57 @@ export interface Practice {
 
 export const practices: Practice[] = [
   {
-    slug: 'arbeitsrecht',
+    slug: 'medizinstrafrecht',
     de: {
-      title: 'Arbeitsrecht',
-      tagline: 'Für Arbeitnehmer und Arbeitgeber',
+      title: 'Medizinstrafrecht',
+      tagline: 'Verteidigung im Gesundheitswesen',
       intro:
-        'Vom Aufhebungsvertrag bis zur Kündigungsschutzklage – wir setzen Ihre Rechte im Arbeitsverhältnis durch, außergerichtlich und vor dem Arbeitsgericht.',
+        'Vom Vorwurf des Abrechnungsbetrugs bis zum Behandlungsfehler – wir verteidigen Ärztinnen, Ärzte, Pflegekräfte und Kliniken mit fachlicher Tiefe und größter Diskretion.',
       bullets: [
-        'Kündigung & Kündigungsschutz',
-        'Abfindung & Aufhebungsvertrag',
-        'Arbeitsverträge & Zeugnisse',
-        'Abmahnung & Versetzung',
-        'Lohn- & Überstundenansprüche',
+        'Abrechnungsbetrug & Wirtschaftlichkeitsprüfung',
+        'Behandlungsfehler & fahrlässige Körperverletzung',
+        'Korruption im Gesundheitswesen (§§ 299a, 299b StGB)',
+        'Betäubungsmittel- & Arzneimittelrecht',
+        'Approbations- & berufsrechtliche Folgen',
       ],
       approach:
-        'Im Arbeitsrecht zählen oft Fristen von nur drei Wochen. Wir prüfen Ihre Situation schnell, nennen Chancen und Risiken klar und handeln zügig.',
+        'Frühzeitige Verteidigung schützt Ruf und Approbation. Wir prüfen die Vorwürfe diskret, sichern die Kommunikation mit Ermittlungsbehörden und denken berufsrechtliche Folgen von Anfang an mit.',
     },
   },
   {
-    slug: 'familienrecht',
+    slug: 'wirtschaftsstrafrecht',
     de: {
-      title: 'Familien- & Erbrecht',
-      tagline: 'In persönlichen Lebenslagen an Ihrer Seite',
+      title: 'Wirtschaftsstrafrecht',
+      tagline: 'Für Unternehmen und Verantwortliche',
       intro:
-        'Trennung, Scheidung oder Nachlass – wir begleiten Sie einfühlsam und lösungsorientiert durch emotional belastende Situationen.',
+        'Betrug, Untreue, Insolvenz- oder Geldwäschedelikte – wir begleiten Unternehmen und ihre Verantwortlichen von der Durchsuchung bis zur Hauptverhandlung.',
       bullets: [
-        'Scheidung & Trennung',
-        'Kindes- & Ehegattenunterhalt',
-        'Sorge- & Umgangsrecht',
-        'Eheverträge & Scheidungsfolgen',
-        'Testament, Erbfolge & Pflichtteil',
+        'Betrug & Untreue',
+        'Insolvenzdelikte & Bankrott',
+        'Geldwäsche & Vermögensabschöpfung',
+        'Durchsuchung & Beschlagnahme',
+        'Compliance & interne Ermittlungen',
       ],
       approach:
-        'Wo möglich suchen wir einvernehmliche Lösungen, wo nötig vertreten wir Ihre Interessen konsequent – immer mit Blick auf das Wohl der Beteiligten.',
+        'Wir verbinden strafrechtliche Verteidigung mit wirtschaftlichem Verständnis, handeln bei Durchsuchungen sofort und entwickeln eine Strategie, die Unternehmen und Person zugleich schützt.',
     },
   },
   {
-    slug: 'wirtschaftsrecht',
+    slug: 'steuerstrafrecht',
     de: {
-      title: 'Vertrags- & Wirtschaftsrecht',
-      tagline: 'Rechtssicherheit für Unternehmen',
+      title: 'Steuerstrafrecht',
+      tagline: 'Zwischen Finanzamt und Staatsanwaltschaft',
       intro:
-        'Von der Gründung bis zum Vertrag – wir gestalten und prüfen, damit Ihr Geschäft auf einem festen rechtlichen Fundament steht.',
+        'Steuerhinterziehung, Selbstanzeige und Betriebsprüfungen mit strafrechtlichem Bezug – wir sichern Ihre Interessen gegenüber Finanzamt und Staatsanwaltschaft.',
       bullets: [
-        'Vertragsgestaltung & -prüfung',
-        'Gesellschaftsrecht & GmbH',
-        'AGB & Haftungsfragen',
-        'Handels- & Wirtschaftsrecht',
-        'Forderungsmanagement',
+        'Steuerhinterziehung & leichtfertige Steuerverkürzung',
+        'Strafbefreiende Selbstanzeige',
+        'Betriebsprüfung mit strafrechtlichem Bezug',
+        'Steuerfahndung & Durchsuchung',
+        'Vermögensabschöpfung & Hinterziehungszinsen',
       ],
       approach:
-        'Wir denken unternehmerisch mit, formulieren klar verständlich und halten den Aufwand stets verhältnismäßig.',
-    },
-  },
-  {
-    slug: 'strafrecht',
-    de: {
-      title: 'Strafrecht',
-      tagline: 'Entschlossene Verteidigung',
-      intro:
-        'Ob Ermittlungsverfahren oder Hauptverhandlung – wir verteidigen Sie diskret, engagiert und mit voller Vorbereitung.',
-      bullets: [
-        'Ermittlungs- & Strafverfahren',
-        'Verkehrsstrafrecht',
-        'Wirtschaftsstrafrecht',
-        'Untersuchungshaft',
-        'Revision & Berufung',
-      ],
-      approach:
-        'Frühzeitige Verteidigung ist entscheidend. Machen Sie keine Angaben zur Sache, bevor Sie mit uns gesprochen haben – wir sind rund um die Uhr erreichbar.',
+        'Bei der Selbstanzeige kommt es auf Vollständigkeit und Timing an. Wir prüfen Ihre Lage sorgfältig, koordinieren steuerliche und strafrechtliche Aspekte und treten gegenüber den Behörden geschlossen auf.',
     },
   },
 ];
