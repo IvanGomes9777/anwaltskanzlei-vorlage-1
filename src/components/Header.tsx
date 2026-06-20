@@ -15,7 +15,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="border-b border-black/10 bg-[#728690] backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-black/10 bg-[#728690] backdrop-blur">
       <div className="container-content flex h-20 items-center justify-between">
         <Link href="/" className="leading-tight">
           <span className="block font-serif text-xl font-semibold text-black">
