@@ -9,7 +9,7 @@ export default function Header() {
     { href: '/#leistungen', label: t('nav.services') },
     { href: '/#kanzlei', label: t('nav.firm') },
     { href: '/#team', label: t('nav.team') },
-    { href: '/#bewertungen', label: t('nav.reviews') },
+    { href: '/#presse', label: t('nav.press') },
     { href: '/#kontakt', label: t('nav.contact') },
   ];
 

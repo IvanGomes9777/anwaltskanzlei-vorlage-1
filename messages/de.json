@@ -10,6 +10,7 @@
     "firm": "Kanzlei",
     "team": "Team",
     "reviews": "Bewertungen",
+    "press": "Presse",
     "contact": "Kontakt",
     "home": "Start",
     "menu": "Menü",
@@ -115,6 +116,12 @@
     "val4t": "Verteidigung",
     "val4d": "Entschlossene, strategische Vertretung im Ermittlungs- und Strafverfahren.",
     "imageAlt": "Beispielbild – Kanzleiräume mit Blick über München (Platzhalter)"
+  },
+  "press": {
+    "eyebrow": "Presse",
+    "heading": "Aktuelles aus der Presse",
+    "intro": "Ausgewählte Beiträge über unsere Arbeit und Einschätzungen.",
+    "placeholder": "Beispiel-Einträge – echte Presse-Links folgen."
   },
   "variantsAbout": {
     "heading": "Über die Kanzlei – 5 Varianten",
