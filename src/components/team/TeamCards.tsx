@@ -18,7 +18,7 @@ export default function TeamCards() {
   const members = useMembers();
 
   return (
-    <section className="bg-[#728690]">
+    <section className="flex min-h-[calc(100vh-5rem)] flex-col justify-center bg-[#728690]">
       <div className="container-content py-24 md:py-28">
         <Reveal>
           <span className="text-xs font-medium uppercase tracking-[0.24em] text-black">

@@ -21,7 +21,7 @@ export default function AboutFinal() {
   ];
 
   return (
-    <section className="relative isolate overflow-hidden">
+    <section className="relative isolate flex min-h-[calc(100vh-5rem)] flex-col justify-center overflow-hidden">
       {/* Foto-Hintergrund */}
       <Image
         src="/hero/about-office.webp"

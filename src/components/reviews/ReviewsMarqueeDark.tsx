@@ -8,7 +8,7 @@ export default function ReviewsMarqueeDark() {
   const loop = [...reviews, ...reviews];
 
   return (
-    <section className="relative overflow-hidden bg-[#728690] text-black">
+    <section className="relative flex min-h-[calc(100vh-5rem)] flex-col justify-center overflow-hidden bg-[#728690] text-black">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.4]"

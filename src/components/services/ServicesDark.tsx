@@ -13,14 +13,14 @@ export default function ServicesDark() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#728690] text-black">
+    <section className="relative flex min-h-[calc(100vh-5rem)] flex-col justify-center overflow-hidden bg-[#728690] text-black">
       <div className="container-content relative py-24 md:py-28">
         <Reveal>
-          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.24em] text-white">
-            <span className="h-px w-8 bg-[#728690]" />
+          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.24em] text-black">
+            <span className="h-px w-8 bg-white" />
             {s('eyebrow')}
           </span>
-          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-black md:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
             {s('heading')}
           </h2>
           <p className="mt-5 max-w-xl text-lg text-black/70">{s('intro')}</p>
