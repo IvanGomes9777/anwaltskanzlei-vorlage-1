@@ -30,30 +30,37 @@ export default function TeamCards() {
           <p className="mt-5 max-w-xl text-lg text-black/65">{t('intro')}</p>
         </Reveal>
 
-        <div className="mx-auto mt-14 flex max-w-4xl flex-col gap-14">
+        <div className="mt-16 flex flex-col gap-16 md:gap-24">
           {attorneys.map((m, i) => (
-            <Reveal key={m.slug} delay={i * 0.08}>
+            <Reveal key={m.slug} delay={0.05}>
               <Link
                 href={`/team/${m.slug}`}
-                className="group grid grid-cols-1 items-center gap-8 sm:grid-cols-[320px_1fr]"
+                className="group grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-14"
               >
-                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
+                <div
+                  className={`relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-xl shadow-black/20 ${
+                    i % 2 === 1 ? 'md:order-2' : ''
+                  }`}
+                >
                   <Image
                     src={m.img}
                     alt={m.name}
                     fill
-                    sizes="(max-width: 640px) 100vw, 320px"
+                    sizes="(max-width: 768px) 100vw, 45vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-black/70">
+                <div className={i % 2 === 1 ? 'md:order-1' : ''}>
+                  <p className="text-xs uppercase tracking-[0.24em] text-black/70">
                     {m.role}
                   </p>
-                  <h3 className="mt-2 font-serif text-2xl font-semibold text-white transition-opacity group-hover:opacity-80 md:text-3xl">
+                  <h3 className="mt-3 font-serif text-3xl font-semibold leading-tight text-white transition-opacity group-hover:opacity-80 md:text-4xl">
                     {m.name}
                   </h3>
-                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-black">
+                  <p className="mt-5 max-w-md text-lg leading-relaxed text-black/80">
+                    {m.teaser}
+                  </p>
+                  <span className="mt-7 inline-flex items-center gap-2 rounded-md bg-black px-6 py-3 text-sm font-medium text-white transition-colors group-hover:bg-black/80">
                     Werdegang ansehen
                     <span className="transition-transform group-hover:translate-x-1">→</span>
                   </span>
@@ -62,8 +69,6 @@ export default function TeamCards() {
             </Reveal>
           ))}
         </div>
-
-        <p className="mt-10 text-xs text-black/40">{t('placeholder')}</p>
       </div>
     </section>
   );
