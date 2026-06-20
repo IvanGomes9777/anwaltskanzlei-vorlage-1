@@ -13,34 +13,34 @@ export default function ServicesDark() {
   ];
 
   return (
-    <section className="relative flex min-h-[calc(100vh-5rem)] flex-col justify-center overflow-hidden bg-[#728690] text-black">
+    <section className="relative flex min-h-[calc(100vh-5rem)] flex-col justify-center overflow-hidden bg-white text-black">
       <div className="container-content relative py-24 md:py-28">
         <Reveal>
-          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.24em] text-black">
-            <span className="h-px w-8 bg-white" />
+          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.24em] text-[#728690]">
+            <span className="h-px w-8 bg-[#728690]" />
             {s('eyebrow')}
           </span>
-          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-[#728690] md:text-5xl">
             {s('heading')}
           </h2>
           <p className="mt-5 max-w-xl text-lg text-black/70">{s('intro')}</p>
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-black/10 bg-black/10 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-[#728690] bg-[#728690]/30 sm:grid-cols-2 md:grid-cols-3">
           {items.map((it, i) => (
             <Reveal key={it.n} delay={i * 0.08}>
               <Link
                 href={`/leistungen/${it.slug}`}
-                className="group block h-full bg-[#728690] p-8 transition-colors hover:bg-[#5d6e77]"
+                className="group block h-full bg-white p-8 transition-colors hover:bg-[#728690]/5"
               >
                 <div className="flex items-baseline justify-between">
-                  <h3 className="font-serif text-2xl font-semibold text-white">{it.title}</h3>
-                  <span className="font-serif text-sm text-black/60">{it.n}</span>
+                  <h3 className="font-serif text-2xl font-semibold text-[#728690]">{it.title}</h3>
+                  <span className="font-serif text-sm text-black/50">{it.n}</span>
                 </div>
-                <p className="mt-4 text-black/80">{it.desc}</p>
+                <p className="mt-4 text-black/75">{it.desc}</p>
                 <p className="mt-6 flex items-center gap-2 text-xs uppercase tracking-wide text-black/60">
                   {it.tags}
-                  <span className="text-black transition-transform group-hover:translate-x-1">→</span>
+                  <span className="text-[#728690] transition-transform group-hover:translate-x-1">→</span>
                 </p>
               </Link>
             </Reveal>
