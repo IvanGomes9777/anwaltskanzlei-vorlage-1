@@ -17,6 +17,12 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-2 text-sm md:items-end">
           <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-end">
+            <Link href="/kosten" className="text-black/70 transition-colors hover:text-black">
+              {t('footer.costs')}
+            </Link>
+            <Link href="/#kontakt" className="text-black/70 transition-colors hover:text-black">
+              {t('footer.contact')}
+            </Link>
             <Link
               href="/impressum"
               className="text-black/70 transition-colors hover:text-black"
