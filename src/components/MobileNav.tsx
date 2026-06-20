@@ -87,9 +87,9 @@ export default function MobileNav() {
         aria-expanded={open}
         className="flex h-10 w-10 flex-col items-center justify-center gap-1.5"
       >
-        <span className="h-px w-6 bg-navy" />
-        <span className="h-px w-6 bg-navy" />
-        <span className="h-px w-6 bg-navy" />
+        <span className="h-px w-6 bg-black" />
+        <span className="h-px w-6 bg-black" />
+        <span className="h-px w-6 bg-black" />
       </button>
 
       {/* Render through a portal so the fixed overlay escapes the header's

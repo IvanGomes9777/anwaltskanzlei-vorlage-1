@@ -14,23 +14,23 @@ export default function Header() {
   ];
 
   return (
-    <header className="border-b border-navy/10 bg-white/80 backdrop-blur">
+    <header className="border-b border-black/10 bg-[#728690] backdrop-blur">
       <div className="container-content flex h-20 items-center justify-between">
         <Link href="/" className="leading-tight">
-          <span className="block font-serif text-xl font-semibold text-navy">
+          <span className="block font-serif text-xl font-semibold text-black">
             {t('brand.name')}
           </span>
-          <span className="block text-[0.68rem] uppercase tracking-[0.22em] text-gold-600">
+          <span className="block text-[0.68rem] uppercase tracking-[0.22em] text-black/70">
             {t('brand.suffix')}
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm text-navy/80 md:flex">
+        <nav className="hidden items-center gap-8 text-sm text-black/80 md:flex">
           {nav.map((item, i) => (
             <Link
               key={i}
               href={item.href}
-              className="transition-colors hover:text-navy"
+              className="transition-colors hover:text-black"
             >
               {item.label}
             </Link>
