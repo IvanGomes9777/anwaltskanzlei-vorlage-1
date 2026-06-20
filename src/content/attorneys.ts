@@ -16,8 +16,7 @@ export const attorneys: Attorney[] = [
     slug: 'sascha-luebbersmann',
     name: 'Sascha Lübbersmann',
     role: 'Rechtsanwalt · Fachanwalt für Strafrecht',
-    // TODO: echtes Foto unter /team/sascha-luebbersmann.jpg ablegen und Pfad anpassen
-    img: '/team/member-2.webp',
+    img: '/team/sascha-luebbersmann.jpg',
     werdegang: [
       { year: '1973', items: ['Geboren in Münster'] },
       {
