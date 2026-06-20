@@ -12,7 +12,7 @@ export default function ContactMap() {
           <span className="text-xs font-medium uppercase tracking-[0.24em] text-black">
             {t('eyebrow')}
           </span>
-          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-black md:text-5xl">
             {t('heading')}
           </h2>
         </Reveal>
