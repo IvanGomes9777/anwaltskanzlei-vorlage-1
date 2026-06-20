@@ -30,19 +30,19 @@ export default function TeamCards() {
           <p className="mt-5 max-w-xl text-lg text-black/65">{t('intro')}</p>
         </Reveal>
 
-        <div className="mx-auto mt-14 flex max-w-3xl flex-col gap-10">
+        <div className="mx-auto mt-14 flex max-w-4xl flex-col gap-14">
           {attorneys.map((m, i) => (
             <Reveal key={m.slug} delay={i * 0.08}>
               <Link
                 href={`/team/${m.slug}`}
-                className="group grid grid-cols-1 items-center gap-6 sm:grid-cols-[220px_1fr]"
+                className="group grid grid-cols-1 items-center gap-8 sm:grid-cols-[320px_1fr]"
               >
-                <div className="relative aspect-square overflow-hidden rounded-2xl">
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
                   <Image
                     src={m.img}
                     alt={m.name}
                     fill
-                    sizes="(max-width: 640px) 100vw, 220px"
+                    sizes="(max-width: 640px) 100vw, 320px"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>

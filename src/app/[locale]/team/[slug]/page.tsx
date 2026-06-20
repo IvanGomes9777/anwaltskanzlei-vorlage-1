@@ -33,14 +33,14 @@ export default async function AttorneyPage({
             ← Zum Team
           </Link>
 
-          <div className="mt-8 grid gap-8 sm:grid-cols-[200px_1fr] sm:items-end">
+          <div className="mt-8 grid gap-8 sm:grid-cols-[280px_1fr] sm:items-end">
             <Reveal>
-              <div className="relative aspect-square overflow-hidden rounded-2xl">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
                 <Image
                   src={attorney.img}
                   alt={attorney.name}
                   fill
-                  sizes="(max-width: 640px) 100vw, 200px"
+                  sizes="(max-width: 640px) 100vw, 280px"
                   className="object-cover"
                   priority
                 />
