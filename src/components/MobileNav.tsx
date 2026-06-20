@@ -4,10 +4,12 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { practices } from '@/content/practice';
 
 export default function MobileNav() {
   const t = useTranslations();
   const [open, setOpen] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -33,7 +35,6 @@ export default function MobileNav() {
   }, [open]);
 
   const nav = [
-    { href: '/#leistungen', label: t('nav.services') },
     { href: '/#kanzlei', label: t('nav.firm') },
     { href: '/#team', label: t('nav.team') },
     { href: '/#presse', label: t('nav.press') },
@@ -41,14 +42,16 @@ export default function MobileNav() {
     { href: '/#kontakt', label: t('nav.contact') },
   ];
 
+  const close = () => setOpen(false);
+
   const overlay = (
-    <div className="fixed inset-0 z-50 bg-[#728690]">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-[#728690]">
       <div className="container-content flex h-20 items-center justify-between border-b border-black/10">
         <span className="font-serif text-xl font-semibold text-white">
           {t('brand.name')}
         </span>
         <button
-          onClick={() => setOpen(false)}
+          onClick={close}
           aria-label={t('nav.close')}
           className="flex h-10 w-10 items-center justify-center text-2xl text-white"
         >
@@ -56,11 +59,39 @@ export default function MobileNav() {
         </button>
       </div>
       <nav className="container-content flex flex-col gap-1 py-8">
+        {/* Rechtsgebiete – aufklappbar */}
+        <div className="border-b border-black/10">
+          <button
+            onClick={() => setAreasOpen((v) => !v)}
+            aria-expanded={areasOpen}
+            className="flex w-full items-center justify-between py-4 font-serif text-2xl text-white transition-colors hover:text-black"
+          >
+            Rechtsgebiete
+            <span aria-hidden className={`text-xl transition-transform ${areasOpen ? 'rotate-45' : ''}`}>
+              +
+            </span>
+          </button>
+          {areasOpen && (
+            <div className="flex flex-col gap-1 pb-4 pl-3">
+              {practices.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/leistungen/${p.slug}`}
+                  onClick={close}
+                  className="py-2 text-base text-white/90 transition-colors hover:text-black"
+                >
+                  {p.de.title}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
         {nav.map((item) => (
           <Link
             key={item.label}
             href={item.href}
-            onClick={() => setOpen(false)}
+            onClick={close}
             className="border-b border-black/10 py-4 font-serif text-2xl text-white transition-colors hover:text-black"
           >
             {item.label}
@@ -68,10 +99,10 @@ export default function MobileNav() {
         ))}
         <div className="mt-8 flex items-center justify-end">
           <div className="flex gap-5 text-sm text-black/60">
-            <Link href="/impressum" onClick={() => setOpen(false)}>
+            <Link href="/impressum" onClick={close}>
               {t('footer.imprint')}
             </Link>
-            <Link href="/datenschutz" onClick={() => setOpen(false)}>
+            <Link href="/datenschutz" onClick={close}>
               {t('footer.privacy')}
             </Link>
           </div>
