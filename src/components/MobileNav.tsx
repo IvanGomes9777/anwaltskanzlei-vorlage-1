@@ -37,6 +37,7 @@ export default function MobileNav() {
     { href: '/#kanzlei', label: t('nav.firm') },
     { href: '/#team', label: t('nav.team') },
     { href: '/#presse', label: t('nav.press') },
+    { href: '/kosten', label: t('nav.costs') },
     { href: '/#kontakt', label: t('nav.contact') },
   ];
 
