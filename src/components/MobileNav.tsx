@@ -41,7 +41,7 @@ export default function MobileNav() {
   ];
 
   const overlay = (
-    <div className="fixed inset-0 z-50 bg-sand-50">
+    <div className="fixed inset-0 z-50 bg-white">
       <div className="container-content flex h-20 items-center justify-between border-b border-navy/10">
         <span className="font-serif text-xl font-semibold text-navy">
           {t('brand.name')}

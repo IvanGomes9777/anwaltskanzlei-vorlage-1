@@ -14,7 +14,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="border-b border-navy/10 bg-sand-50/80 backdrop-blur">
+    <header className="border-b border-navy/10 bg-white/80 backdrop-blur">
       <div className="container-content flex h-20 items-center justify-between">
         <Link href="/" className="leading-tight">
           <span className="block font-serif text-xl font-semibold text-navy">
