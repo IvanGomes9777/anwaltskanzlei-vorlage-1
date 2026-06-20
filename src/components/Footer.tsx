@@ -11,9 +11,6 @@ export default function Footer() {
         <div>
           <p className="font-serif text-lg font-semibold text-white">{t('brand.name')}</p>
           <p className="text-sm text-black/60">{t('brand.suffix')}</p>
-          <p className="mt-4 max-w-sm text-xs text-black/40">
-            {t('footer.placeholder')}
-          </p>
         </div>
         <div className="flex flex-col gap-2 text-sm md:items-end">
           <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-end">

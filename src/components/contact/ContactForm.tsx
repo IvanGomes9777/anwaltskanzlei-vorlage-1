@@ -21,7 +21,6 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
   const inputCls = dark
     ? 'border-black/20 bg-[#728690]/[0.04] text-black placeholder:text-black/30 focus:border-white'
     : 'border-black/20 bg-white text-black placeholder:text-black/40 focus:border-black';
-  const noteCls = dark ? 'text-black/45' : 'text-black/45';
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -145,7 +144,7 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
         <span>{t('consent')}</span>
       </label>
 
-      <p className={`text-xs leading-relaxed ${noteCls}`}>{t('confidential')}</p>
+      <p className="text-xs leading-relaxed text-white/70">{t('confidential')}</p>
 
       <button
         type="submit"
