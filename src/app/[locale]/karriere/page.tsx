@@ -28,29 +28,6 @@ const content = {
     cta: 'Jetzt bewerben',
     note: 'Beispiel-Stellen für diese Vorlage.',
   },
-  en: {
-    eyebrow: 'Careers',
-    heading: 'Become part of the team.',
-    intro:
-      'We are looking for people who make the law understandable and genuinely want to help clients. You can expect a collegial environment with real responsibility.',
-    benefitsTitle: 'What we offer',
-    benefits: [
-      ['Flexible hours', 'Work and private life in balance.'],
-      ['Modern firm', 'Digital files, central Munich location.'],
-      ['Real responsibility', 'Your own cases from day one.'],
-      ['Development', 'Support for specialist titles & training.'],
-    ],
-    openTitle: 'Open positions',
-    positions: [
-      ['Attorney (m/f/d)', 'Employment or family law · full-time'],
-      ['Legal traineeship', 'All practice areas · flexible'],
-      ['Legal assistant (m/f/d)', 'Full-time or part-time'],
-    ],
-    ctaTitle: 'Interested?',
-    ctaText: 'Send us your application – we look forward to it.',
-    cta: 'Apply now',
-    note: 'Sample positions for this template.',
-  },
 };
 
 export default async function KarrierePage({
@@ -60,7 +37,7 @@ export default async function KarrierePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const c = locale === 'en' ? content.en : content.de;
+  const c = content.de;
 
   return (
     <div className="flex min-h-screen flex-col">

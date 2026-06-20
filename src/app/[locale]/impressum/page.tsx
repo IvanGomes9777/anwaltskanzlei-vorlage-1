@@ -8,20 +8,17 @@ export default async function ImpressumPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const en = locale === 'en';
 
   return (
     <LegalShell
-      title={en ? 'Legal Notice' : 'Impressum'}
-      updated={en ? 'Template – to be reviewed by a lawyer before going live.' : 'Vorlage – vor Veröffentlichung anwaltlich prüfen lassen.'}
+      title="Impressum"
+      updated="Vorlage – vor Veröffentlichung anwaltlich prüfen lassen."
     >
       <div className="mb-8 rounded-lg border border-gold/30 bg-gold/[0.06] p-4 text-sm text-navy/70">
-        {en
-          ? 'Note: This is sample/placeholder content for a template. Replace all data marked [...] with the real firm details and have it reviewed legally before publishing.'
-          : 'Hinweis: Dies ist Beispiel-/Platzhalterinhalt einer Vorlage. Ersetzen Sie alle mit [...] markierten Angaben durch die echten Kanzleidaten und lassen Sie das Impressum vor Veröffentlichung rechtlich prüfen.'}
+        Hinweis: Dies ist Beispiel-/Platzhalterinhalt einer Vorlage. Ersetzen Sie alle mit [...] markierten Angaben durch die echten Kanzleidaten und lassen Sie das Impressum vor Veröffentlichung rechtlich prüfen.
       </div>
 
-      {en ? <ImpressumEN /> : <ImpressumDE />}
+      <ImpressumDE />
     </LegalShell>
   );
 }
@@ -119,85 +116,6 @@ function ImpressumDE() {
         unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche
         gekennzeichnet. Vervielfältigung, Bearbeitung und Verbreitung außerhalb der
         Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung.
-      </p>
-    </>
-  );
-}
-
-function ImpressumEN() {
-  return (
-    <>
-      <h2>Information pursuant to § 5 DDG</h2>
-      <p>
-        <strong>Hoffmann · Vogel Rechtsanwälte [placeholder]</strong>
-        <br />
-        Maximilianstraße 12
-        <br />
-        80539 Munich, Germany
-      </p>
-      <p>
-        <strong>Represented by:</strong>
-        <br />
-        Dr. Katharina Hoffmann, Michael Vogel [placeholder]
-      </p>
-
-      <h2>Contact</h2>
-      <p>
-        Phone: +49 89 1234 567 [placeholder]
-        <br />
-        Email: kanzlei@hoffmann-vogel.example [placeholder]
-      </p>
-
-      <h2>VAT ID</h2>
-      <p>
-        VAT identification number pursuant to § 27a German VAT Act:
-        <br />
-        DE000000000 [placeholder]
-      </p>
-
-      <h2>Professional information</h2>
-      <p>
-        <strong>Statutory professional title:</strong> Rechtsanwältin / Rechtsanwalt
-        (attorney admitted in the Federal Republic of Germany)
-      </p>
-      <p>
-        <strong>Competent bar association:</strong> Rechtsanwaltskammer München (Munich
-        Bar Association), Tal 33, 80331 Munich [adjust if applicable]
-      </p>
-      <p>
-        <strong>Professional regulations:</strong> In particular the Federal Lawyers&apos;
-        Act (BRAO), the Code of Professional Conduct (BORA), the Specialist Lawyers&apos;
-        Regulation (FAO), the Lawyers&apos; Remuneration Act (RVG) and the CCBE Code of
-        Conduct. Available at{' '}
-        <a href="https://www.brak.de" target="_blank" rel="noopener noreferrer">
-          www.brak.de
-        </a>
-        .
-      </p>
-      <p>
-        <strong>Professional liability insurance:</strong> [name and address of insurer].
-        Geographical scope of cover: Germany / European Union [adjust].
-      </p>
-
-      <h2>Consumer dispute resolution</h2>
-      <p>
-        We are neither willing nor obliged to participate in dispute resolution
-        proceedings before a consumer arbitration board (§ 36 VSBG). The competent body
-        is the{' '}
-        <a href="https://www.s-d-r.org" target="_blank" rel="noopener noreferrer">
-          Arbitration Board of the German Bar
-        </a>
-        , Neue Grünstraße 17, 10179 Berlin.
-      </p>
-
-      <h2>Liability for content, links &amp; copyright</h2>
-      <p>
-        As a service provider we are responsible for our own content on these pages under
-        the general laws. Content was created with great care, but no guarantee can be
-        given for its accuracy, completeness or timeliness. We have no influence over the
-        content of external linked sites; the respective provider is always responsible.
-        Content and works created by the site operators are subject to German copyright
-        law.
       </p>
     </>
   );

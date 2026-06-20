@@ -20,8 +20,7 @@ export default async function PracticePage({
   const practice = getPractice(slug);
   if (!practice) notFound();
 
-  const en = locale === 'en';
-  const c = en ? practice.en : practice.de;
+  const c = practice.de;
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -39,7 +38,7 @@ export default async function PracticePage({
           />
           <div className="container-content relative py-20 md:py-28">
             <Link href="/#leistungen" className="text-sm text-sand-100/60 transition-colors hover:text-gold-400">
-              ← {en ? 'All practice areas' : 'Alle Rechtsgebiete'}
+              ← Alle Rechtsgebiete
             </Link>
             <p className="mt-6 text-xs font-medium uppercase tracking-[0.24em] text-gold-400">
               {c.tagline}
@@ -58,7 +57,7 @@ export default async function PracticePage({
           <div className="container-content grid gap-12 py-20 md:grid-cols-[1fr_0.8fr] md:py-24">
             <Reveal>
               <h2 className="font-serif text-2xl font-semibold text-navy">
-                {en ? 'What we handle' : 'Was wir übernehmen'}
+                Was wir übernehmen
               </h2>
               <ul className="mt-6 space-y-3">
                 {c.bullets.map((b) => (
@@ -73,14 +72,14 @@ export default async function PracticePage({
             <Reveal delay={0.1}>
               <div className="rounded-2xl border border-navy/10 bg-white p-7">
                 <h3 className="font-serif text-lg font-semibold text-navy">
-                  {en ? 'Our approach' : 'Unsere Arbeitsweise'}
+                  Unsere Arbeitsweise
                 </h3>
                 <p className="mt-3 leading-relaxed text-navy/70">{c.approach}</p>
                 <Link
                   href="/#kontakt"
                   className="mt-6 inline-block rounded-md bg-navy px-7 py-3.5 text-sm font-medium text-sand-50 transition-colors hover:bg-navy-700"
                 >
-                  {en ? 'Request a consultation' : 'Erstberatung anfragen'}
+                  Erstberatung anfragen
                 </Link>
               </div>
             </Reveal>

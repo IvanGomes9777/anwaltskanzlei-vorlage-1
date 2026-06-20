@@ -10,7 +10,6 @@ export interface Attorney {
   name: string;
   img: string;
   de: AttorneyContent;
-  en: AttorneyContent;
 }
 
 export const attorneys: Attorney[] = [
@@ -27,15 +26,6 @@ export const attorneys: Attorney[] = [
       ],
       focus: ['Scheidung & Unterhalt', 'Sorge- & Umgangsrecht', 'Erbfolge & Pflichtteil', 'Eheverträge'],
     },
-    en: {
-      role: 'Partner',
-      area: 'Family & Inheritance Law',
-      vita: [
-        'Dr. Katharina Hoffmann co-founded the firm and has advised on all matters of family and inheritance law for over 20 years.',
-        'She combines legal precision with great empathy and is known for clear, durable solutions – even in highly contested proceedings.',
-      ],
-      focus: ['Divorce & maintenance', 'Custody & access', 'Succession & compulsory portion', 'Prenuptial agreements'],
-    },
   },
   {
     slug: 'michael-vogel',
@@ -49,15 +39,6 @@ export const attorneys: Attorney[] = [
         'Diskretion, schnelle Erreichbarkeit und akribische Vorbereitung sind die Grundpfeiler seiner Verteidigung.',
       ],
       focus: ['Wirtschaftsstrafrecht', 'Verkehrsstrafrecht', 'Untersuchungshaft', 'Revision'],
-    },
-    en: {
-      role: 'Partner',
-      area: 'Criminal Law',
-      vita: [
-        'Michael Vogel is a defence lawyer by conviction and has handled demanding cases for two decades.',
-        'Discretion, fast availability and meticulous preparation are the pillars of his defence work.',
-      ],
-      focus: ['White-collar crime', 'Traffic criminal law', 'Pre-trial detention', 'Appeals'],
     },
   },
   {
@@ -73,15 +54,6 @@ export const attorneys: Attorney[] = [
       ],
       focus: ['Kündigungsschutz', 'Abfindungen', 'Arbeitsverträge', 'Aufhebungsverträge'],
     },
-    en: {
-      role: 'Attorney',
-      area: 'Employment Law',
-      vita: [
-        'Dr. Julia Brandt advises employees and companies on all questions of individual and collective employment law.',
-        'She negotiates firmly on the substance while remaining solution-oriented.',
-      ],
-      focus: ['Protection against dismissal', 'Severance', 'Employment contracts', 'Termination agreements'],
-    },
   },
   {
     slug: 'stefan-keller',
@@ -95,15 +67,6 @@ export const attorneys: Attorney[] = [
         'Pragmatisch, gründlich und mit unternehmerischem Blick.',
       ],
       focus: ['Verträge & AGB', 'Gesellschaftsrecht', 'Haftungsfragen', 'Forderungen'],
-    },
-    en: {
-      role: 'Attorney',
-      area: 'Contract & Commercial Law',
-      vita: [
-        'Stefan Keller supports companies, founders and the self-employed from contract drafting to enforcing their claims.',
-        'Pragmatic, thorough and with an entrepreneurial eye.',
-      ],
-      focus: ['Contracts & T&Cs', 'Corporate law', 'Liability', 'Receivables'],
     },
   },
 ];

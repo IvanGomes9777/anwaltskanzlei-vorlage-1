@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import LanguageSwitcher from './LanguageSwitcher';
 
 export default function MobileNav() {
   const t = useTranslations();
@@ -66,8 +65,7 @@ export default function MobileNav() {
             {item.label}
           </Link>
         ))}
-        <div className="mt-8 flex items-center justify-between">
-          <LanguageSwitcher />
+        <div className="mt-8 flex items-center justify-end">
           <div className="flex gap-5 text-sm text-navy/60">
             <Link href="/impressum" onClick={() => setOpen(false)}>
               {t('footer.imprint')}

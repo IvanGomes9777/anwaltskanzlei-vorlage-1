@@ -38,7 +38,6 @@ export async function POST(request: Request) {
   const message = String(body.message ?? '').trim();
   const consent = body.consent === true || body.consent === 'on';
   const honeypot = String(body.company ?? '').trim(); // Spam-Falle
-  const locale = body.locale === 'en' ? 'en' : 'de';
 
   // Spam: Honeypot ausgefüllt → still „erfolgreich", aber nichts senden
   if (honeypot) return NextResponse.json({ ok: true });
@@ -78,14 +77,8 @@ export async function POST(request: Request) {
     });
 
     // 2) Automatische Eingangsbestätigung an den Absender
-    const ackSubject =
-      locale === 'en'
-        ? 'We have received your request'
-        : 'Ihre Anfrage ist bei uns eingegangen';
-    const ackText =
-      locale === 'en'
-        ? `Dear ${name},\n\nthank you for your message regarding "${areaLabel}". The responsible attorney will get back to you shortly.\n\nKind regards\nHoffmann · Vogel Rechtsanwälte`
-        : `Guten Tag ${name},\n\nvielen Dank für Ihre Nachricht zum Thema „${areaLabel}". Die zuständige Person meldet sich zeitnah bei Ihnen.\n\nMit freundlichen Grüßen\nHoffmann · Vogel Rechtsanwälte`;
+    const ackSubject = 'Ihre Anfrage ist bei uns eingegangen';
+    const ackText = `Guten Tag ${name},\n\nvielen Dank für Ihre Nachricht zum Thema „${areaLabel}". Die zuständige Person meldet sich zeitnah bei Ihnen.\n\nMit freundlichen Grüßen\nHoffmann · Vogel Rechtsanwälte`;
 
     await resend.emails.send({
       from,

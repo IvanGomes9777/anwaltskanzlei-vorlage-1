@@ -21,8 +21,7 @@ export default async function AttorneyPage({
   const attorney = getAttorney(slug);
   if (!attorney) notFound();
 
-  const en = locale === 'en';
-  const c = en ? attorney.en : attorney.de;
+  const c = attorney.de;
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -30,7 +29,7 @@ export default async function AttorneyPage({
       <main className="flex-1 bg-sand-50">
         <div className="container-content py-16 md:py-24">
           <Link href="/#team" className="text-sm text-navy/55 transition-colors hover:text-gold-600">
-            ← {en ? 'All attorneys' : 'Zum Team'}
+            ← Zum Team
           </Link>
 
           <div className="mt-8 grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
@@ -65,7 +64,7 @@ export default async function AttorneyPage({
                 ))}
 
                 <h2 className="mt-10 font-serif text-lg font-semibold text-navy">
-                  {en ? 'Focus areas' : 'Schwerpunkte'}
+                  Schwerpunkte
                 </h2>
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {c.focus.map((f) => (
@@ -82,7 +81,7 @@ export default async function AttorneyPage({
                   href="/#kontakt"
                   className="mt-10 inline-block rounded-md bg-navy px-7 py-3.5 text-sm font-medium text-sand-50 transition-colors hover:bg-navy-700"
                 >
-                  {en ? 'Request a consultation' : 'Erstberatung anfragen'}
+                  Erstberatung anfragen
                 </Link>
               </div>
             </Reveal>

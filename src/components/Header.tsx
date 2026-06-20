@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import LanguageSwitcher from './LanguageSwitcher';
 import MobileNav from './MobileNav';
 
 export default function Header() {
@@ -39,9 +38,6 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden md:block">
-            <LanguageSwitcher />
-          </div>
           <MobileNav />
         </div>
       </div>
