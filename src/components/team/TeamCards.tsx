@@ -24,7 +24,7 @@ export default function TeamCards() {
           <span className="text-xs font-medium uppercase tracking-[0.24em] text-black">
             {t('eyebrow')}
           </span>
-          <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
+          <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight text-black md:text-5xl">
             {t('heading')}
           </h2>
           <p className="mt-5 max-w-xl text-lg text-black/65">{t('intro')}</p>

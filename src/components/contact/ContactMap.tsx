@@ -12,7 +12,7 @@ export default function ContactMap() {
           <span className="text-xs font-medium uppercase tracking-[0.24em] text-black">
             {t('eyebrow')}
           </span>
-          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-black md:text-5xl">
             {t('heading')}
           </h2>
         </Reveal>
@@ -35,38 +35,38 @@ export default function ContactMap() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-white">
+                  <p className="text-xs uppercase tracking-wide text-black">
                     {t('addressTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-white/80">
+                  <p className="mt-1 text-sm text-black/75">
                     {t('address1')}
                     <br />
                     {t('address2')}
                   </p>
-                  <p className="mt-3 text-xs uppercase tracking-wide text-white">
+                  <p className="mt-3 text-xs uppercase tracking-wide text-black">
                     {t('emailTitle')}
                   </p>
                   <a
                     href={`mailto:${t('email')}`}
-                    className="mt-1 block break-all text-sm text-white/80 underline-offset-2 hover:underline"
+                    className="mt-1 block break-all text-sm text-black/75 underline-offset-2 hover:underline"
                   >
                     {t('email')}
                   </a>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-white">
+                  <p className="text-xs uppercase tracking-wide text-black">
                     {t('phoneTitle')}
                   </p>
                   <a
                     href={`tel:${t('phone').replace(/\s/g, '')}`}
-                    className="mt-1 block text-sm text-white/80 underline-offset-2 hover:underline"
+                    className="mt-1 block text-sm text-black/75 underline-offset-2 hover:underline"
                   >
                     {t('phone')}
                   </a>
-                  <p className="mt-3 text-xs uppercase tracking-wide text-white">
+                  <p className="mt-3 text-xs uppercase tracking-wide text-black">
                     {t('faxTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-white/80">{t('fax')}</p>
+                  <p className="mt-1 text-sm text-black/75">{t('fax')}</p>
                 </div>
               </div>
             </div>
