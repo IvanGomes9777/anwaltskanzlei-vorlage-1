@@ -41,15 +41,15 @@ export default function MobileNav() {
   ];
 
   const overlay = (
-    <div className="fixed inset-0 z-50 bg-white">
-      <div className="container-content flex h-20 items-center justify-between border-b border-navy/10">
-        <span className="font-serif text-xl font-semibold text-navy">
+    <div className="fixed inset-0 z-50 bg-[#728690]">
+      <div className="container-content flex h-20 items-center justify-between border-b border-black/10">
+        <span className="font-serif text-xl font-semibold text-white">
           {t('brand.name')}
         </span>
         <button
           onClick={() => setOpen(false)}
           aria-label={t('nav.close')}
-          className="flex h-10 w-10 items-center justify-center text-2xl text-navy"
+          className="flex h-10 w-10 items-center justify-center text-2xl text-white"
         >
           ×
         </button>
@@ -60,13 +60,13 @@ export default function MobileNav() {
             key={item.label}
             href={item.href}
             onClick={() => setOpen(false)}
-            className="border-b border-navy/10 py-4 font-serif text-2xl text-navy transition-colors hover:text-gold-600"
+            className="border-b border-black/10 py-4 font-serif text-2xl text-white transition-colors hover:text-black"
           >
             {item.label}
           </Link>
         ))}
         <div className="mt-8 flex items-center justify-end">
-          <div className="flex gap-5 text-sm text-navy/60">
+          <div className="flex gap-5 text-sm text-black/60">
             <Link href="/impressum" onClick={() => setOpen(false)}>
               {t('footer.imprint')}
             </Link>

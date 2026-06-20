@@ -18,16 +18,16 @@ export default function TeamCards() {
   const members = useMembers();
 
   return (
-    <section className="bg-sand-50">
+    <section className="bg-[#728690]">
       <div className="container-content py-24 md:py-28">
         <Reveal>
-          <span className="text-xs font-medium uppercase tracking-[0.24em] text-gold-600">
+          <span className="text-xs font-medium uppercase tracking-[0.24em] text-black">
             {t('eyebrow')}
           </span>
-          <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight text-navy md:text-5xl">
+          <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
             {t('heading')}
           </h2>
-          <p className="mt-5 max-w-xl text-lg text-navy/65">{t('intro')}</p>
+          <p className="mt-5 max-w-xl text-lg text-black/65">{t('intro')}</p>
         </Reveal>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -44,20 +44,20 @@ export default function TeamCards() {
                   />
                 </div>
                 <div className="mt-4">
-                  <p className="text-xs uppercase tracking-wide text-gold-600">
+                  <p className="text-xs uppercase tracking-wide text-black">
                     {m.role}
                   </p>
-                  <h3 className="mt-1 font-serif text-lg font-semibold text-navy transition-colors group-hover:text-gold-600">
+                  <h3 className="mt-1 font-serif text-lg font-semibold text-white transition-colors group-hover:text-black">
                     {m.name}
                   </h3>
-                  <p className="mt-1 text-sm text-navy/55">{m.area}</p>
+                  <p className="mt-1 text-sm text-black/55">{m.area}</p>
                 </div>
               </Link>
             </Reveal>
           ))}
         </div>
 
-        <p className="mt-10 text-xs text-navy/40">{t('placeholder')}</p>
+        <p className="mt-10 text-xs text-black/40">{t('placeholder')}</p>
       </div>
     </section>
   );

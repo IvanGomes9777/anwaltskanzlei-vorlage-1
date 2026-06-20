@@ -26,9 +26,9 @@ export default async function AttorneyPage({
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 bg-sand-50">
+      <main className="flex-1 bg-[#728690]">
         <div className="container-content py-16 md:py-24">
-          <Link href="/#team" className="text-sm text-navy/55 transition-colors hover:text-gold-600">
+          <Link href="/#team" className="text-sm text-black/55 transition-colors hover:text-black">
             ← Zum Team
           </Link>
 
@@ -48,29 +48,29 @@ export default async function AttorneyPage({
 
             <Reveal delay={0.1}>
               <div>
-                <p className="text-xs uppercase tracking-[0.24em] text-gold-600">
+                <p className="text-xs uppercase tracking-[0.24em] text-black">
                   {c.role}
                 </p>
-                <h1 className="mt-3 font-serif text-4xl font-semibold text-navy md:text-5xl">
+                <h1 className="mt-3 font-serif text-4xl font-semibold text-white md:text-5xl">
                   {attorney.name}
                 </h1>
-                <p className="mt-2 text-navy/55">{c.area}</p>
+                <p className="mt-2 text-black/55">{c.area}</p>
                 <div className="hairline-gold mt-6" />
 
                 {c.vita.map((p, i) => (
-                  <p key={i} className="mt-5 leading-relaxed text-navy/75">
+                  <p key={i} className="mt-5 leading-relaxed text-black/75">
                     {p}
                   </p>
                 ))}
 
-                <h2 className="mt-10 font-serif text-lg font-semibold text-navy">
+                <h2 className="mt-10 font-serif text-lg font-semibold text-white">
                   Schwerpunkte
                 </h2>
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {c.focus.map((f) => (
                     <li
                       key={f}
-                      className="rounded-full border border-navy/15 px-4 py-1.5 text-sm text-navy/70"
+                      className="rounded-full border border-black/15 px-4 py-1.5 text-sm text-black/70"
                     >
                       {f}
                     </li>
@@ -79,7 +79,7 @@ export default async function AttorneyPage({
 
                 <Link
                   href="/#kontakt"
-                  className="mt-10 inline-block rounded-md bg-navy px-7 py-3.5 text-sm font-medium text-sand-50 transition-colors hover:bg-navy-700"
+                  className="mt-10 inline-block rounded-md bg-black px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-black"
                 >
                   Erstberatung anfragen
                 </Link>

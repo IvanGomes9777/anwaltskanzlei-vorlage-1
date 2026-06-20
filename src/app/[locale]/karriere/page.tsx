@@ -43,7 +43,7 @@ export default async function KarrierePage({
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="relative overflow-hidden bg-navy-900 text-sand-100">
+        <section className="relative overflow-hidden bg-[#728690] text-black">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-[0.4]"
@@ -53,51 +53,51 @@ export default async function KarrierePage({
             }}
           />
           <div className="container-content relative py-20 md:py-28">
-            <p className="text-xs font-medium uppercase tracking-[0.24em] text-gold-400">
+            <p className="text-xs font-medium uppercase tracking-[0.24em] text-black">
               {c.eyebrow}
             </p>
             <h1 className="mt-3 max-w-3xl font-serif text-4xl font-semibold leading-tight md:text-6xl">
               {c.heading}
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-sand-100/75">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-black/75">
               {c.intro}
             </p>
           </div>
         </section>
 
-        <section className="bg-sand-50">
+        <section className="bg-[#728690]">
           <div className="container-content py-20 md:py-24">
-            <h2 className="font-serif text-2xl font-semibold text-navy">
+            <h2 className="font-serif text-2xl font-semibold text-white">
               {c.benefitsTitle}
             </h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {c.benefits.map(([t, d], i) => (
                 <Reveal key={t} delay={i * 0.08}>
-                  <div className="h-full rounded-xl border border-navy/10 bg-white p-6">
-                    <span className="block h-px w-10 bg-gold" />
-                    <h3 className="mt-4 font-serif text-lg font-semibold text-navy">
+                  <div className="h-full rounded-xl border border-black/10 bg-[#728690] p-6">
+                    <span className="block h-px w-10 bg-white" />
+                    <h3 className="mt-4 font-serif text-lg font-semibold text-white">
                       {t}
                     </h3>
-                    <p className="mt-2 text-sm text-navy/60">{d}</p>
+                    <p className="mt-2 text-sm text-black/60">{d}</p>
                   </div>
                 </Reveal>
               ))}
             </div>
 
-            <h2 className="mt-20 font-serif text-2xl font-semibold text-navy">
+            <h2 className="mt-20 font-serif text-2xl font-semibold text-white">
               {c.openTitle}
             </h2>
             <div className="mt-8 space-y-3">
               {c.positions.map(([t, d], i) => (
                 <Reveal key={t} delay={i * 0.06}>
-                  <div className="group flex items-center justify-between gap-4 rounded-xl border border-navy/10 bg-white p-6 transition-colors hover:border-gold/40">
+                  <div className="group flex items-center justify-between gap-4 rounded-xl border border-black/10 bg-[#728690] p-6 transition-colors hover:border-white/40">
                     <div>
-                      <h3 className="font-serif text-lg font-semibold text-navy">{t}</h3>
-                      <p className="mt-1 text-sm text-navy/55">{d}</p>
+                      <h3 className="font-serif text-lg font-semibold text-white">{t}</h3>
+                      <p className="mt-1 text-sm text-black/55">{d}</p>
                     </div>
                     <Link
                       href="/#kontakt"
-                      className="shrink-0 text-sm font-medium text-gold-600 transition-transform group-hover:translate-x-1"
+                      className="shrink-0 text-sm font-medium text-black transition-transform group-hover:translate-x-1"
                     >
                       {c.cta} →
                     </Link>
@@ -105,14 +105,14 @@ export default async function KarrierePage({
                 </Reveal>
               ))}
             </div>
-            <p className="mt-6 text-xs text-navy/40">{c.note}</p>
+            <p className="mt-6 text-xs text-black/40">{c.note}</p>
 
-            <div className="mt-16 rounded-2xl bg-navy p-8 text-center text-sand-100 md:p-12">
+            <div className="mt-16 rounded-2xl bg-black p-8 text-center text-white md:p-12">
               <h2 className="font-serif text-2xl font-semibold">{c.ctaTitle}</h2>
-              <p className="mt-3 text-sand-100/75">{c.ctaText}</p>
+              <p className="mt-3 text-white/75">{c.ctaText}</p>
               <Link
                 href="/#kontakt"
-                className="mt-6 inline-block rounded-md bg-gold px-7 py-3.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-gold-400"
+                className="mt-6 inline-block rounded-md bg-white px-7 py-3.5 text-sm font-semibold text-black transition-colors hover:bg-white"
               >
                 {c.cta}
               </Link>

@@ -17,15 +17,15 @@ export default async function FaqPage({
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 bg-sand-50">
+      <main className="flex-1 bg-[#728690]">
         <div className="container-content max-w-3xl py-20 md:py-24">
-          <p className="text-xs font-medium uppercase tracking-[0.24em] text-gold-600">
+          <p className="text-xs font-medium uppercase tracking-[0.24em] text-black">
             Häufige Fragen
           </p>
-          <h1 className="mt-3 font-serif text-4xl font-semibold text-navy md:text-5xl">
+          <h1 className="mt-3 font-serif text-4xl font-semibold text-white md:text-5xl">
             Antworten auf Ihre Fragen
           </h1>
-          <p className="mt-5 text-lg text-navy/65">
+          <p className="mt-5 text-lg text-black/65">
             Die häufigsten Fragen rund um die Zusammenarbeit mit uns.
           </p>
 
@@ -33,13 +33,13 @@ export default async function FaqPage({
             <FaqAccordion items={items} />
           </div>
 
-          <div className="mt-12 rounded-2xl border border-navy/10 bg-white p-7 text-center">
-            <p className="text-navy/70">
+          <div className="mt-12 rounded-2xl border border-black/10 bg-[#728690] p-7 text-center">
+            <p className="text-black/70">
               Ihre Frage war nicht dabei?
             </p>
             <Link
               href="/#kontakt"
-              className="mt-4 inline-block rounded-md bg-navy px-7 py-3.5 text-sm font-medium text-sand-50 transition-colors hover:bg-navy-700"
+              className="mt-4 inline-block rounded-md bg-black px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-black"
             >
               Kontakt aufnehmen
             </Link>

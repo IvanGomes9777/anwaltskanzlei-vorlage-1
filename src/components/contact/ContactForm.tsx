@@ -17,11 +17,11 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
     { slug: 'steuerstrafrecht', label: a('a3') },
   ];
 
-  const labelCls = dark ? 'text-sand-100/70' : 'text-navy/60';
+  const labelCls = dark ? 'text-black/70' : 'text-black/60';
   const inputCls = dark
-    ? 'border-sand-100/20 bg-sand-100/[0.04] text-sand-100 placeholder:text-sand-100/30 focus:border-gold-400'
-    : 'border-navy/15 bg-white text-navy placeholder:text-navy/30 focus:border-gold';
-  const noteCls = dark ? 'text-sand-100/45' : 'text-navy/45';
+    ? 'border-black/20 bg-[#728690]/[0.04] text-black placeholder:text-black/30 focus:border-white'
+    : 'border-black/20 bg-white text-black placeholder:text-black/40 focus:border-black';
+  const noteCls = dark ? 'text-black/45' : 'text-black/45';
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -55,10 +55,10 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
     return (
       <div
         className={`rounded-xl border p-8 text-center ${
-          dark ? 'border-sand-100/15 bg-sand-100/[0.04] text-sand-100' : 'border-navy/10 bg-white text-navy'
+          dark ? 'border-black/15 bg-[#728690]/[0.04] text-black' : 'border-black/10 bg-[#728690] text-white'
         }`}
       >
-        <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold text-2xl text-navy-900">
+        <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-2xl text-black">
           ✓
         </span>
         <p className="font-serif text-lg font-semibold">{t('success')}</p>
@@ -110,11 +110,11 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
             {t('areaPlaceholder')}
           </option>
           {areas.map((area) => (
-            <option key={area.slug} value={area.slug} className="text-navy">
+            <option key={area.slug} value={area.slug} className="text-black">
               {area.label}
             </option>
           ))}
-          <option value="other" className="text-navy">
+          <option value="other" className="text-black">
             {t('areaOther')}
           </option>
         </select>
@@ -140,8 +140,8 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
         className="absolute left-[-9999px] h-0 w-0 opacity-0"
       />
 
-      <label className={`flex items-start gap-3 text-sm ${dark ? 'text-sand-100/70' : 'text-navy/65'}`}>
-        <input type="checkbox" name="consent" required className="mt-1 accent-gold" />
+      <label className={`flex items-start gap-3 text-sm ${dark ? 'text-black/70' : 'text-black/65'}`}>
+        <input type="checkbox" name="consent" required className="mt-1 accent-black" />
         <span>{t('consent')}</span>
       </label>
 
@@ -151,7 +151,7 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
         type="submit"
         disabled={status === 'loading'}
         className={`rounded-md px-7 py-3.5 text-sm font-semibold transition-colors disabled:opacity-60 ${
-          dark ? 'bg-gold text-navy-900 hover:bg-gold-400' : 'bg-navy text-sand-50 hover:bg-navy-700'
+          dark ? 'bg-white text-black hover:bg-white' : 'bg-black text-white hover:bg-black'
         }`}
       >
         {status === 'loading' ? t('sending') : t('submit')}

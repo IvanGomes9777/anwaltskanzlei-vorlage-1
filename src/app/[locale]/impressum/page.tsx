@@ -14,7 +14,7 @@ export default async function ImpressumPage({
       title="Impressum"
       updated="Vorlage – vor Veröffentlichung anwaltlich prüfen lassen."
     >
-      <div className="mb-8 rounded-lg border border-gold/30 bg-gold/[0.06] p-4 text-sm text-navy/70">
+      <div className="mb-8 rounded-lg border border-white/30 bg-white/[0.06] p-4 text-sm text-black/70">
         Hinweis: Dies ist Beispiel-/Platzhalterinhalt einer Vorlage. Ersetzen Sie alle mit [...] markierten Angaben durch die echten Kanzleidaten und lassen Sie das Impressum vor Veröffentlichung rechtlich prüfen.
       </div>
 

@@ -12,29 +12,29 @@ export default function AboutCentered() {
   ];
 
   return (
-    <section className="bg-sand-50">
+    <section className="bg-[#728690]">
       <div className="container-content py-24 text-center md:py-28">
         <Reveal>
-          <span className="text-xs font-medium uppercase tracking-[0.32em] text-gold-600">
+          <span className="text-xs font-medium uppercase tracking-[0.32em] text-black">
             {t('eyebrow')}
           </span>
-          <h2 className="mx-auto mt-5 max-w-3xl font-serif text-4xl font-semibold leading-tight text-navy md:text-5xl">
+          <h2 className="mx-auto mt-5 max-w-3xl font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
             {t('heading')}
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-navy/65">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-black/65">
             {t('lead')}
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-10 border-t border-navy/12 pt-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-10 border-t border-black/12 pt-12 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((v, i) => (
             <Reveal key={v.t} delay={i * 0.08}>
               <div className="text-center">
-                <span className="mx-auto block h-px w-10 bg-gold" />
-                <h3 className="mt-5 font-serif text-xl font-semibold text-navy">
+                <span className="mx-auto block h-px w-10 bg-white" />
+                <h3 className="mt-5 font-serif text-xl font-semibold text-white">
                   {v.t}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-navy/60">{v.d}</p>
+                <p className="mt-3 text-sm leading-relaxed text-black/60">{v.d}</p>
               </div>
             </Reveal>
           ))}

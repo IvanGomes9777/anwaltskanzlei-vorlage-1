@@ -17,7 +17,7 @@ export default function ServicesDark() {
       <div className="container-content relative py-24 md:py-28">
         <Reveal>
           <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.24em] text-white">
-            <span className="h-px w-8 bg-white" />
+            <span className="h-px w-8 bg-[#728690]" />
             {s('eyebrow')}
           </span>
           <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-black md:text-5xl">

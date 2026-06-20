@@ -7,7 +7,7 @@ export default function FaqAccordion({ items }: { items: QA[] }) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <div className="divide-y divide-navy/10 border-y border-navy/10">
+    <div className="divide-y divide-black/10 border-y border-black/10">
       {items.map((item, i) => {
         const isOpen = open === i;
         return (
@@ -17,11 +17,11 @@ export default function FaqAccordion({ items }: { items: QA[] }) {
               aria-expanded={isOpen}
               className="flex w-full items-center justify-between gap-4 py-5 text-left"
             >
-              <span className="font-serif text-lg font-semibold text-navy">
+              <span className="font-serif text-lg font-semibold text-white">
                 {item.q}
               </span>
               <span
-                className={`shrink-0 text-2xl text-gold-600 transition-transform ${
+                className={`shrink-0 text-2xl text-black transition-transform ${
                   isOpen ? 'rotate-45' : ''
                 }`}
                 aria-hidden
@@ -35,7 +35,7 @@ export default function FaqAccordion({ items }: { items: QA[] }) {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="leading-relaxed text-navy/70">{item.a}</p>
+                <p className="leading-relaxed text-black/70">{item.a}</p>
               </div>
             </div>
           </div>

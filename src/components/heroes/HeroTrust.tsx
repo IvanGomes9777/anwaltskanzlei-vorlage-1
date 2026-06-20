@@ -15,7 +15,7 @@ export default function HeroTrust() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-sand-50">
+    <section className="relative overflow-hidden bg-[#728690]">
       {/* sanfter Farbschleier oben */}
       <div
         aria-hidden
@@ -30,9 +30,9 @@ export default function HeroTrust() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease }}
-          className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-gold-600"
+          className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-black"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+          <span className="h-1.5 w-1.5 rounded-full bg-white" />
           {t('eyebrow')}
         </motion.span>
 
@@ -40,7 +40,7 @@ export default function HeroTrust() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.08, ease }}
-          className="mt-6 max-w-3xl font-serif text-5xl font-semibold leading-[1.04] text-navy md:text-7xl"
+          className="mt-6 max-w-3xl font-serif text-5xl font-semibold leading-[1.04] text-white md:text-7xl"
         >
           {t('title')}
         </motion.h1>
@@ -49,14 +49,14 @@ export default function HeroTrust() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.2, ease }}
-          className="mt-8 h-px w-16 origin-left bg-gold"
+          className="mt-8 h-px w-16 origin-left bg-white"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.24, ease }}
-          className="mt-8 max-w-xl text-lg leading-relaxed text-navy/70"
+          className="mt-8 max-w-xl text-lg leading-relaxed text-black/70"
         >
           {t('subtitle')}
         </motion.p>
@@ -69,13 +69,13 @@ export default function HeroTrust() {
         >
           <a
             href="#"
-            className="rounded-md bg-navy px-7 py-3.5 text-sm font-medium text-sand-50 transition-colors hover:bg-navy-700"
+            className="rounded-md bg-black px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-black"
           >
             {t('ctaPrimary')}
           </a>
           <a
             href="#"
-            className="rounded-md border border-navy/20 px-7 py-3.5 text-sm font-medium text-navy transition-colors hover:border-navy/50"
+            className="rounded-md border border-black/20 px-7 py-3.5 text-sm font-medium text-white transition-colors hover:border-black/50"
           >
             {t('ctaSecondary')}
           </a>
@@ -85,12 +85,12 @@ export default function HeroTrust() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-navy/10 pt-8"
+          className="mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-black/10 pt-8"
         >
           {stats.map((s) => (
             <div key={s.l}>
-              <dt className="font-serif text-3xl font-semibold text-navy">{s.v}</dt>
-              <dd className="mt-1 text-sm text-navy/55">{s.l}</dd>
+              <dt className="font-serif text-3xl font-semibold text-white">{s.v}</dt>
+              <dd className="mt-1 text-sm text-black/55">{s.l}</dd>
             </div>
           ))}
         </motion.dl>

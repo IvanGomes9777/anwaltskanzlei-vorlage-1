@@ -14,7 +14,7 @@ export default async function DatenschutzPage({
       title="Datenschutzerklärung"
       updated="Vorlage – vor Veröffentlichung anwaltlich prüfen lassen."
     >
-      <div className="mb-8 rounded-lg border border-gold/30 bg-gold/[0.06] p-4 text-sm text-navy/70">
+      <div className="mb-8 rounded-lg border border-white/30 bg-white/[0.06] p-4 text-sm text-black/70">
         Hinweis: Beispiel-/Platzhalterinhalt. An die tatsächliche Datenverarbeitung, eingesetzte Tools und das Hosting anpassen und vor Veröffentlichung rechtlich prüfen lassen.
       </div>
 

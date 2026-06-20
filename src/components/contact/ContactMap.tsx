@@ -6,13 +6,13 @@ export default function ContactMap() {
   const t = useTranslations('contact');
 
   return (
-    <section className="bg-sand-50">
+    <section className="bg-[#728690]">
       <div className="container-content py-24 md:py-28">
         <Reveal>
-          <span className="text-xs font-medium uppercase tracking-[0.24em] text-gold-600">
+          <span className="text-xs font-medium uppercase tracking-[0.24em] text-black">
             {t('eyebrow')}
           </span>
-          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-navy md:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-serif text-4xl font-semibold leading-tight text-white md:text-5xl">
             {t('heading')}
           </h2>
         </Reveal>
@@ -24,7 +24,7 @@ export default function ContactMap() {
 
           <Reveal delay={0.12}>
             <div className="flex h-full flex-col gap-6">
-              <div className="overflow-hidden rounded-2xl border border-navy/10">
+              <div className="overflow-hidden rounded-2xl border border-black/10">
                 <iframe
                   title={t('mapLabel')}
                   className="h-[320px] w-full md:h-[380px]"
@@ -34,24 +34,24 @@ export default function ContactMap() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-gold-600">
+                  <p className="text-xs uppercase tracking-wide text-black">
                     {t('addressTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-navy/75">
+                  <p className="mt-1 text-sm text-black/75">
                     {t('address1')}
                     <br />
                     {t('address2')}
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-gold-600">
+                  <p className="text-xs uppercase tracking-wide text-black">
                     {t('phoneTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-navy/75">{t('phone')}</p>
-                  <p className="mt-3 text-xs uppercase tracking-wide text-gold-600">
+                  <p className="mt-1 text-sm text-black/75">{t('phone')}</p>
+                  <p className="mt-3 text-xs uppercase tracking-wide text-black">
                     {t('hoursTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-navy/75">{t('hours')}</p>
+                  <p className="mt-1 text-sm text-black/75">{t('hours')}</p>
                 </div>
               </div>
             </div>
