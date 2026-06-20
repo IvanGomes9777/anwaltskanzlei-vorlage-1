@@ -25,7 +25,7 @@ export default function HeroDark() {
         className="pointer-events-none absolute inset-0 opacity-[0.5]"
         style={{
           background:
-            'radial-gradient(60% 60% at 78% 18%, rgba(194,161,77,0.22) 0%, transparent 60%), radial-gradient(50% 50% at 10% 100%, rgba(31,52,79,0.6) 0%, transparent 70%)',
+            'radial-gradient(60% 60% at 78% 18%, rgba(114,134,144,0.22) 0%, transparent 60%), radial-gradient(50% 50% at 10% 100%, rgba(31,52,79,0.6) 0%, transparent 70%)',
         }}
       />
       <div

@@ -22,7 +22,7 @@ export default function HeroTrust() {
         className="pointer-events-none absolute inset-x-0 top-0 h-[420px] opacity-[0.07]"
         style={{
           background:
-            'radial-gradient(120% 100% at 20% 0%, #0f1b2d 0%, transparent 60%), radial-gradient(80% 80% at 90% 0%, #c2a14d 0%, transparent 55%)',
+            'radial-gradient(120% 100% at 20% 0%, #0f1b2d 0%, transparent 60%), radial-gradient(80% 80% at 90% 0%, #728690 0%, transparent 55%)',
         }}
       />
       <div className="container-content relative py-24 md:py-32">

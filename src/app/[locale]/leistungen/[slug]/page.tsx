@@ -34,7 +34,7 @@ export default async function PracticePage({
             className="pointer-events-none absolute inset-0 opacity-[0.4]"
             style={{
               background:
-                'radial-gradient(60% 60% at 80% 0%, rgba(194,161,77,0.16) 0%, transparent 60%)',
+                'radial-gradient(60% 60% at 80% 0%, rgba(114,134,144,0.16) 0%, transparent 60%)',
             }}
           />
           <div className="container-content relative py-20 md:py-28">
