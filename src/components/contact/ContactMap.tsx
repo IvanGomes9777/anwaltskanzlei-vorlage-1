@@ -35,38 +35,38 @@ export default function ContactMap() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-black">
+                  <p className="text-xs uppercase tracking-wide text-white">
                     {t('addressTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-black/75">
+                  <p className="mt-1 text-sm text-white/80">
                     {t('address1')}
                     <br />
                     {t('address2')}
                   </p>
-                  <p className="mt-3 text-xs uppercase tracking-wide text-black">
+                  <p className="mt-3 text-xs uppercase tracking-wide text-white">
                     {t('emailTitle')}
                   </p>
                   <a
                     href={`mailto:${t('email')}`}
-                    className="mt-1 block break-all text-sm text-black/75 underline-offset-2 hover:underline"
+                    className="mt-1 block break-all text-sm text-white/80 underline-offset-2 hover:underline"
                   >
                     {t('email')}
                   </a>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-black">
+                  <p className="text-xs uppercase tracking-wide text-white">
                     {t('phoneTitle')}
                   </p>
                   <a
                     href={`tel:${t('phone').replace(/\s/g, '')}`}
-                    className="mt-1 block text-sm text-black/75 underline-offset-2 hover:underline"
+                    className="mt-1 block text-sm text-white/80 underline-offset-2 hover:underline"
                   >
                     {t('phone')}
                   </a>
-                  <p className="mt-3 text-xs uppercase tracking-wide text-black">
+                  <p className="mt-3 text-xs uppercase tracking-wide text-white">
                     {t('faxTitle')}
                   </p>
-                  <p className="mt-1 text-sm text-black/75">{t('fax')}</p>
+                  <p className="mt-1 text-sm text-white/80">{t('fax')}</p>
                 </div>
               </div>
             </div>
