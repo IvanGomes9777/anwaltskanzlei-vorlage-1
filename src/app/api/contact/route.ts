@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { rateLimit } from '@/lib/rate-limit';
 
 // Stabile Slugs → Klartext-Label (für die E-Mail) und Empfänger (aus Env)
 const AREA_LABELS: Record<string, string> = {
@@ -9,23 +10,37 @@ const AREA_LABELS: Record<string, string> = {
   other: 'Sonstiges / noch unklar',
 };
 
-function recipientFor(area: string): string {
+function recipientFor(area: string): string | null {
   const map: Record<string, string | undefined> = {
     medizinstrafrecht: process.env.CONTACT_TO_MEDIZINSTRAFRECHT,
     wirtschaftsstrafrecht: process.env.CONTACT_TO_WIRTSCHAFTSSTRAFRECHT,
     steuerstrafrecht: process.env.CONTACT_TO_STEUERSTRAFRECHT,
   };
-  return (
-    map[area] ||
-    process.env.CONTACT_TO_DEFAULT ||
-    'luebbersmann@luebersmann-rechtsanwaelte.de'
-  );
+  return map[area] || process.env.CONTACT_TO_DEFAULT || null;
 }
 
 const isEmail = (v: unknown): v is string =>
   typeof v === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
+// Einzeilige Felder: Zeilenumbrüche/Steuerzeichen entfernen (verhindert
+// E-Mail-Header-Injection, z. B. über den Namen im Betreff) und Länge begrenzen.
+const cleanLine = (v: unknown, max: number): string =>
+  String(v ?? '')
+    .replace(/[\r\n\u2028\u2029]/g, " ")
+    .trim()
+    .slice(0, max);
+
 export async function POST(request: Request) {
+  const ip =
+    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+  const limit = rateLimit(ip);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: 'rate_limited' },
+      { status: 429, headers: { 'Retry-After': String(limit.retryAfter) } }
+    );
+  }
+
   let body: Record<string, unknown>;
   try {
     body = await request.json();
@@ -33,11 +48,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'invalid_json' }, { status: 400 });
   }
 
-  const name = String(body.name ?? '').trim();
-  const email = String(body.email ?? '').trim();
-  const phone = String(body.phone ?? '').trim();
-  const area = String(body.area ?? '').trim();
-  const message = String(body.message ?? '').trim();
+  const name = cleanLine(body.name, 100);
+  const email = cleanLine(body.email, 200);
+  const phone = cleanLine(body.phone, 50);
+  const area = cleanLine(body.area, 40);
+  const message = String(body.message ?? '').replace(/\r/g, '').trim().slice(0, 5000);
   const consent = body.consent === true || body.consent === 'on';
   const honeypot = String(body.company ?? '').trim(); // Spam-Falle
 
@@ -55,8 +70,15 @@ export async function POST(request: Request) {
 
   // Demo-Modus: kein API-Key gesetzt → nichts senden, aber Formular „funktioniert"
   if (!apiKey) {
-    console.log('[contact] DEMO – würde senden an', to, { name, email, area });
+    console.log('[contact] DEMO – kein RESEND_API_KEY gesetzt, es wird nichts versendet');
     return NextResponse.json({ ok: true, demo: true });
+  }
+
+  // Kein Empfänger konfiguriert → Konfigurationsfehler statt Versand an
+  // eine Platzhalter-Adresse.
+  if (!to) {
+    console.error('[contact] Kein Empfänger konfiguriert (CONTACT_TO_* / CONTACT_TO_DEFAULT)');
+    return NextResponse.json({ error: 'send_failed' }, { status: 502 });
   }
 
   const resend = new Resend(apiKey);
