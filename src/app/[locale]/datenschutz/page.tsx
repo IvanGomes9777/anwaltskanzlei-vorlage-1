@@ -107,8 +107,9 @@ function DatenschutzDE() {
       <h2>9. Beschwerderecht bei der Aufsichtsbehörde</h2>
       <p>
         Ihnen steht ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu.
-        Zuständig ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA),
-        Promenade 27, 91522 Ansbach [ggf. anpassen].
+        Zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit
+        Nordrhein-Westfalen (LDI NRW), Kavalleriestraße 2–4, 40213 Düsseldorf,
+        www.ldi.nrw.de.
       </p>
 
       <h2>10. Aktualität und Änderung</h2>
