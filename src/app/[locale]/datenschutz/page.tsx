@@ -123,13 +123,32 @@ function DatenschutzDE() {
         vertrauliche Mandatsanfragen einen EU-basierten Versandweg erwägen.]
       </p>
 
-      <h2>8. Cookies</h2>
+      <h2>8. Cookies und lokale Speicherung</h2>
       <p>
-        Diese Website verwendet technisch notwendige Cookies, die für den Betrieb
-        erforderlich sind (Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO bzw. § 25 Abs. 2
-        TDDDG). Nicht notwendige Cookies oder Tracking werden nur mit Ihrer
-        Einwilligung gemäß § 25 Abs. 1 TDDDG eingesetzt. [Falls keine
-        Tracking-Cookies eingesetzt werden, hier vermerken.]
+        Diese Website verwendet ausschließlich technisch notwendige Cookies und
+        vergleichbare Speichertechniken (Rechtsgrundlage § 25 Abs. 2 TDDDG,
+        Art. 6 Abs. 1 lit. f DSGVO). Tracking-, Analyse- oder Werbe-Cookies setzen
+        wir nicht ein. Im Einzelnen werden verwendet:
+      </p>
+      <ul>
+        <li>
+          Cookie „NEXT_LOCALE": speichert die Spracheinstellung der Website,
+          sofern diese von der Standardeinstellung abweicht (technisch notwendig).
+        </li>
+        <li>
+          Local-Storage-Eintrag „cookie-consent": merkt sich Ihre Entscheidung im
+          Cookie-Hinweis, damit dieser nicht bei jedem Besuch erneut erscheint.
+        </li>
+        <li>
+          Local-Storage-Eintrag „map-consent": merkt sich Ihre Einwilligung zum
+          Laden der Anfahrtskarte (siehe Abschnitt 9).
+        </li>
+      </ul>
+      <p>
+        Nach Ihrer Einwilligung zum Laden der Google-Maps-Karte kann Google eigene
+        Cookies setzen (Abschnitt 9). Sonstige nicht notwendige Cookies würden nur
+        mit Ihrer Einwilligung gemäß § 25 Abs. 1 TDDDG eingesetzt. Die
+        Local-Storage-Einträge können Sie jederzeit über die Browserdaten löschen.
       </p>
 
       <h2>9. Eingebundener Kartendienst (Google Maps)</h2>
