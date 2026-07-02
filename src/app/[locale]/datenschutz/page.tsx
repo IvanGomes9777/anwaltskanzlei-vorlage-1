@@ -36,7 +36,7 @@ function DatenschutzDE() {
         <br />
         Südstraße 11, 48153 Münster
         <br />
-        E-Mail: luebbersmann@luebersmann-rechtsanwaelte.de
+        E-Mail: luebbersmann@luebbersmann-rechtsanwaelte.de
       </p>
 
       <h2>2. Ihre Rechte als betroffene Person</h2>
@@ -122,9 +122,9 @@ function DatenschutzDE() {
       <h2>10. Beschwerderecht bei der Aufsichtsbehörde</h2>
       <p>
         Ihnen steht ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu.
-        Zuständig für Nordrhein-Westfalen ist die Landesbeauftragte für Datenschutz
-        und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), Kavalleriestraße 2–4,
-        40213 Düsseldorf.
+        Zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit
+        Nordrhein-Westfalen (LDI NRW), Kavalleriestraße 2–4, 40213 Düsseldorf,
+        www.ldi.nrw.de.
       </p>
 
       <h2>11. Aktualität und Änderung</h2>

@@ -46,7 +46,7 @@ function ImpressumDE() {
         <br />
         Fax: 0251 531761
         <br />
-        E-Mail: luebbersmann@luebersmann-rechtsanwaelte.de
+        E-Mail: luebbersmann@luebbersmann-rechtsanwaelte.de
       </p>
 
       <h2>Umsatzsteuer-ID</h2>
