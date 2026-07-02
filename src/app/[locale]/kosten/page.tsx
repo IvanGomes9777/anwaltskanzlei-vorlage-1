@@ -1,6 +1,14 @@
 import { setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+
+export const metadata = pageMetadata({
+  path: '/kosten',
+  title: 'Kosten & Vergütung',
+  description:
+    'Transparente Vergütung in der Strafverteidigung: gesetzliche Gebühren nach RVG oder faire Vergütungsvereinbarung – inkl. Mandatsbedingungen und Widerrufsbelehrung.',
+});
 
 export default async function KostenPage({
   params,
@@ -69,6 +77,85 @@ export default async function KostenPage({
                 Vergütungsvereinbarung. Für beide Seiten ist das die fairste Lösung:
                 Abgerechnet wird allein der tatsächliche Aufwand, den Ihr Mandat erfordert
                 – und nicht die Zahl der Verhandlungstage.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl font-semibold text-[#728690]">
+                Mandatsbedingungen
+              </h2>
+              <p className="mt-4 leading-relaxed text-black/80">
+                <strong>Zustandekommen des Mandats:</strong> Ein Mandat kommt erst durch
+                ausdrückliche Annahme durch die Kanzlei zustande – nicht bereits durch
+                das Absenden einer Anfrage über das Kontaktformular oder per E-Mail.
+                Bitte beachten Sie: Durch eine bloße Anfrage werden keine Fristen
+                gewahrt.
+              </p>
+              <p className="mt-4 leading-relaxed text-black/80">
+                <strong>Verschwiegenheit:</strong> Wir unterliegen der gesetzlichen
+                Verschwiegenheitspflicht (§ 43a Abs. 2 BRAO, § 2 BORA). Alle
+                Mitarbeitenden sind entsprechend verpflichtet.
+              </p>
+              <p className="mt-4 leading-relaxed text-black/80">
+                <strong>Kommunikation:</strong> Sofern Sie uns per unverschlüsselter
+                E-Mail kontaktieren, gehen wir von Ihrem Einverständnis mit dieser
+                Kommunikationsform aus. Für besonders sensible Inhalte empfehlen wir die
+                Übergabe in Person, per Post oder eine verschlüsselte Übermittlung.
+              </p>
+              <p className="mt-4 leading-relaxed text-black/80">
+                <strong>Handakten:</strong> Handakten werden nach § 50 Abs. 1 BRAO für
+                die Dauer von sechs Jahren nach Beendigung des Mandats aufbewahrt.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl font-semibold text-[#728690]">
+                Widerrufsbelehrung für Verbraucher
+              </h2>
+              <p className="mt-4 leading-relaxed text-black/80">
+                Wird der Anwaltsvertrag ausschließlich über Fernkommunikationsmittel
+                (z. B. Telefon, E-Mail, Kontaktformular) oder außerhalb von
+                Geschäftsräumen geschlossen, steht Verbraucherinnen und Verbrauchern ein
+                gesetzliches Widerrufsrecht nach §§ 312b, 312c, 355 BGB zu.
+              </p>
+              <p className="mt-4 leading-relaxed text-black/80">
+                <strong>Widerrufsrecht:</strong> Sie haben das Recht, binnen vierzehn
+                Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die
+                Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.
+                Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Lübbersmann
+                Rechtsanwälte, Südstraße 11, 48153 Münster, E-Mail:
+                luebbersmann@luebbersmann-rechtsanwaelte.de) mittels einer eindeutigen
+                Erklärung (z. B. ein mit der Post versandter Brief oder eine E-Mail)
+                über Ihren Entschluss informieren, diesen Vertrag zu widerrufen. Zur
+                Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über
+                die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
+              </p>
+              <p className="mt-4 leading-relaxed text-black/80">
+                <strong>Folgen des Widerrufs:</strong> Wenn Sie diesen Vertrag
+                widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten
+                haben, unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag
+                zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf bei uns
+                eingegangen ist. Haben Sie verlangt, dass die Dienstleistung während der
+                Widerrufsfrist beginnen soll, so haben Sie uns einen angemessenen Betrag
+                zu zahlen, der dem Anteil der bis zur Ausübung des Widerrufsrechts
+                bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im
+                Vertrag vorgesehenen Dienstleistungen entspricht.
+              </p>
+              <p className="mt-4 leading-relaxed text-black/80">
+                <strong>Erlöschen des Widerrufsrechts:</strong> Das Widerrufsrecht
+                erlischt, wenn wir die Dienstleistung vollständig erbracht haben und mit
+                der Ausführung erst begonnen haben, nachdem Sie dazu Ihre ausdrückliche
+                Zustimmung gegeben und gleichzeitig Ihre Kenntnis davon bestätigt haben,
+                dass Sie Ihr Widerrufsrecht bei vollständiger Vertragserfüllung durch
+                uns verlieren (§ 356 Abs. 4 BGB).
+              </p>
+              <p className="mt-4 leading-relaxed text-black/80">
+                <strong>Muster-Widerrufsformular:</strong> Wenn Sie den Vertrag
+                widerrufen wollen, können Sie folgende Formulierung verwenden: „Hiermit
+                widerrufe(n) ich/wir den von mir/uns abgeschlossenen Vertrag über die
+                Erbringung der folgenden Dienstleistung: … Bestellt am: … Name und
+                Anschrift des/der Verbraucher(s): … Datum, Unterschrift (nur bei
+                Mitteilung auf Papier)."
               </p>
             </section>
           </div>

@@ -3,3 +3,6 @@
 // Sitemap, robots.txt und Canonicals leiten sich hiervon ab.
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? 'https://anwaltskanzlei-vorlage-1.vercel.app';
+
+// Kanzleiname für Metadaten (Title-Template, OpenGraph, JSON-LD).
+export const SITE_NAME = 'Lübbersmann Rechtsanwälte';

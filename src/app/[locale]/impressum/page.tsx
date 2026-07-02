@@ -1,5 +1,13 @@
 import { setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 import LegalShell from '@/components/legal/LegalShell';
+
+export const metadata = pageMetadata({
+  path: '/impressum',
+  title: 'Impressum',
+  description:
+    'Impressum gemäß § 5 DDG mit berufsrechtlichen Angaben der Kanzlei Lübbersmann Rechtsanwälte, Münster.',
+});
 
 export default async function ImpressumPage({
   params,

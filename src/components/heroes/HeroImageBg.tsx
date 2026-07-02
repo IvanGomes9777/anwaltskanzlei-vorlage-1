@@ -13,7 +13,7 @@ export default function HeroImageBg() {
       {/* Hintergrundbild (Platzhalter) */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="https://picsum.photos/seed/kanzlei-architektur/2000/1200"
+        src="/hero/hero-library.webp"
         alt={t('imageAlt')}
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />

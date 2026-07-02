@@ -4,14 +4,9 @@ import { attorneys } from '@/content/attorneys';
 import { practices } from '@/content/practice';
 import { SITE_URL } from '@/lib/site';
 
-const staticPaths = [
-  '',
-  '/leistungen',
-  '/team',
-  '/kosten',
-  '/impressum',
-  '/datenschutz',
-];
+// Nur real existierende Routen — Leistungen und Team haben keine Index-Seiten,
+// sondern nur Detailseiten (Slugs unten) und Anker auf der Startseite.
+const staticPaths = ['', '/kosten', '/impressum', '/datenschutz'];
 
 // localePrefix 'as-needed': die Default-Locale läuft ohne URL-Präfix.
 const localePrefix = (locale: string) =>

@@ -13,7 +13,6 @@
     "press": "Presse",
     "costs": "Kosten",
     "contact": "Kontakt",
-    "home": "Start",
     "menu": "Menü",
     "close": "Schließen"
   },
@@ -22,6 +21,11 @@
     "accept": "Akzeptieren",
     "decline": "Ablehnen",
     "more": "Datenschutzerklärung"
+  },
+  "map": {
+    "text": "Die Anfahrtskarte wird erst nach Ihrer Einwilligung von Google Maps geladen. Dabei wird Ihre IP-Adresse an Google übermittelt; eine Übertragung in die USA ist möglich.",
+    "load": "Karte laden",
+    "note": "Mehr dazu in der Datenschutzerklärung"
   },
   "scaffold": {
     "badge": "Grundgerüst",

@@ -1,7 +1,11 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import { pageMetadata } from '@/lib/metadata';
+import { attorneyJsonLd } from '@/lib/jsonld';
+import JsonLd from '@/components/JsonLd';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Reveal from '@/components/Reveal';
@@ -9,6 +13,22 @@ import { attorneys, getAttorney } from '@/content/attorneys';
 
 export function generateStaticParams() {
   return attorneys.map((a) => ({ slug: a.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const attorney = getAttorney(slug);
+  if (!attorney) return {};
+
+  return pageMetadata({
+    path: `/team/${attorney.slug}`,
+    title: `${attorney.name} – ${attorney.role}`,
+    description: attorney.teaser,
+  });
 }
 
 export default async function AttorneyPage({
@@ -23,6 +43,7 @@ export default async function AttorneyPage({
 
   return (
     <div className="flex min-h-screen flex-col">
+      <JsonLd data={attorneyJsonLd(attorney)} />
       <Header />
       <main className="flex-1 bg-white">
         <div className="container-content max-w-3xl py-16 md:py-24">

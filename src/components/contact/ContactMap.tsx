@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Reveal from '@/components/Reveal';
 import ContactForm from './ContactForm';
+import MapConsent from './MapConsent';
 
 export default function ContactMap() {
   const t = useTranslations('contact');
@@ -25,11 +26,9 @@ export default function ContactMap() {
           <Reveal delay={0.12}>
             <div className="flex h-full flex-col gap-6">
               <div className="overflow-hidden rounded-2xl border border-black/10">
-                <iframe
+                <MapConsent
                   title={t('mapLabel')}
                   className="h-[320px] w-full md:h-[380px]"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                   src="https://www.google.com/maps?q=S%C3%BCdstra%C3%9Fe%2011%2C%2048153%20M%C3%BCnster&output=embed"
                 />
               </div>
