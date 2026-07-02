@@ -4,19 +4,17 @@ import { rateLimit } from '@/lib/rate-limit';
 
 // Stabile Slugs → Klartext-Label (für die E-Mail) und Empfänger (aus Env)
 const AREA_LABELS: Record<string, string> = {
-  arbeitsrecht: 'Arbeitsrecht',
-  familienrecht: 'Familien- & Erbrecht',
-  wirtschaftsrecht: 'Vertrags- & Wirtschaftsrecht',
-  strafrecht: 'Strafrecht',
+  medizinstrafrecht: 'Medizinstrafrecht',
+  wirtschaftsstrafrecht: 'Wirtschaftsstrafrecht',
+  steuerstrafrecht: 'Steuerstrafrecht',
   other: 'Sonstiges / noch unklar',
 };
 
 function recipientFor(area: string): string | null {
   const map: Record<string, string | undefined> = {
-    arbeitsrecht: process.env.CONTACT_TO_ARBEITSRECHT,
-    familienrecht: process.env.CONTACT_TO_FAMILIENRECHT,
-    wirtschaftsrecht: process.env.CONTACT_TO_WIRTSCHAFTSRECHT,
-    strafrecht: process.env.CONTACT_TO_STRAFRECHT,
+    medizinstrafrecht: process.env.CONTACT_TO_MEDIZINSTRAFRECHT,
+    wirtschaftsstrafrecht: process.env.CONTACT_TO_WIRTSCHAFTSSTRAFRECHT,
+    steuerstrafrecht: process.env.CONTACT_TO_STEUERSTRAFRECHT,
   };
   return map[area] || process.env.CONTACT_TO_DEFAULT || null;
 }
@@ -57,7 +55,6 @@ export async function POST(request: Request) {
   const message = String(body.message ?? '').replace(/\r/g, '').trim().slice(0, 5000);
   const consent = body.consent === true || body.consent === 'on';
   const honeypot = String(body.company ?? '').trim(); // Spam-Falle
-  const locale = body.locale === 'en' ? 'en' : 'de';
 
   // Spam: Honeypot ausgefüllt → still „erfolgreich", aber nichts senden
   if (honeypot) return NextResponse.json({ ok: true });
@@ -68,7 +65,7 @@ export async function POST(request: Request) {
 
   const areaLabel = AREA_LABELS[area] ?? AREA_LABELS.other;
   const to = recipientFor(area);
-  const from = process.env.CONTACT_FROM || 'Kanzlei <onboarding@resend.dev>';
+  const from = process.env.CONTACT_FROM || 'Lübbersmann Rechtsanwälte <onboarding@resend.dev>';
   const apiKey = process.env.RESEND_API_KEY;
 
   // Demo-Modus: kein API-Key gesetzt → nichts senden, aber Formular „funktioniert"
@@ -104,14 +101,8 @@ export async function POST(request: Request) {
     });
 
     // 2) Automatische Eingangsbestätigung an den Absender
-    const ackSubject =
-      locale === 'en'
-        ? 'We have received your request'
-        : 'Ihre Anfrage ist bei uns eingegangen';
-    const ackText =
-      locale === 'en'
-        ? `Dear ${name},\n\nthank you for your message regarding "${areaLabel}". The responsible attorney will get back to you shortly.\n\nKind regards\nHoffmann · Vogel Rechtsanwälte`
-        : `Guten Tag ${name},\n\nvielen Dank für Ihre Nachricht zum Thema „${areaLabel}". Die zuständige Person meldet sich zeitnah bei Ihnen.\n\nMit freundlichen Grüßen\nHoffmann · Vogel Rechtsanwälte`;
+    const ackSubject = 'Ihre Anfrage ist bei uns eingegangen';
+    const ackText = `Guten Tag ${name},\n\nvielen Dank für Ihre Nachricht zum Thema „${areaLabel}". Die zuständige Person meldet sich zeitnah bei Ihnen.\n\nMit freundlichen Grüßen\nLübbersmann Rechtsanwälte`;
 
     await resend.emails.send({
       from,

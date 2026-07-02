@@ -18,14 +18,14 @@ export default function HeroDark() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-navy-900 text-sand-100">
+    <section className="relative overflow-hidden bg-[#728690] text-black">
       {/* Goldglühen + feines Raster */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.5]"
         style={{
           background:
-            'radial-gradient(60% 60% at 78% 18%, rgba(194,161,77,0.22) 0%, transparent 60%), radial-gradient(50% 50% at 10% 100%, rgba(31,52,79,0.6) 0%, transparent 70%)',
+            'radial-gradient(60% 60% at 78% 18%, rgba(114,134,144,0.22) 0%, transparent 60%), radial-gradient(50% 50% at 10% 100%, rgba(31,52,79,0.6) 0%, transparent 70%)',
         }}
       />
       <div
@@ -42,9 +42,9 @@ export default function HeroDark() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease }}
-          className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.24em] text-gold-400"
+          className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.24em] text-black"
         >
-          <span className="h-px w-8 bg-gold-400" />
+          <span className="h-px w-8 bg-white" />
           {t('eyebrow')}
         </motion.span>
 
@@ -55,14 +55,14 @@ export default function HeroDark() {
           className="mt-8 max-w-3xl font-serif text-5xl font-medium leading-[1.05] md:text-7xl"
         >
           {before}
-          <span className="text-gold-400">{accent}</span>
+          <span className="text-black">{accent}</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.26, ease }}
-          className="mt-8 max-w-xl text-lg leading-relaxed text-sand-100/70"
+          className="mt-8 max-w-xl text-lg leading-relaxed text-black/70"
         >
           {t('subtitle')}
         </motion.p>
@@ -75,13 +75,13 @@ export default function HeroDark() {
         >
           <a
             href="#"
-            className="rounded-md bg-gold px-7 py-3.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-gold-400"
+            className="rounded-md bg-white px-7 py-3.5 text-sm font-semibold text-black transition-colors hover:bg-white"
           >
             {t('ctaPrimary')}
           </a>
           <a
             href="#"
-            className="rounded-md border border-sand-100/25 px-7 py-3.5 text-sm font-medium text-sand-100 transition-colors hover:border-gold-400 hover:text-gold-400"
+            className="rounded-md border border-black/25 px-7 py-3.5 text-sm font-medium text-black transition-colors hover:border-white hover:text-black"
           >
             {t('ctaSecondary')}
           </a>
@@ -91,12 +91,12 @@ export default function HeroDark() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.55 }}
-          className="mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-sand-100/15 pt-8"
+          className="mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-black/15 pt-8"
         >
           {stats.map((s) => (
             <div key={s.l}>
-              <dt className="font-serif text-3xl font-semibold text-gold-400">{s.v}</dt>
-              <dd className="mt-1 text-sm text-sand-100/55">{s.l}</dd>
+              <dt className="font-serif text-3xl font-semibold text-black">{s.v}</dt>
+              <dd className="mt-1 text-sm text-black/55">{s.l}</dd>
             </div>
           ))}
         </motion.dl>

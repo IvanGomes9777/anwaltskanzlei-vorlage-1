@@ -15,10 +15,10 @@ export default function LegalShell({
       <Header />
       <main className="flex-1">
         <div className="container-content max-w-3xl py-20 md:py-24">
-          <h1 className="font-serif text-4xl font-semibold text-navy md:text-5xl">
+          <h1 className="font-serif text-4xl font-semibold text-white md:text-5xl">
             {title}
           </h1>
-          <p className="mt-3 text-sm text-navy/45">{updated}</p>
+          <p className="mt-3 text-sm text-black/45">{updated}</p>
           <div className="hairline-gold mt-6" />
           <div className="legal-prose mt-10">{children}</div>
         </div>

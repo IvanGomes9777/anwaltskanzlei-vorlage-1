@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-export function Stars({ className = 'text-gold' }: { className?: string }) {
+export function Stars({ className = 'text-black' }: { className?: string }) {
   return (
     <span className={`inline-flex gap-0.5 ${className}`} aria-label="5 von 5 Sternen">
       {Array.from({ length: 5 }).map((_, i) => (

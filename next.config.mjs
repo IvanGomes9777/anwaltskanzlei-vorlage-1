@@ -25,7 +25,7 @@ const csp = [
   "img-src 'self' data: blob: https://images.unsplash.com https://picsum.photos https://fastly.picsum.photos https://vercel.live https://vercel.com",
   "font-src 'self' data: https://vercel.live",
   "connect-src 'self' https://vercel.live wss://ws-us3.pusher.com",
-  "frame-src 'self' https://www.openstreetmap.org https://vercel.live",
+  "frame-src 'self' https://www.google.com https://www.openstreetmap.org https://vercel.live",
   'upgrade-insecure-requests',
 ].join('; ');
 

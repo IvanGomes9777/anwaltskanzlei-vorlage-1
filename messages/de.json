@@ -1,15 +1,17 @@
 {
   "brand": {
-    "name": "Hoffmann · Vogel",
+    "name": "Lübbersmann",
     "suffix": "Rechtsanwälte",
-    "claim": "Rechtssicherheit mit Weitblick."
+    "claim": "Strafverteidigung mit Weitblick."
   },
   "nav": {
     "home": "Start",
     "services": "Leistungen",
     "firm": "Kanzlei",
-    "team": "Team",
+    "team": "Anwälte",
     "reviews": "Bewertungen",
+    "press": "Presse",
+    "costs": "Kosten",
     "contact": "Kontakt",
     "home": "Start",
     "menu": "Menü",
@@ -29,12 +31,12 @@
     "next": "Nächster Schritt: Hero-Sektion – 5 Varianten"
   },
   "hero": {
-    "eyebrow": "Arbeits-, Familien-, Wirtschafts- & Strafrecht",
-    "title": "Rechtssicherheit mit Weitblick.",
-    "titleAccent": "Weitblick.",
-    "subtitle": "Persönliche Beratung und durchsetzungsstarke Vertretung – für Privatpersonen und Unternehmen in München und bundesweit.",
+    "eyebrow": "Strafverteidigung in Münster",
+    "title": "Fachanwalt für Strafrecht",
+    "titleAccent": "Strafrecht",
+    "subtitle": "Diskrete Beratung und konsequente Verteidigung – für Privatpersonen und Unternehmen in Münster und bundesweit.",
     "ctaPrimary": "Erstberatung anfragen",
-    "ctaSecondary": "Unsere Leistungen",
+    "ctaSecondary": "Unsere Rechtsgebiete",
     "stat1Value": "25+",
     "stat1Label": "Jahre Erfahrung",
     "stat2Value": "4",
@@ -68,24 +70,21 @@
     "v10Desc": "Farbblock Navy/Sand, modern-editorial"
   },
   "areas": {
-    "a1": "Arbeitsrecht",
-    "a2": "Familien- & Erbrecht",
-    "a3": "Vertrags- & Wirtschaftsrecht",
-    "a4": "Strafrecht"
+    "a1": "Medizinstrafrecht",
+    "a2": "Wirtschaftsstrafrecht",
+    "a3": "Steuerstrafrecht"
   },
   "services": {
     "eyebrow": "Rechtsgebiete",
-    "heading": "Vier Schwerpunkte, ein Anspruch.",
+    "heading": "Drei Schwerpunkte, ein Anspruch.",
     "intro": "Ob privat oder unternehmerisch – wir vertreten Ihre Interessen mit Klarheit, Erfahrung und Nachdruck.",
     "cta": "Mehr erfahren",
-    "d1": "Kündigung, Abfindung und Aufhebungsverträge: Wir vertreten Arbeitnehmer wie Arbeitgeber durchsetzungsstark – außergerichtlich und vor dem Arbeitsgericht.",
-    "d2": "Scheidung, Unterhalt und Sorgerecht ebenso wie Testamente und Nachlass – einfühlsam beraten und vorausschauend geregelt.",
-    "d3": "Verträge, Gesellschaftsrecht und Haftungsfragen: rechtssichere Lösungen für Unternehmen, Gründer und Selbstständige.",
-    "d4": "Verteidigung im Ermittlungs- und Strafverfahren – diskret, entschlossen und mit voller Aufmerksamkeit für Ihren Fall.",
-    "t1": "Kündigungsschutz, Abfindung, Arbeitsvertrag",
-    "t2": "Scheidung, Unterhalt, Erbrecht",
-    "t3": "Verträge, GmbH, Haftung",
-    "t4": "Verteidigung, Ermittlung, Revision"
+    "d1": "Vorwürfe wie Abrechnungsbetrug, Behandlungsfehler oder Korruption im Gesundheitswesen – wir verteidigen Ärztinnen, Ärzte und Kliniken mit fachlicher Tiefe und größter Diskretion.",
+    "d2": "Ermittlungen wegen Betrug, Untreue, Insolvenzdelikten oder Geldwäsche – wir begleiten Unternehmen und Verantwortliche von der Durchsuchung bis zur Hauptverhandlung.",
+    "d3": "Steuerhinterziehung, Selbstanzeige und Betriebsprüfungen mit strafrechtlichem Bezug – wir sichern Ihre Interessen gegenüber Finanzamt und Staatsanwaltschaft.",
+    "t1": "Abrechnungsbetrug, Behandlungsfehler, Korruption",
+    "t2": "Betrug, Untreue, Geldwäsche",
+    "t3": "Steuerhinterziehung, Selbstanzeige, Betriebsprüfung"
   },
   "variantsSvc": {
     "heading": "Leistungs-Sektion – 5 Varianten",
@@ -109,15 +108,21 @@
     "p2": "Verlässlichkeit ist für uns keine Floskel, sondern Arbeitsweise: kurze Reaktionszeiten, feste Ansprechpartner und eine Strategie, die zu Ihren Zielen passt.",
     "quote": "Wir hören zu, bevor wir handeln.",
     "cta": "Lernen Sie uns kennen",
-    "val1t": "Klartext",
-    "val1d": "Wir erklären Recht verständlich – ohne Juristendeutsch.",
-    "val2t": "Erreichbarkeit",
-    "val2d": "Feste Ansprechpartner und kurze Reaktionszeiten.",
-    "val3t": "Diskretion",
-    "val3d": "Vertraulichkeit in jedem Schritt des Mandats.",
-    "val4t": "Durchsetzung",
-    "val4d": "Entschlossen und strategisch für Ihr Ziel.",
+    "val1t": "Prävention",
+    "val1d": "Risiken früh erkennen und vermeiden, bevor daraus ein Verfahren wird.",
+    "val2t": "Compliance",
+    "val2d": "Klare Strukturen und Prozesse, die Sie und Ihr Unternehmen rechtssicher aufstellen.",
+    "val3t": "Beratung",
+    "val3d": "Fundierte, verständliche Einschätzung Ihrer Lage – ehrlich und vorausschauend.",
+    "val4t": "Verteidigung",
+    "val4d": "Entschlossene, strategische Vertretung im Ermittlungs- und Strafverfahren.",
     "imageAlt": "Beispielbild – Kanzleiräume mit Blick über München (Platzhalter)"
+  },
+  "press": {
+    "eyebrow": "Presse",
+    "heading": "Aktuelles aus der Presse",
+    "intro": "Ausgewählte Beiträge über unsere Arbeit und Einschätzungen.",
+    "placeholder": "Beispiel-Einträge – echte Presse-Links folgen."
   },
   "variantsAbout": {
     "heading": "Über die Kanzlei – 5 Varianten",
@@ -134,7 +139,7 @@
     "v5Desc": "Vollbild-Foto mit Overlay-Text"
   },
   "team": {
-    "eyebrow": "Das Team",
+    "eyebrow": "Die Anwälte",
     "heading": "Anwälte, die zuhören.",
     "intro": "Erfahrene Juristinnen und Juristen mit klaren Schwerpunkten – an Ihrer Seite.",
     "cta": "Profil ansehen",
@@ -185,12 +190,14 @@
     "confidential": "Hinweis: Bitte übermitteln Sie keine vertraulichen Details über dieses Formular – eine unverschlüsselte Übertragung ist nicht absolut sicher.",
     "demoNote": "Demo-Formular – es werden keine Daten gesendet.",
     "addressTitle": "Adresse",
-    "address1": "Maximilianstraße 12",
-    "address2": "80539 München",
+    "address1": "Südstraße 11",
+    "address2": "48153 Münster",
     "phoneTitle": "Telefon",
-    "phone": "+49 89 1234 567",
+    "phone": "0251 524024",
     "emailTitle": "E-Mail",
-    "email": "kanzlei@hoffmann-vogel.example",
+    "email": "luebbersmann@luebersmann-rechtsanwaelte.de",
+    "faxTitle": "Fax",
+    "fax": "0251 531761",
     "hoursTitle": "Sprechzeiten",
     "hours": "Mo–Fr 9:00–18:00 Uhr",
     "mapLabel": "Anfahrt"
@@ -241,14 +248,12 @@
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
+    "costs": "Kosten",
+    "contact": "Kontakt",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "faq": "FAQ",
     "career": "Karriere",
     "placeholder": "Beispiel-Vorlage – Inhalte sind Platzhalter."
-  },
-  "lang": {
-    "de": "DE",
-    "en": "EN"
   }
 }

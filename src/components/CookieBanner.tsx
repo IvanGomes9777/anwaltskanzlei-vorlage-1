@@ -28,12 +28,12 @@ export default function CookieBanner() {
       className="fixed inset-x-0 bottom-0 z-50 animate-fade-up p-4"
     >
       <div className="container-content">
-        <div className="flex flex-col gap-4 rounded-xl border border-navy/10 bg-white/95 p-5 shadow-[0_20px_50px_-20px_rgba(15,27,45,0.5)] backdrop-blur md:flex-row md:items-center md:justify-between">
-          <p className="max-w-2xl text-sm text-navy/70">
+        <div className="flex flex-col gap-4 rounded-xl border border-black/10 bg-[#728690]/95 p-5 shadow-[0_20px_50px_-20px_rgba(15,27,45,0.5)] backdrop-blur md:flex-row md:items-center md:justify-between">
+          <p className="max-w-2xl text-sm text-black/70">
             {t('text')}{' '}
             <Link
               href="/datenschutz"
-              className="text-gold-600 underline underline-offset-2"
+              className="text-black underline underline-offset-2"
             >
               {t('more')}
             </Link>
@@ -41,13 +41,13 @@ export default function CookieBanner() {
           <div className="flex shrink-0 gap-3">
             <button
               onClick={() => decide('declined')}
-              className="rounded-md border border-navy/20 px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:border-navy/50"
+              className="rounded-md border border-black/20 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-black/50"
             >
               {t('decline')}
             </button>
             <button
               onClick={() => decide('accepted')}
-              className="rounded-md bg-navy px-5 py-2.5 text-sm font-medium text-sand-50 transition-colors hover:bg-navy-700"
+              className="rounded-md bg-black px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-black"
             >
               {t('accept')}
             </button>

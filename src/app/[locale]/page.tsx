@@ -5,7 +5,7 @@ import HeroFinal from '@/components/heroes/HeroFinal';
 import ServicesDark from '@/components/services/ServicesDark';
 import AboutFinal from '@/components/about/AboutFinal';
 import TeamCards from '@/components/team/TeamCards';
-import ReviewsMarqueeDark from '@/components/reviews/ReviewsMarqueeDark';
+import PressList from '@/components/press/PressList';
 import ContactMap from '@/components/contact/ContactMap';
 
 export default async function Home({
@@ -30,8 +30,8 @@ export default async function Home({
         <div id="team" className="scroll-mt-20">
           <TeamCards />
         </div>
-        <div id="bewertungen" className="scroll-mt-20">
-          <ReviewsMarqueeDark />
+        <div id="presse" className="scroll-mt-20">
+          <PressList />
         </div>
         <div id="kontakt" className="scroll-mt-20">
           <ContactMap />

@@ -14,10 +14,10 @@ export default {
           600: '#1f344f',
         },
         gold: {
-          DEFAULT: '#c2a14d',
-          400: '#d4b876',
-          500: '#c2a14d',
-          600: '#a8883b',
+          DEFAULT: '#728690',
+          400: '#8a9ca5',
+          500: '#728690',
+          600: '#5d6e77',
         },
         sand: {
           DEFAULT: '#f7f4ee',
