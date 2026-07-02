@@ -12,11 +12,15 @@ Live-Stand (`main`).
 - [ ] **Berufshaftpflichtversicherung** für das Impressum (§ 2 Abs. 1 Nr. 11
   DL-InfoV): Name und Anschrift des Versicherers sowie räumlicher
   Geltungsbereich — aktuell nur Platzhalter.
-- [ ] **Korrekte E-Mail-Domain** bestätigen: Im Code steht
-  `…@luebersmann-rechtsanwaelte.de` (ein „b"), der Kanzleiname schreibt sich
-  aber „Lübbersmann" (zwei „b"). Falls Tippfehler: `.env`-Variablen in Vercel,
-  `.env.example`, `src/app/api/contact/route.ts` und ggf. Impressum/Kontakt
-  korrigieren. Bis zur Klärung können Anfragen ins Leere laufen!
+- [x] **E-Mail-Domain geklärt und korrigiert:** DNS-Prüfung (02.07.2026) ergab,
+  dass `luebersmann-rechtsanwaelte.de` (ein „b") nicht existiert (NXDOMAIN) —
+  nur `luebbersmann-rechtsanwaelte.de` (zwei „b") hat einen Mail-Server
+  (Microsoft 365). Alle Code-Stellen auf
+  `luebbersmann@luebbersmann-rechtsanwaelte.de` korrigiert.
+  **Noch offen:** Die `CONTACT_*`-Environment-Variablen in Vercel
+  (Project → Settings → Environment Variables) auf die Zwei-„b"-Domain
+  prüfen/korrigieren — sonst versendet die Kontakt-API weiter an die
+  nicht existierende Domain.
 - [ ] Danach: verbliebene Vorlagen-Warnhinweise („Beispiel-/Platzhalterinhalt")
   auf Impressum/Datenschutz entfernen und beide Seiten anwaltlich prüfen lassen.
 

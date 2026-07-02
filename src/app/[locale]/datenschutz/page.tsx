@@ -36,7 +36,7 @@ function DatenschutzDE() {
         <br />
         Südstraße 11, 48153 Münster
         <br />
-        E-Mail: luebbersmann@luebersmann-rechtsanwaelte.de
+        E-Mail: luebbersmann@luebbersmann-rechtsanwaelte.de
       </p>
 
       <h2>2. Ihre Rechte als betroffene Person</h2>

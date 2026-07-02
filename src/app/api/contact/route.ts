@@ -18,7 +18,7 @@ function recipientFor(area: string): string {
   return (
     map[area] ||
     process.env.CONTACT_TO_DEFAULT ||
-    'luebbersmann@luebersmann-rechtsanwaelte.de'
+    'luebbersmann@luebbersmann-rechtsanwaelte.de'
   );
 }
 
