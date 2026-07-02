@@ -4,7 +4,9 @@ import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { SITE_URL } from '@/lib/site';
+import { SITE_NAME, SITE_URL } from '@/lib/site';
+import { legalServiceJsonLd } from '@/lib/jsonld';
+import JsonLd from '@/components/JsonLd';
 import CookieBanner from '@/components/CookieBanner';
 import '../globals.css';
 
@@ -23,8 +25,12 @@ const body = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Lübbersmann Rechtsanwälte',
-  description: 'Lübbersmann Rechtsanwälte – Strafverteidigung in Münster.',
+  title: {
+    default: `${SITE_NAME} – Strafverteidigung in Münster`,
+    template: `%s · ${SITE_NAME}`,
+  },
+  description:
+    'Fachanwalt für Strafrecht in Münster – Verteidigung im Medizin-, Wirtschafts- und Steuerstrafrecht, diskret und bundesweit.',
 };
 
 export function generateStaticParams() {
@@ -49,6 +55,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${display.variable} ${body.variable}`}>
       <body>
+        <JsonLd data={legalServiceJsonLd()} />
         <NextIntlClientProvider>
           {children}
           <CookieBanner />

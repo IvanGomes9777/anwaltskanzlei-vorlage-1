@@ -16,6 +16,8 @@ export default function CookieBanner() {
 
   const decide = (value: 'accepted' | 'declined') => {
     localStorage.setItem(KEY, value);
+    // Einwilligungsabhängige Inhalte (z. B. die Google-Maps-Karte) sofort informieren.
+    window.dispatchEvent(new CustomEvent('cookie-consent', { detail: value }));
     setVisible(false);
   };
 

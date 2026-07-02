@@ -73,7 +73,7 @@ export default function HeroSplitPhoto() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://picsum.photos/seed/kanzlei-muenchen/1400/1700"
+            src="/hero/hero-library-alt.webp"
             alt={t('imageAlt')}
             className="absolute inset-0 h-full w-full object-cover"
           />

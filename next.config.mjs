@@ -10,9 +10,9 @@ const withNextIntl = createNextIntlPlugin();
 //    App kein nutzerkontrolliertes HTML rendert (kein dangerouslySetInnerHTML),
 //    ist das Restrisiko gering; eine Nonce-basierte CSP wäre der nächste Schritt.
 //  - Fonts werden über next/font self-hosted → font-src 'self' genügt.
-//  - openstreetmap.org: eingebettete Anfahrtskarte (iframe).
-//  - unsplash/picsum: Beispielbilder der Vorlage — beim Go-Live durch eigene
-//    Bilder ersetzen und diese Einträge entfernen.
+//  - google.com: eingebettete Anfahrtskarte (iframe, lädt erst nach
+//    Einwilligung — Zwei-Klick-Lösung in MapConsent.tsx).
+//  - Alle Bilder liegen lokal (public/) — keine externen Bild-Hosts nötig.
 //  - vercel.live: Vercel-Preview-Feedback-Widget (nur Preview-Deployments).
 const csp = [
   "default-src 'self'",
@@ -22,7 +22,7 @@ const csp = [
   "form-action 'self'",
   "script-src 'self' 'unsafe-inline' https://vercel.live",
   "style-src 'self' 'unsafe-inline' https://vercel.live",
-  "img-src 'self' data: blob: https://images.unsplash.com https://picsum.photos https://fastly.picsum.photos https://vercel.live https://vercel.com",
+  "img-src 'self' data: blob: https://vercel.live https://vercel.com",
   "font-src 'self' data: https://vercel.live",
   "connect-src 'self' https://vercel.live wss://ws-us3.pusher.com",
   "frame-src 'self' https://www.google.com https://www.openstreetmap.org https://vercel.live",
@@ -48,11 +48,6 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
-  images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-    ],
-  },
   async headers() {
     return [
       {

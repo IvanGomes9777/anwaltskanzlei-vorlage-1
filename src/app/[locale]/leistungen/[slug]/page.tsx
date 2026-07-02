@@ -1,6 +1,8 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import { pageMetadata } from '@/lib/metadata';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Reveal from '@/components/Reveal';
@@ -8,6 +10,22 @@ import { practices, getPractice } from '@/content/practice';
 
 export function generateStaticParams() {
   return practices.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const practice = getPractice(slug);
+  if (!practice) return {};
+
+  return pageMetadata({
+    path: `/leistungen/${practice.slug}`,
+    title: practice.de.title,
+    description: practice.de.intro,
+  });
 }
 
 export default async function PracticePage({

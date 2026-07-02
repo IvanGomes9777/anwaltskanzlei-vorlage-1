@@ -1,5 +1,13 @@
 import { setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/metadata';
 import LegalShell from '@/components/legal/LegalShell';
+
+export const metadata = pageMetadata({
+  path: '/datenschutz',
+  title: 'Datenschutzerklärung',
+  description:
+    'Informationen zur Verarbeitung personenbezogener Daten auf dieser Website (DSGVO).',
+});
 
 export default async function DatenschutzPage({
   params,
@@ -79,7 +87,28 @@ function DatenschutzDE() {
         Sicherheitsrisiken birgt.
       </p>
 
-      <h2>6. E-Mail-Versand über Resend</h2>
+      <h2>6. Datenverarbeitung im Rahmen des Mandats</h2>
+      <p>
+        Bei Anbahnung und Durchführung eines Mandats verarbeiten wir die von Ihnen
+        mitgeteilten personenbezogenen Daten zur Erfüllung des Anwaltsvertrags
+        (Art. 6 Abs. 1 lit. b DSGVO) sowie zur Erfüllung rechtlicher Verpflichtungen
+        (Art. 6 Abs. 1 lit. c DSGVO). Soweit dabei besondere Kategorien
+        personenbezogener Daten (Art. 9 Abs. 1 DSGVO, z. B. Gesundheitsdaten in
+        medizinstrafrechtlichen Verfahren) betroffen sind, erfolgt die Verarbeitung
+        zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen
+        (Art. 9 Abs. 2 lit. f DSGVO) oder auf Grundlage Ihrer ausdrücklichen
+        Einwilligung (Art. 9 Abs. 2 lit. a DSGVO).
+      </p>
+      <p>
+        Als Rechtsanwälte unterliegen wir der gesetzlichen Verschwiegenheitspflicht
+        (§ 43a Abs. 2 BRAO, § 2 BORA). Mandatsbezogene Daten werden nur offengelegt,
+        soweit dies zur Mandatsbearbeitung erforderlich ist (z. B. gegenüber
+        Gerichten, Behörden oder der Gegenseite) oder eine gesetzliche Pflicht
+        besteht. Auskunftsrechte Dritter können insoweit nach § 29 Abs. 1 BDSG
+        eingeschränkt sein.
+      </p>
+
+      <h2>7. E-Mail-Versand über Resend</h2>
       <p>
         Für den Versand der Formular-E-Mails (Benachrichtigung an die Kanzlei und
         Eingangsbestätigung an Sie) setzen wir den Dienst Resend (Resend, Inc., 2261
@@ -94,7 +123,7 @@ function DatenschutzDE() {
         vertrauliche Mandatsanfragen einen EU-basierten Versandweg erwägen.]
       </p>
 
-      <h2>7. Cookies</h2>
+      <h2>8. Cookies</h2>
       <p>
         Diese Website verwendet technisch notwendige Cookies, die für den Betrieb
         erforderlich sind (Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO bzw. § 25 Abs. 2
@@ -103,23 +132,50 @@ function DatenschutzDE() {
         Tracking-Cookies eingesetzt werden, hier vermerken.]
       </p>
 
-      <h2>8. Eingebundener Kartendienst (Google Maps)</h2>
+      <h2>9. Eingebundener Kartendienst (Google Maps)</h2>
       <p>
         Zur Darstellung der Anfahrt binden wir Karten von Google Maps ein (Anbieter:
-        Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden
-        der Karte wird Ihre IP-Adresse an Google übermittelt; dabei können Daten auch in
-        die USA übertragen werden. Rechtsgrundlage ist unser berechtigtes Interesse an
-        einer ansprechenden Darstellung (Art. 6 Abs. 1 lit. f DSGVO) bzw. Ihre
-        Einwilligung gemäß § 25 Abs. 1 TDDDG.
+        Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Die
+        Karte wird erst geladen, nachdem Sie eingewilligt haben — entweder über den
+        Cookie-Hinweis („Akzeptieren") oder durch Klick auf „Karte laden" direkt auf
+        dem Karten-Platzhalter (Zwei-Klick-Lösung). Erst dann wird Ihre IP-Adresse an
+        Google übermittelt; dabei können Daten auch in die USA übertragen werden
+        (Google LLC ist nach dem EU-US Data Privacy Framework zertifiziert).
+        Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25
+        Abs. 1 TDDDG); Ihre Auswahl wird lokal in Ihrem Browser gespeichert und kann
+        durch Löschen der Browserdaten widerrufen werden.
       </p>
 
-      <h2>9. SSL-/TLS-Verschlüsselung</h2>
+      <h2>10. Speicherdauer und Löschfristen</h2>
+      <p>
+        Wir verarbeiten personenbezogene Daten nur so lange, wie es für den jeweiligen
+        Zweck erforderlich ist, und löschen sie anschließend, soweit keine gesetzlichen
+        Aufbewahrungspflichten entgegenstehen. Insbesondere gelten:
+      </p>
+      <ul>
+        <li>
+          Anfragen ohne anschließendes Mandat: Löschung, sobald die Anfrage
+          abschließend beantwortet ist.
+        </li>
+        <li>
+          Handakten: Aufbewahrung für sechs Jahre nach Beendigung des Mandats
+          (§ 50 Abs. 1 BRAO).
+        </li>
+        <li>
+          Buchhaltungs- und steuerrelevante Unterlagen: Aufbewahrung nach den
+          handels- und steuerrechtlichen Fristen (§ 257 HGB, § 147 AO) von bis zu
+          zehn Jahren.
+        </li>
+        <li>Server-Logfiles: Löschung nach kurzer Frist.</li>
+      </ul>
+
+      <h2>11. SSL-/TLS-Verschlüsselung</h2>
       <p>
         Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine
         verschlüsselte Verbindung erkennen Sie an „https://" in der Adresszeile.
       </p>
 
-      <h2>10. Beschwerderecht bei der Aufsichtsbehörde</h2>
+      <h2>12. Beschwerderecht bei der Aufsichtsbehörde</h2>
       <p>
         Ihnen steht ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu.
         Zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit
@@ -127,7 +183,7 @@ function DatenschutzDE() {
         www.ldi.nrw.de.
       </p>
 
-      <h2>11. Aktualität und Änderung</h2>
+      <h2>13. Aktualität und Änderung</h2>
       <p>
         Diese Datenschutzerklärung ist aktuell gültig. Durch Weiterentwicklung der
         Website oder geänderte gesetzliche Vorgaben kann eine Anpassung erforderlich

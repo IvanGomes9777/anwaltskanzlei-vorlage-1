@@ -30,8 +30,19 @@ zusätzlich erhält der Absender eine automatische Eingangsbestätigung (DE/EN).
   USt-IdNr., zuständige Rechtsanwaltskammer, Berufshaftpflichtversicherung
   (Versicherer + Anschrift + Geltungsbereich) eintragen.
 - **Datenschutz** (`/datenschutz`): Verantwortlichen, eingesetzte Tools/Hosting
-  und tatsächliche Verarbeitung anpassen.
-- **Beides vor Veröffentlichung anwaltlich prüfen lassen.**
+  und tatsächliche Verarbeitung anpassen. **Aufsichtsbehörde je Bundesland
+  korrekt benennen** (z. B. LDI NRW für Nordrhein-Westfalen, BayLDA für Bayern —
+  der Kanzleisitz ist maßgeblich); Speicher-/Löschfristen konkretisieren.
+- **Kosten/Vergütung** (`/kosten`): Vergütungsmodell und Widerrufsbelehrung an
+  die Kanzleipraxis anpassen (Fernabsatzmandate!).
+- **Kennzahlen nur belegbar:** Angaben wie „25+ Jahre Erfahrung" oder
+  „1.500+ Mandate" (Hero) nur verwenden, wenn sie nachweisbar zutreffen —
+  irreführende Werbung verstößt gegen § 43b BRAO / BORA.
+- **Barrierefreiheit (BFSG):** Seit 28.06.2025 gilt das
+  Barrierefreiheitsstärkungsgesetz auch für viele Dienstleistungs-Websites.
+  Prüfen, ob die Kanzlei in den Anwendungsbereich fällt, und die Seite auf
+  Kontraste, Tastaturbedienung und Alternativtexte prüfen.
+- **Alles vor Veröffentlichung anwaltlich prüfen lassen.**
 
 ## 3. Inhalte ersetzen
 
@@ -52,7 +63,18 @@ Google-Profil setzen.
 
 ## 5. Domain & Feinschliff
 
-- Eigene Domain in Vercel verbinden
-- `metadata` (Titel/Description) in `src/app/[locale]/layout.tsx` anpassen
-- Favicon/OG-Image ergänzen
+- Eigene Domain in Vercel verbinden und `NEXT_PUBLIC_SITE_URL` setzen
+  (`src/lib/site.ts` — Basis für Sitemap, robots.txt und Canonicals)
+- Titel/Description in `src/app/[locale]/layout.tsx`, die `metadata` der
+  Unterseiten sowie `SITE_NAME` in `src/lib/site.ts` prüfen
+- Favicon (`src/app/icon.svg`) und OG-Image
+  (`src/app/[locale]/opengraph-image.tsx`) bei Bedarf anpassen
+- Strukturierte Daten (`src/lib/jsonld.ts`: Adresse, Telefon, Sprechzeiten)
+  und `public/llms.txt` aktuell halten
 - Optional: Hero-Video zusätzlich als WebM (kleiner) bereitstellen
+
+## 6. Betrieb
+
+- Dependabot ist aktiviert (`.github/dependabot.yml`) — Update-PRs zeitnah
+  einspielen
+- Vor jedem Release `npm audit` ausführen und Findings beheben
