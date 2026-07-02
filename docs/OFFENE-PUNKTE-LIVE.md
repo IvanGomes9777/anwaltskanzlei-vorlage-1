@@ -1,10 +1,9 @@
-# Offene Punkte Live-Seite — warten auf Infos der Kanzlei
+# Offene Punkte Live-Seite — Merkliste
 
-Stand: 2. Juli 2026. Diese Punkte aus dem Audit (siehe PR #6/#7) können erst
-umgesetzt werden, wenn die Kanzlei die Angaben liefert. Betrifft den
+Stand: 2. Juli 2026 (nach Merge von PR #6, #7 und #8). Betrifft den
 Live-Stand (`main`).
 
-## Benötigte Angaben
+## Warten auf Angaben der Kanzlei
 
 - [ ] **USt-IdNr.** für das Impressum — aktuell steht dort
   „DE000000000 [Platzhalter]". Entweder echte Nummer eintragen oder die Zeile
@@ -12,31 +11,45 @@ Live-Stand (`main`).
 - [ ] **Berufshaftpflichtversicherung** für das Impressum (§ 2 Abs. 1 Nr. 11
   DL-InfoV): Name und Anschrift des Versicherers sowie räumlicher
   Geltungsbereich — aktuell nur Platzhalter.
-- [x] **E-Mail-Domain geklärt und korrigiert:** DNS-Prüfung (02.07.2026) ergab,
-  dass `luebersmann-rechtsanwaelte.de` (ein „b") nicht existiert (NXDOMAIN) —
-  nur `luebbersmann-rechtsanwaelte.de` (zwei „b") hat einen Mail-Server
-  (Microsoft 365). Alle Code-Stellen auf
-  `luebbersmann@luebbersmann-rechtsanwaelte.de` korrigiert.
-  **Noch offen:** Die `CONTACT_*`-Environment-Variablen in Vercel
-  (Project → Settings → Environment Variables) auf die Zwei-„b"-Domain
-  prüfen/korrigieren — sonst versendet die Kontakt-API weiter an die
-  nicht existierende Domain.
+- [ ] **Rechtsanwaltskammer bestätigen:** Im Impressum steht „RAK Hamm
+  [ggf. anpassen]" — für Münster plausibel, aber von der Kanzlei bestätigen
+  lassen und den Vermerk entfernen.
+- [ ] **Hero-Kennzahlen belegen oder entfernen:** „25+ Jahre Erfahrung" und
+  „1.500+ betreute Mandate" stammen aus der Vorlage. Nur belegbare Angaben
+  verwenden (§ 43b BRAO / BORA), sonst streichen.
 - [ ] Danach: verbliebene Vorlagen-Warnhinweise („Beispiel-/Platzhalterinhalt")
-  auf Impressum/Datenschutz entfernen und beide Seiten anwaltlich prüfen lassen.
+  auf Impressum/Datenschutz/Kosten entfernen und alle Rechtstexte anwaltlich
+  prüfen lassen.
 
-## Bereits erledigt (dieser Branch)
+## Aufgaben außerhalb des Codes (Vercel)
 
-- [x] Aufsichtsbehörde in der Datenschutzerklärung auf LDI NRW korrigiert
-  (vorher fälschlich BayLDA — für den Kanzleisitz Münster ist NRW zuständig).
-- [x] `/varianten/*`-Demoseiten entfernt (waren live öffentlich erreichbar).
+- [ ] **`CONTACT_*`-Environment-Variablen prüfen** (Project → Settings →
+  Environment Variables): Empfänger-Adressen müssen die Zwei-„b"-Domain
+  `luebbersmann-rechtsanwaelte.de` verwenden — die Ein-„b"-Variante existiert
+  nicht (DNS-Prüfung 02.07.2026: NXDOMAIN). Ohne gesetzte Variablen läuft das
+  Formular im Demo-Modus; ohne `CONTACT_TO_DEFAULT` schlägt der Versand mit
+  Fehler an, statt an eine falsche Adresse zu senden.
+- [ ] Bei Domain-Umzug auf die Kanzlei-Domain: `NEXT_PUBLIC_SITE_URL` setzen
+  (Basis für Canonicals, Sitemap, robots.txt, JSON-LD-URLs).
 
-## Separat offen
+## Entscheidung nötig
 
-- [ ] **Punkt 6 (Entscheidung nötig):** Echtes Porträtfoto
-  (`sascha-luebbersmann.jpg`) inkl. Git-Historie aus dem Vorlagen-Repo
-  entfernen — erfordert History-Rewrite (`git filter-repo` + Force-Push),
-  destruktiv, nur nach Freigabe.
-- [ ] Die Vorlagen-Verbesserungen aus PR #7 (Zwei-Klick-Karte, SEO, JSON-LD,
-  Vergütungsseite …) beim Merge mit dem Lübbersmann-Stand auf `main`
-  zusammenführen — Konflikte bewusst auflösen, Lübbersmann-Inhalte sind
-  maßgeblich.
+- [ ] **Porträtfoto aus Git-Historie entfernen (Audit Punkt 6):**
+  `sascha-luebbersmann.jpg` liegt inkl. Historie im Repo. Vollständige
+  Entfernung erfordert History-Rewrite (`git filter-repo` + Force-Push) —
+  destruktiv, nur nach ausdrücklicher Freigabe. Solange die Kanzlei das Foto
+  auf der Live-Seite nutzt, betrifft das nur die Historie-Hygiene.
+
+## Bereits erledigt (Juli 2026)
+
+- [x] Aufsichtsbehörde auf LDI NRW korrigiert (PR #8)
+- [x] `/varianten/*`-Demoseiten entfernt (PR #8)
+- [x] E-Mail-Adresse überall auf `luebbersmann@luebbersmann-rechtsanwaelte.de`
+  korrigiert (PR #8)
+- [x] Zwei-Klick-Lösung für die Google-Maps-Karte (PR #7)
+- [x] SEO: Canonicals, OpenGraph, OG-Image, Favicon, Sitemap-Fix (PR #7)
+- [x] JSON-LD (LegalService/LocalBusiness, Attorney) + `llms.txt` (PR #7)
+- [x] Mandatsbedingungen + Widerrufsbelehrung auf `/kosten`; Datenschutz um
+  Mandats-Abschnitt und Speicherfristen erweitert (PR #7)
+- [x] Dependabot aktiviert, `npm audit` 0 Schwachstellen (PR #7)
+- [x] Security-Header, gehärtete Kontakt-API, robots/sitemap (PR #6)

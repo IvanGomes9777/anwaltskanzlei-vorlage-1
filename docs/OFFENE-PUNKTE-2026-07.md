@@ -34,16 +34,16 @@ müssen dort (bzw. im dazugehörigen Code-Stand) behoben werden.
 |---|---------|---------|
 | 6 | **Echtes Porträtfoto entfernen:** `sascha-luebbersmann.jpg` liegt inkl. Git-Historie im Vorlagen-Repo. Vollständige Entfernung erfordert History-Rewrite (`git filter-repo` + Force-Push) — destruktiv, nur nach Freigabe. | `public/team/…` |
 
-## Offene Verbesserungen in der Vorlage (mittlere Priorität)
+## Verbesserungen — umgesetzt (PR #7, Juli 2026, angepasst auf den Live-Stand)
 
-| # | Aufgabe | Fundort |
-|---|---------|---------|
-| 7 | **OSM-Karte:** Zwei-Klick-Lösung (Karte lädt erst nach Einwilligung; aktuell lädt sie sofort und sendet die IP an die OSM Foundation/UK, obwohl der Banner Consent verspricht) — oder statisches Kartenbild + Banner vereinfachen | `CookieBanner.tsx`, `ContactMap.tsx` |
-| 8 | **SEO-Ausbau:** lokalisierte `generateMetadata` pro Seite (Title/Description/Canonical/hreflang/OG je Sprache), OG-Image, Favicon | `src/app/[locale]/**` |
-| 9 | **JSON-LD:** LegalService/LocalBusiness (NAP, Öffnungszeiten), Attorney, FAQPage; dazu `public/llms.txt` (GEO) | Layout, `/faq`, `public/` |
-| 10 | **Rechtsseiten ergänzen:** Seite „Vergütung/Mandatsbedingungen" + Widerrufsbelehrung für Verbraucher-Fernabsatzmandate; Datenschutzerklärung um Speicherfristen und Mandats-Abschnitt (§ 43a BRAO, Art. 9 DSGVO) erweitern | neue Seite, `datenschutz/page.tsx` |
-| 11 | **Kleinkram:** picsum.photos-Hotlinks in 2 Hero-Varianten lokalisieren; doppelten `nav.home`-Key in `messages/de.json` + `en.json` fixen; SETUP.md um Prüfpunkte „Aufsichtsbehörde je Bundesland", „Kennzahlen nur belegbar (BRAO/BORA)", „Barrierefreiheit (BFSG)" erweitern | s. Audit-Bericht |
-| 12 | Betrieb: Dependabot/Renovate aktivieren, `npm audit` vor jedem Release | Prozess |
+- [x] **7 — Karte:** Zwei-Klick-Lösung für die Google-Maps-Karte (`MapConsent.tsx`); Datenschutz auf Einwilligung umgestellt
+- [x] **8 — SEO:** Canonical/OG/Twitter pro Seite (`src/lib/metadata.ts`), Title-Template, OG-Image, Favicon; Sitemap-Fix (nicht existierende Indexrouten entfernt)
+- [x] **9 — JSON-LD:** LegalService/LocalBusiness im Layout, Attorney auf Team-Seiten; `public/llms.txt`
+- [x] **10 — Rechtsseiten:** `/kosten` um Mandatsbedingungen + Widerrufsbelehrung erweitert; Datenschutz um Mandats-Abschnitt (§ 43a BRAO, Art. 9 DSGVO) und Speicherfristen
+- [x] **11 — Kleinkram:** picsum-Hotlinks lokalisiert (CSP bereinigt), `nav.home`-Duplikat entfernt, SETUP.md-Prüfpunkte ergänzt
+- [x] **12 — Betrieb:** Dependabot aktiviert, `npm audit` als Release-Prüfpunkt (0 Schwachstellen)
+
+Verbleibende offene Punkte: siehe `docs/OFFENE-PUNKTE-LIVE.md`.
 
 ---
 
