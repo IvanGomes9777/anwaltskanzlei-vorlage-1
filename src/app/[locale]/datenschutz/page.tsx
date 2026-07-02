@@ -79,16 +79,31 @@ function DatenschutzDE() {
         Sicherheitsrisiken birgt.
       </p>
 
-      <h2>6. Cookies</h2>
+      <h2>6. E-Mail-Versand über Resend</h2>
+      <p>
+        Für den Versand der Formular-E-Mails (Benachrichtigung an die Kanzlei und
+        Eingangsbestätigung an Sie) setzen wir den Dienst Resend (Resend, Inc., 2261
+        Market Street #5039, San Francisco, CA 94114, USA) als Auftragsverarbeiter
+        gemäß Art. 28 DSGVO ein. Dabei werden die von Ihnen im Formular angegebenen
+        Daten an Resend übermittelt; eine Übermittlung in die USA ist möglich. Diese
+        wird durch die Standardvertragsklauseln der EU-Kommission (Art. 46 Abs. 2
+        lit. c DSGVO) abgesichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO
+        (Bearbeitung Ihrer Anfrage) sowie Art. 6 Abs. 1 lit. f DSGVO. Weitere
+        Informationen: resend.com/legal/privacy-policy. [Hinweis: Abschluss des
+        Auftragsverarbeitungsvertrags (DPA) mit Resend sicherstellen; für besonders
+        vertrauliche Mandatsanfragen einen EU-basierten Versandweg erwägen.]
+      </p>
+
+      <h2>7. Cookies</h2>
       <p>
         Diese Website verwendet technisch notwendige Cookies, die für den Betrieb
         erforderlich sind (Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO bzw. § 25 Abs. 2
-        TDDDG). Nicht notwendige Cookies oder Tracking werden nur mit Ihrer Einwilligung
-        gemäß § 25 Abs. 1 TDDDG eingesetzt. [Falls keine Tracking-Cookies eingesetzt
-        werden, hier vermerken.]
+        TDDDG). Nicht notwendige Cookies oder Tracking werden nur mit Ihrer
+        Einwilligung gemäß § 25 Abs. 1 TDDDG eingesetzt. [Falls keine
+        Tracking-Cookies eingesetzt werden, hier vermerken.]
       </p>
 
-      <h2>7. Eingebundener Kartendienst (Google Maps)</h2>
+      <h2>8. Eingebundener Kartendienst (Google Maps)</h2>
       <p>
         Zur Darstellung der Anfahrt binden wir Karten von Google Maps ein (Anbieter:
         Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden
@@ -98,13 +113,13 @@ function DatenschutzDE() {
         Einwilligung gemäß § 25 Abs. 1 TDDDG.
       </p>
 
-      <h2>8. SSL-/TLS-Verschlüsselung</h2>
+      <h2>9. SSL-/TLS-Verschlüsselung</h2>
       <p>
         Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine
         verschlüsselte Verbindung erkennen Sie an „https://" in der Adresszeile.
       </p>
 
-      <h2>9. Beschwerderecht bei der Aufsichtsbehörde</h2>
+      <h2>10. Beschwerderecht bei der Aufsichtsbehörde</h2>
       <p>
         Ihnen steht ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu.
         Zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit
@@ -112,7 +127,7 @@ function DatenschutzDE() {
         www.ldi.nrw.de.
       </p>
 
-      <h2>10. Aktualität und Änderung</h2>
+      <h2>11. Aktualität und Änderung</h2>
       <p>
         Diese Datenschutzerklärung ist aktuell gültig. Durch Weiterentwicklung der
         Website oder geänderte gesetzliche Vorgaben kann eine Anpassung erforderlich

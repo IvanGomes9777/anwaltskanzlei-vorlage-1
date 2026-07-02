@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { SITE_URL } from '@/lib/site';
 import CookieBanner from '@/components/CookieBanner';
 import '../globals.css';
 
@@ -21,6 +22,7 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'Lübbersmann Rechtsanwälte',
   description: 'Lübbersmann Rechtsanwälte – Strafverteidigung in Münster.',
 };
