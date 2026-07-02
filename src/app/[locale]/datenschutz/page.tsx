@@ -82,16 +82,32 @@ function DatenschutzDE() {
         Sicherheitsrisiken birgt.
       </p>
 
-      <h2>6. Cookies</h2>
+      <h2>6. E-Mail-Versand über Resend</h2>
+      <p>
+        Für den Versand der Formular-E-Mails (Benachrichtigung an die Kanzlei und
+        Eingangsbestätigung an Sie) setzen wir den Dienst Resend (Resend, Inc., 2261
+        Market Street #5039, San Francisco, CA 94114, USA) als Auftragsverarbeiter
+        gemäß Art. 28 DSGVO ein. Dabei werden die von Ihnen im Formular angegebenen
+        Daten an Resend übermittelt; eine Übermittlung in die USA ist möglich. Diese
+        wird durch die Standardvertragsklauseln der EU-Kommission (Art. 46 Abs. 2
+        lit. c DSGVO) abgesichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO
+        (Bearbeitung Ihrer Anfrage) sowie Art. 6 Abs. 1 lit. f DSGVO. Weitere
+        Informationen: resend.com/legal/privacy-policy. [Hinweis: Abschluss des
+        Auftragsverarbeitungsvertrags (DPA) mit Resend sicherstellen; für besonders
+        vertrauliche Mandatsanfragen einen EU-basierten Versandweg erwägen.]
+      </p>
+
+      <h2>7. Cookies</h2>
       <p>
         Diese Website verwendet technisch notwendige Cookies, die für den Betrieb
         erforderlich sind (Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO bzw. § 25 Abs. 2
-        TDDDG). Nicht notwendige Cookies oder Tracking werden nur mit Ihrer Einwilligung
-        gemäß § 25 Abs. 1 TDDDG eingesetzt. [Falls keine Tracking-Cookies eingesetzt
-        werden, hier vermerken.]
+        TDDDG). Dazu zählt insbesondere das Cookie „NEXT_LOCALE", das Ihre
+        Sprachauswahl speichert. Nicht notwendige Cookies oder Tracking werden nur mit
+        Ihrer Einwilligung gemäß § 25 Abs. 1 TDDDG eingesetzt. [Falls keine
+        Tracking-Cookies eingesetzt werden, hier vermerken.]
       </p>
 
-      <h2>7. Eingebundener Kartendienst (OpenStreetMap)</h2>
+      <h2>8. Eingebundener Kartendienst (OpenStreetMap)</h2>
       <p>
         Zur Darstellung der Anfahrt binden wir Karten von OpenStreetMap (OpenStreetMap
         Foundation, St John&apos;s Innovation Centre, Cowley Road, Cambridge, CB4 0WS, UK)
@@ -100,20 +116,21 @@ function DatenschutzDE() {
         Darstellung (Art. 6 Abs. 1 lit. f DSGVO) bzw. Ihre Einwilligung.
       </p>
 
-      <h2>8. SSL-/TLS-Verschlüsselung</h2>
+      <h2>9. SSL-/TLS-Verschlüsselung</h2>
       <p>
         Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine
         verschlüsselte Verbindung erkennen Sie an „https://" in der Adresszeile.
       </p>
 
-      <h2>9. Beschwerderecht bei der Aufsichtsbehörde</h2>
+      <h2>10. Beschwerderecht bei der Aufsichtsbehörde</h2>
       <p>
         Ihnen steht ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu.
-        Zuständig ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA),
-        Promenade 27, 91522 Ansbach [ggf. anpassen].
+        Zuständig ist die Aufsichtsbehörde des Bundeslandes, in dem die Kanzlei ihren
+        Sitz hat. [Anpassen — z. B. LDI NRW für Nordrhein-Westfalen oder das
+        Bayerische Landesamt für Datenschutzaufsicht (BayLDA) für Bayern.]
       </p>
 
-      <h2>10. Aktualität und Änderung</h2>
+      <h2>11. Aktualität und Änderung</h2>
       <p>
         Diese Datenschutzerklärung ist aktuell gültig. Durch Weiterentwicklung der
         Website oder geänderte gesetzliche Vorgaben kann eine Anpassung erforderlich
@@ -175,15 +192,30 @@ function DatenschutzEN() {
         unencrypted email transmission carries security risks.
       </p>
 
-      <h2>6. Cookies</h2>
+      <h2>6. Email dispatch via Resend</h2>
       <p>
-        This website uses technically necessary cookies required for operation (legal
-        basis Art. 6(1)(f) GDPR and § 25(2) TDDDG). Non-essential cookies or tracking are
-        only used with your consent under § 25(1) TDDDG. [Note here if no tracking cookies
-        are used.]
+        To send the form emails (notification to the firm and confirmation of receipt
+        to you), we use the service Resend (Resend, Inc., 2261 Market Street #5039,
+        San Francisco, CA 94114, USA) as a processor pursuant to Art. 28 GDPR. The
+        data you enter in the form is transmitted to Resend; a transfer to the USA is
+        possible and is safeguarded by the EU Commission&apos;s Standard Contractual
+        Clauses (Art. 46(2)(c) GDPR). Legal basis: Art. 6(1)(b) GDPR (processing your
+        enquiry) and Art. 6(1)(f) GDPR. Further information:
+        resend.com/legal/privacy-policy. [Note: ensure a data processing agreement
+        (DPA) with Resend is in place; consider an EU-based dispatch route for
+        particularly confidential mandate enquiries.]
       </p>
 
-      <h2>7. Embedded map service (OpenStreetMap)</h2>
+      <h2>7. Cookies</h2>
+      <p>
+        This website uses technically necessary cookies required for operation (legal
+        basis Art. 6(1)(f) GDPR and § 25(2) TDDDG). This includes in particular the
+        &quot;NEXT_LOCALE&quot; cookie, which stores your language selection.
+        Non-essential cookies or tracking are only used with your consent under
+        § 25(1) TDDDG. [Note here if no tracking cookies are used.]
+      </p>
+
+      <h2>8. Embedded map service (OpenStreetMap)</h2>
       <p>
         To show directions we embed maps from OpenStreetMap (OpenStreetMap Foundation,
         Cambridge, UK). When the map loads, your IP address is transmitted to
@@ -191,21 +223,22 @@ function DatenschutzEN() {
         presentation (Art. 6(1)(f) GDPR) or your consent.
       </p>
 
-      <h2>8. SSL/TLS encryption</h2>
+      <h2>9. SSL/TLS encryption</h2>
       <p>
         For security reasons this website uses SSL/TLS encryption. You can recognise an
         encrypted connection by &quot;https://&quot; in the address bar.
       </p>
 
-      <h2>9. Right to lodge a complaint</h2>
+      <h2>10. Right to lodge a complaint</h2>
       <p>
         You have the right to lodge a complaint with a data protection supervisory
-        authority. The competent authority is the Bavarian State Office for Data
-        Protection Supervision (BayLDA), Promenade 27, 91522 Ansbach [adjust if
-        applicable].
+        authority. The competent authority is the supervisory authority of the German
+        federal state in which the firm has its seat. [Adjust — e.g. LDI NRW for
+        North Rhine-Westphalia or the Bavarian State Office for Data Protection
+        Supervision (BayLDA) for Bavaria.]
       </p>
 
-      <h2>10. Updates</h2>
+      <h2>11. Updates</h2>
       <p>
         This privacy policy is currently valid. Further development of the website or
         changes in legal requirements may make adjustments necessary.
