@@ -4,16 +4,6 @@ import { Link } from '@/i18n/navigation';
 import Reveal from '@/components/Reveal';
 import { attorneys } from '@/content/attorneys';
 
-export function useMembers() {
-  const t = useTranslations('team');
-  return [
-    { img: '/team/member-1.webp', name: t('m1name'), role: t('m1role'), area: t('m1area'), slug: 'katharina-hoffmann' },
-    { img: '/team/member-2.webp', name: t('m2name'), role: t('m2role'), area: t('m2area'), slug: 'michael-vogel' },
-    { img: '/team/member-3.webp', name: t('m3name'), role: t('m3role'), area: t('m3area'), slug: 'julia-brandt' },
-    { img: '/team/member-4.webp', name: t('m4name'), role: t('m4role'), area: t('m4area'), slug: 'stefan-keller' },
-  ];
-}
-
 export default function TeamCards() {
   const t = useTranslations('team');
 
