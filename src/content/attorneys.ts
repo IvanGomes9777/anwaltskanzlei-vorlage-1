@@ -55,11 +55,44 @@ export const attorneys: Attorney[] = [
     slug: 'rechtsanwaeltin',
     name: '[Name folgt]',
     role: 'Rechtsanwältin',
-    teaser: 'Kurzprofil folgt in Kürze.',
-    // TODO: echtes Foto und Daten ergänzen
+    teaser:
+      'Strafverteidigung aus Überzeugung – mit Schwerpunkten im Wirtschafts-, Steuer- und Medizinstrafrecht. Bundesweite Beratung und Verteidigung für Unternehmen und Privatpersonen, von Compliance und Nebenklage bis zu Zoll- und Approbationsverfahren.',
+    // TODO: echter Name und Foto ergänzen (Werdegang aus „Über mich"-PDF übernommen)
     img: '/team/member-1.webp',
     werdegang: [
-      { year: '—', items: ['Der Werdegang folgt in Kürze.'] },
+      {
+        year: 'Studium',
+        items: [
+          'International Baccalaureate (IB) in England',
+          'Studium der Rechtswissenschaften an der Universität Regensburg',
+          'Vertiefung im Strafrecht und in der Strafverteidigung bei Prof. Dr. Bockemühl, Regensburg',
+          'Praktika bei Birkenstock Rechtsanwälte, Köln',
+          'Erstes Staatsexamen in Bayern (Prüfungsort Regensburg)',
+        ],
+      },
+      {
+        year: 'Referendariat',
+        items: [
+          'Referendariat am Oberlandesgericht Düsseldorf',
+          'Zweites Staatsexamen in Düsseldorf',
+          'Wahlstation bei Lübbersmann Rechtsanwälte, Münster',
+        ],
+      },
+      {
+        year: 'Anwaltliche Tätigkeit',
+        items: [
+          'Rechtsanwältin bei Lübbersmann Rechtsanwälte, Münster',
+          'Schwerpunkte: Wirtschaftsstrafrecht, Steuerstrafrecht und Medizinstrafrecht',
+        ],
+      },
+      {
+        year: 'Schwerpunkte',
+        items: [
+          'Bundesweite Verteidigung und Beratung im gesamten Strafrecht für Unternehmen und Privatpersonen',
+          'Compliance, Nebenklage, Steuerstrafrecht sowie Verfahren durch den Zoll',
+          'Medizinstrafrecht inkl. Approbations- und Disziplinarverfahren, Verfahren vor der Kassenärztlichen Vereinigung sowie Maßnahmen der Bezirksregierung',
+        ],
+      },
     ],
   },
 ];
