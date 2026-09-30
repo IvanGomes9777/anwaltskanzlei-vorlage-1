@@ -11,6 +11,16 @@
   html {
     scroll-behavior: smooth;
   }
+  /* Scrollbars global ausblenden – Scrollen bleibt voll funktional */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE / alt-Edge */
+  }
+  *::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none; /* Chrome, Safari, neue Edge */
+  }
   body {
     background-color: rgb(var(--background));
     color: rgb(var(--foreground));

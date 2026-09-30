@@ -79,6 +79,16 @@ export default async function AttorneyPage({
             </Reveal>
           </div>
 
+          {attorney.intro && attorney.intro.length > 0 && (
+            <div className="mt-12 space-y-4">
+              {attorney.intro.map((para, i) => (
+                <Reveal key={i} delay={i * 0.06}>
+                  <p className="leading-relaxed text-black/80">{para}</p>
+                </Reveal>
+              ))}
+            </div>
+          )}
+
           <div className="mt-12 h-px w-16 bg-[#728690]" />
           <h2 className="mt-10 font-serif text-2xl font-semibold text-[#728690]">
             Werdegang
